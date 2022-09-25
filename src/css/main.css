@@ -30,8 +30,8 @@ img {
   height: 65px; }
   .header .header__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     height: 70px;
     max-width: 1200px;
     margin: 0 auto; }
@@ -39,8 +39,8 @@ img {
     display: none; }
   .header__middle {
     display: flex;
-    width: 40%;
-    align-items: center; }
+    align-items: center;
+    width: 40%; }
     .header__middle .search {
       background-color: #f3f3f3;
       padding: 0.3rem 0;
@@ -51,17 +51,16 @@ img {
       height: 30px; }
       .header__middle .search__icon {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         background-color: #f3f3f3;
-        border-radius: 0 0.4rem 0.4rem 0;
         height: 30px;
         cursor: pointer;
         color: #f27a1a; }
   .header__middle2 {
     display: flex;
-    width: 100%;
     align-items: center;
+    width: 100%;
     margin: 0 auto; }
     .header__middle2 .search {
       background-color: #f3f3f3;
@@ -73,10 +72,9 @@ img {
       height: 30px; }
       .header__middle2 .search__icon {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         background-color: #f3f3f3;
-        border-radius: 0 0.4rem 0.4rem 0;
         height: 30px;
         cursor: pointer;
         color: #f27a1a; }
@@ -117,8 +115,8 @@ nav {
   padding: 0.5rem 0; }
   nav .nav-list {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 3rem; }
@@ -150,9 +148,9 @@ nav {
         display: block; }
         .header .header__left .menu__con .menu__inner {
           display: flex;
+          align-items: center;
           flex-direction: column;
-          line-height: 0.4rem;
-          align-items: center; }
+          line-height: 0.4rem; }
           .header .header__left .menu__con .menu__inner .menu__icon {
             font-size: 1.8rem; }
           .header .header__left .menu__con .menu__inner p {
@@ -163,8 +161,6 @@ nav {
       font-size: 1.5rem; }
     .header .header__right .login__icon {
       font-size: 1.8rem; }
-    .header .header__right .basket {
-      width: 21px; }
   .header__middle {
     display: none; }
   .header__middle2__con {
@@ -175,11 +171,11 @@ nav {
     height: 100vh;
     top: 0%;
     left: -100%;
-    transition: 0.5s;
+    transition: all 0.5s linear;
     overflow: scroll;
     z-index: 100;
     background: #ffff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
     padding: 0; }
     nav.active {
       left: 0%; }
@@ -206,3 +202,9 @@ nav {
         margin: 2rem 0; }
         nav .nav-list .nav-item .arrow__icon {
           font-size: 1rem; } }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 1rem; }
+  nav {
+    width: 100%; } }

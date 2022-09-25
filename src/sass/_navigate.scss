@@ -2,9 +2,8 @@ nav {
   padding: 0.5rem 0;
 
   .nav-list {
-    display: flex;
+    @include flex-align-center;
     justify-content: center;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 3rem;
@@ -14,21 +13,21 @@ nav {
         text-transform: uppercase;
 
         &:hover {
-          color: #f27a1a;
-          border-bottom: 2px solid #f27a1a;
+          color: $--orange-main;
+          border-bottom: 2px solid $--orange-main;
         }
         &.active {
-          border-bottom: 2px solid #f27a1a;
-          color: #f27a1a;
+          border-bottom: 2px solid $--orange-main;
+          color: $--orange-main;
         }
       }
-      .arrow__icon{
+      .arrow__icon {
         display: none;
       }
     }
   }
 
-  .nav__header{
+  .nav__header {
     display: none;
   }
 

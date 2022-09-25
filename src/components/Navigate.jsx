@@ -12,7 +12,9 @@ const Navigate = () => {
   return (
     <nav className={`${menu ? "active" : null} `}>
       <div className="nav__header">
-        <Link to="/">MertShop</Link>
+        <Link onClick={() => dispatch(handleMenu())} to="/">
+          MertShop
+        </Link>
         <CloseOutlinedIcon
           onClick={() => dispatch(handleMenu())}
         ></CloseOutlinedIcon>
@@ -20,35 +22,55 @@ const Navigate = () => {
 
       <ul className="nav-list">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/laptop">
+          <NavLink
+            onClick={() => dispatch(handleMenu())}
+            className="nav-link"
+            to="/laptop"
+          >
             Laptop
           </NavLink>
           <ArrowForwardIosOutlinedIcon className="arrow__icon"></ArrowForwardIosOutlinedIcon>
         </li>
 
         <li className="nav-item">
-          <NavLink className="nav-link" to="/phone">
+          <NavLink
+            onClick={() => dispatch(handleMenu())}
+            className="nav-link"
+            to="/phone"
+          >
             Phone
           </NavLink>
           <ArrowForwardIosOutlinedIcon className="arrow__icon"></ArrowForwardIosOutlinedIcon>
         </li>
 
         <li className="nav-item">
-          <NavLink className="nav-link" to="/headphone">
+          <NavLink
+            onClick={() => dispatch(handleMenu())}
+            className="nav-link"
+            to="/headphone"
+          >
             Headphone
           </NavLink>
           <ArrowForwardIosOutlinedIcon className="arrow__icon"></ArrowForwardIosOutlinedIcon>
         </li>
 
         <li className="nav-item">
-          <NavLink className="nav-link" to="/television">
+          <NavLink
+            onClick={() => dispatch(handleMenu())}
+            className="nav-link"
+            to="/television"
+          >
             Television
           </NavLink>
           <ArrowForwardIosOutlinedIcon className="arrow__icon"></ArrowForwardIosOutlinedIcon>
         </li>
 
         <li className="nav-item">
-          <NavLink className="nav-link" to="/monitor">
+          <NavLink
+            onClick={() => dispatch(handleMenu())}
+            className="nav-link"
+            to="/monitor"
+          >
             monitor
           </NavLink>
           <ArrowForwardIosOutlinedIcon className="arrow__icon"></ArrowForwardIosOutlinedIcon>

@@ -4,9 +4,8 @@
   height: 65px;
 
   .header__inner {
-    display: flex;
+    @include flex-align-center;
     justify-content: space-between;
-    align-items: center;
     height: 70px;
     max-width: 1200px;
     margin: 0 auto;
@@ -19,9 +18,8 @@
   }
 
   &__middle {
-    display: flex;
+    @include flex-align-center;
     width: 40%;
-    align-items: center;
 
     .search {
       background-color: #f3f3f3;
@@ -33,22 +31,19 @@
       height: 30px;
 
       &__icon {
-        display: flex;
+        @include flex-align-center;
         justify-content: center;
-        align-items: center;
         background-color: #f3f3f3;
-        border-radius: 0 0.4rem 0.4rem 0;
         height: 30px;
         cursor: pointer;
-        color: #f27a1a;
+        color: $--orange-main;
       }
     }
   }
 
   &__middle2 {
-    display: flex;
+    @include flex-align-center;
     width: 100%;
-    align-items: center;
     margin: 0 auto;
 
     .search {
@@ -61,30 +56,26 @@
       height: 30px;
 
       &__icon {
-        display: flex;
+        @include flex-align-center;
         justify-content: center;
-        align-items: center;
         background-color: #f3f3f3;
-        border-radius: 0 0.4rem 0.4rem 0;
         height: 30px;
         cursor: pointer;
-        color: #f27a1a;
+        color: $--orange-main;
       }
     }
   }
 
   &__right {
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
     gap: 1rem;
 
     .favorites {
-      display: flex;
-      align-items: center;
-      transition: all 0.2s linear;
+      @include flex-align-center;
+      transition: $--short-transition;
 
       &:hover {
-        color: #f27a1a;
+        color: $--orange-main;
       }
 
       svg {
@@ -94,28 +85,26 @@
     }
 
     .count__con {
-      display: flex;
-      align-items: center;
+      @include flex-align-center;
       position: relative;
       gap: 0.3rem;
-      transition: all 0.2s linear;
+      transition: $--short-transition;
 
       &:hover {
-        color: #f27a1a;
+        color: $--orange-main;
       }
 
-      .shop__icon{
+      .shop__icon {
         font-size: 1.5rem;
       }
     }
 
     .login {
-      transition: all 0.2s linear;
-      display: flex;
-      align-items: center;
+      transition: $--short-transition;
+      @include flex-align-center;
       gap: 0.3rem;
       &:hover {
-        color: #f27a1a;
+        color: $--orange-main;
       }
     }
   }
