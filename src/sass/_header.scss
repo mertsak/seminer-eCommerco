@@ -1,0 +1,126 @@
+.header {
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 5px 0px;
+  padding: 0 2rem;
+  height: 65px;
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header__left {
+    .menu__con {
+      display: none;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    width: 40%;
+    align-items: center;
+
+    .search {
+      background-color: #f3f3f3;
+      padding: 0.3rem 0;
+      border-radius: 0.4rem 0 0 0.4rem;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 0.5rem;
+      height: 30px;
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3f3f3;
+        border-radius: 0 0.4rem 0.4rem 0;
+        height: 30px;
+        cursor: pointer;
+        color: #f27a1a;
+      }
+    }
+  }
+
+  &__middle2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+
+    .search {
+      background-color: #f3f3f3;
+      padding: 0.3rem 0;
+      border-radius: 0.4rem 0 0 0.4rem;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 0.5rem;
+      height: 30px;
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3f3f3;
+        border-radius: 0 0.4rem 0.4rem 0;
+        height: 30px;
+        cursor: pointer;
+        color: #f27a1a;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .favorites {
+      display: flex;
+      align-items: center;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: #f27a1a;
+      }
+
+      svg {
+        margin-right: 0.1rem;
+        font-size: 18px;
+      }
+    }
+
+    .count__con {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 0.3rem;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: #f27a1a;
+      }
+
+      .shop__icon{
+        font-size: 1.5rem;
+      }
+    }
+
+    .login {
+      transition: all 0.2s linear;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      &:hover {
+        color: #f27a1a;
+      }
+    }
+  }
+
+  .header__middle2__con {
+    display: none;
+  }
+}

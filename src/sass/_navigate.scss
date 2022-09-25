@@ -1,0 +1,39 @@
+nav {
+  padding: 0.5rem 0;
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+
+    .nav-item {
+      .nav-link {
+        text-transform: uppercase;
+
+        &:hover {
+          color: #f27a1a;
+          border-bottom: 2px solid #f27a1a;
+        }
+        &.active {
+          border-bottom: 2px solid #f27a1a;
+          color: #f27a1a;
+        }
+      }
+      .arrow__icon{
+        display: none;
+      }
+    }
+  }
+
+  .nav__header{
+    display: none;
+  }
+
+  .line {
+    border: 0.1px solid rgb(231, 231, 231);
+    border-radius: 5px;
+  }
+}
