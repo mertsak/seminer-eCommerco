@@ -11,12 +11,30 @@
     border-radius: 0.8rem;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
     }
     &:hover .laptop__image {
       transform: scale(1.1);
+    }
+  }
+
+  .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .heart__icon {
+      color: $--orange-main;
     }
   }
 
