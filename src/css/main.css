@@ -212,7 +212,7 @@ nav {
 .products__container {
   display: flex;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 2rem auto; }
   .products__container .product__filter {
     flex: 0.2;
     min-width: 200px; }
@@ -223,8 +223,7 @@ nav {
 .laptops__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0; }
+  gap: 1rem; }
   .laptops__container .laptop__container {
     border: 1px solid #c5c5c5;
     padding: 0 2rem 1rem 2rem;
@@ -273,3 +272,17 @@ nav {
       font-size: 12px; }
   .laptops__container .css-ryrseu-MuiRating-root {
     font-size: 1rem; }
+
+.filter__container .filter__brand {
+  padding-right: 1rem; }
+  .filter__container .filter__brand .filter__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; }
+    .filter__container .filter__brand .filter__header .arrow__icon.active {
+      transform: rotate(180deg); }
+  .filter__container .filter__brand .filter__inner__con .css-p82ss4-MuiButtonBase-root-MuiCheckbox-root {
+    padding: 2px 9px; }
+  .filter__container .filter__brand .filter__inner__con.active {
+    display: none; }

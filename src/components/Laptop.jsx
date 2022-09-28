@@ -2,7 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import CurrencyFormat from "react-currency-format";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { orange } from "@mui/material/colors";
+
+import Checkbox from "@mui/material/Checkbox";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Favorite from "@mui/icons-material/Favorite";
 
 import Rating from "@mui/material/Rating";
 const Laptop = () => {
@@ -49,7 +53,15 @@ const Laptop = () => {
               </div>
 
               <div className="heart">
-                <FavoriteBorderOutlinedIcon className="heart__icon"></FavoriteBorderOutlinedIcon>
+                <Checkbox
+                  sx={{
+                    "&.Mui-checked": {
+                      color: orange[600],
+                    },
+                  }}
+                  icon={<FavoriteBorder />}
+                  checkedIcon={<Favorite />}
+                />
               </div>
             </div>
           </>
