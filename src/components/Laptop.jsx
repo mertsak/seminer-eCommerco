@@ -20,51 +20,49 @@ const Laptop = () => {
 
   return (
     <>
-      <div className="laptops__container">
+      <div className="products__inner__container">
         {Laptops.map((x) => (
-          <>
-            <div className="laptop__container">
-              <img
-                className="laptop__image"
-                src={require(`../assets/LaptopImage/${x.image}`)}
-                alt=""
-              />
+          <div className="product__inner__container">
+            <img
+              className="product__image"
+              src={require(`../assets/LaptopImage/${x.image}`)}
+              alt=""
+            />
 
-              <div className="laptop__info">
-                <p className="laptop__desc">
-                  <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
-                </p>
+            <div className="product__info">
+              <p className="product__desc">
+                <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
+              </p>
 
-                <div className="rating">
-                  <Rating name="read-only" value={x.rating} readOnly />
-                  <span className="reviews">
-                    {x.numReviews} <RemoveRedEyeIcon></RemoveRedEyeIcon>
-                  </span>
-                </div>
-                <div className="price">
-                  <p>Basket Price</p>
-                  <CurrencyFormat
-                    value={x.price}
-                    displayType={"text"}
-                    thousandSeparator={true}
-                    prefix={"$"}
-                  />
-                </div>
+              <div className="rating">
+                <Rating name="read-only" value={x.rating} readOnly />
+                <span className="reviews">
+                  {x.numReviews} <RemoveRedEyeIcon></RemoveRedEyeIcon>
+                </span>
               </div>
-
-              <div className="heart">
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: orange[600],
-                    },
-                  }}
-                  icon={<FavoriteBorder />}
-                  checkedIcon={<Favorite />}
+              <div className="price">
+                <p>Basket Price</p>
+                <CurrencyFormat
+                  value={x.price}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  prefix={"$"}
                 />
               </div>
             </div>
-          </>
+
+            <div className="heart">
+              <Checkbox
+                sx={{
+                  "&.Mui-checked": {
+                    color: orange[600],
+                  },
+                }}
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+              />
+            </div>
+          </div>
         ))}
       </div>
     </>

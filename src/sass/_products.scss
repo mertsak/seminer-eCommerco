@@ -1,0 +1,15 @@
+.products__container {
+  display: flex;
+  margin: 2rem 5rem;
+  justify-content: center;
+
+  .product__filter {
+    flex: 0.2;
+    min-width: 200px;
+  }
+
+  .product__container {
+    flex: 0.8;
+    padding-right: 1rem;
+  }
+}

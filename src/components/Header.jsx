@@ -1,13 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useDispatch } from "react-redux";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import { handleMenu } from "../redux/commerceSlice";
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+    backgroundColor: "#f27a1a",
+  },
+}));
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -36,14 +50,19 @@ const Header = () => {
             <PersonOutlinedIcon className="login__icon"></PersonOutlinedIcon>{" "}
             <span>Login</span>
           </a>
+
           <a className="favorites" href="#/">
             <FavoriteBorderOutlinedIcon className="favorites__icon"></FavoriteBorderOutlinedIcon>
             <span>Favorites</span>
           </a>
 
           <a className="count__con" href="#/">
-            <span>My Basket</span>
-            <ShoppingCartOutlinedIcon className="shop__icon"></ShoppingCartOutlinedIcon>
+            <span className="count__text">My Basket</span>
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={1} color="secondary">
+                <ShoppingCartIcon />
+              </StyledBadge>
+            </IconButton>
           </a>
         </div>
       </div>

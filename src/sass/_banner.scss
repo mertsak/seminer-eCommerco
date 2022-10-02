@@ -1,0 +1,60 @@
+.banner__containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 10rem;
+
+  .banner__container {
+    width: 500px;
+    transition: $--short-transition;
+    cursor: pointer;
+    border-radius: 0.5rem;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    &:hover .banner__text {
+      background-color: $--orange-main;
+      transition: $--short-transition;
+    }
+
+    img {
+      display: block;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .banner__text {
+      background-color: black;
+      color: white;
+      padding: 0 1rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+  }
+}
+
+.banner__container {
+  &:hover .text__shop {
+    display: block;
+  }
+}
+
+.text__shop {
+  display: none;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    .arrow {
+      font-size: 14px;
+      margin-left: 0.2rem;
+    }
+  }
+}

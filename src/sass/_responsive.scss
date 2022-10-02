@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1024px) {
+  .product__filter {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .header {
     padding: 0 5rem;
@@ -26,7 +32,20 @@
     }
 
     .header__right {
-      span {
+      padding-right: 0.2rem;
+      .login {
+        span {
+          display: none;
+        }
+      }
+
+      .favorites {
+        span {
+          display: none;
+        }
+      }
+
+      .count__text {
         display: none;
       }
 

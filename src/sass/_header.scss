@@ -90,6 +90,11 @@
       gap: 0.3rem;
       transition: $--short-transition;
 
+      &:hover .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+        color: $--orange-main;
+        transition: $--short-transition;
+      }
+
       &:hover {
         color: $--orange-main;
       }
@@ -106,6 +111,10 @@
       &:hover {
         color: $--orange-main;
       }
+    }
+
+    .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+      padding: 0;
     }
   }
 

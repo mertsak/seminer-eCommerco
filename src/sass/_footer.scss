@@ -1,0 +1,81 @@
+footer {
+  background-color: #000000;
+
+  .box__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    padding: 5rem 10rem;
+
+    .box h3 {
+      font-size: 1rem;
+      color: #ffff;
+      padding: 1rem 0;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .box__list__item {
+      display: block;
+      font-size: 0.8rem;
+      color: #ffff;
+      padding: 1rem 0;
+      transition: $--short-transition;
+
+      &:hover {
+        color: $--orange-main;
+        text-decoration: underline;
+      }
+    }
+
+    .share {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      .share__inner {
+        display: flex;
+
+        a {
+          background-color: #f3f3f3;
+          margin: 0.5rem;
+          margin-left: 0;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          padding: 0.2rem;
+          transition: $--short-transition;
+
+          &:hover {
+            background-color: $--orange-main;
+            color: #ffff;
+          }
+
+          .shree__icon {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .payment__container {
+      width: 250px;
+      margin-top: 1rem;
+    }
+  }
+
+  .credit {
+    color: #ffff;
+    background-color: #2d2d2d;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

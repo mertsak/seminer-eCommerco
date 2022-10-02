@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import Navigate from "./components/Navigate";
 import LaptopPage from "./pages/LaptopPage";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/television" element={<TelevisionPage />} />
         <Route path="/monitor" element={<MonitorPage />} />
       </Routes>
+      <Footer></Footer>
     </>
   );
 }
