@@ -37,7 +37,7 @@ const Highlights = () => {
         modules={[Navigation]}
       >
         <div className="swiper__header">
-          <h2>Highlight</h2>
+          <h2>Opportunity Products</h2>
           <a href="#/">Tüm Ürünler</a>
         </div>
 

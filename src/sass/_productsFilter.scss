@@ -3,9 +3,8 @@
     padding-right: 1rem;
 
     .filter__header {
-      display: flex;
+      @include flex-align-center;
       justify-content: space-between;
-      align-items: center;
       cursor: pointer;
 
       .arrow__icon {

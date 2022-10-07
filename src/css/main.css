@@ -226,8 +226,8 @@ nav {
 
 .banner__containers {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   padding: 1rem 10rem; }
   .banner__containers .banner__container {
@@ -266,37 +266,37 @@ nav {
       font-size: 14px;
       margin-left: 0.2rem; }
 
-.highlight {
+.swiper__con {
   margin: 5rem 0;
   padding: 0 10rem;
   border-radius: 0.2rem; }
-  .highlight .highlight__header {
+  .swiper__con .swiper__header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 0.7rem; }
-    .highlight .highlight__header a {
+    .swiper__con .swiper__header a {
       text-decoration: underline;
       font-size: 14px; }
-  .highlight .product {
+  .swiper__con .product {
     width: 200px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     font-size: 14px;
     padding: 1rem 0;
     cursor: pointer; }
-    .highlight .product:hover .product__image {
+    .swiper__con .product:hover .product__image {
       transform: scale(1.1);
       transition: all 0.2s linear; }
-    .highlight .product .product__info {
+    .swiper__con .product .product__info {
       text-align: left; }
-      .highlight .product .product__info .product__price {
+      .swiper__con .product .product__info .product__price {
         margin-top: 0.3rem;
         color: #f27a1a;
         font-size: 16px; }
-    .highlight .product .heart {
+    .swiper__con .product .heart {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -305,9 +305,9 @@ nav {
       border-radius: 50%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       display: flex;
-      justify-content: center;
-      align-items: center; }
-      .highlight .product .heart:hover .heart__icon {
+      align-items: center;
+      justify-content: center; }
+      .swiper__con .product .heart:hover .heart__icon {
         color: #f27a1a; }
 
 .swiper {
@@ -484,8 +484,8 @@ footer {
   padding-right: 1rem; }
   .filter__container .filter__brand .filter__header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer; }
     .filter__container .filter__brand .filter__header .arrow__icon.active {
       transform: rotate(180deg); }

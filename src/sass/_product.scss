@@ -53,8 +53,7 @@
     gap: 0.3rem;
 
     .reviews {
-      display: flex;
-      align-items: center;
+      @include flex-align-center;
       gap: 0.3rem;
 
       .css-i4bv87-MuiSvgIcon-root {
