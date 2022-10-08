@@ -1,5 +1,5 @@
 footer {
-  background-color: #000000;
+  background-color: $--black-text;
 
   .box__container {
     display: grid;
@@ -9,7 +9,7 @@ footer {
 
     .box h3 {
       font-size: 1rem;
-      color: #ffff;
+      color: $--white-text;
       padding: 1rem 0;
       font-weight: bold;
       cursor: pointer;
@@ -22,11 +22,11 @@ footer {
     .box__list__item {
       display: block;
       font-size: 0.8rem;
-      color: #ffff;
+      color: $--white-text;
       padding: 1rem 0;
-      transition: $--short-transition;
 
       &:hover {
+        transition: $--short-transition;
         color: $--orange-main;
         text-decoration: underline;
       }
@@ -46,14 +46,13 @@ footer {
           margin: 0.5rem;
           margin-left: 0;
           border-radius: 50%;
-          display: flex;
-          align-items: center;
+          @include flex-align-center;
           padding: 0.2rem;
-          transition: $--short-transition;
 
           &:hover {
+            transition: $--short-transition;
             background-color: $--orange-main;
-            color: #ffff;
+            color: $--white-text;
           }
 
           .shree__icon {
@@ -70,8 +69,8 @@ footer {
   }
 
   .credit {
-    color: #ffff;
-    background-color: #2d2d2d;
+    color: $--white-text;
+    background-color: $--credit-bg-color;
     margin-top: 2rem;
     padding: 1rem 0;
     @include flex-align-center;

@@ -15,6 +15,9 @@ a {
 li {
   list-style-type: none; }
 
+button {
+  cursor: pointer; }
+
 button,
 input {
   border: none;
@@ -138,7 +141,7 @@ nav {
   nav .nav__header {
     display: none; }
   nav .line {
-    border: 0.1px solid #e7e7e7;
+    border: 0.1px solid #dddddd;
     border-radius: 5px; }
 
 @media only screen and (max-width: 1024px) {
@@ -210,7 +213,7 @@ nav {
       width: 100%;
       padding: 0 1rem; }
       nav .nav-list .nav-item {
-        border-bottom: 1px solid #e7e7e7;
+        border-bottom: 1px solid #dddddd;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -245,7 +248,7 @@ nav {
       border-radius: 0.5rem 0.5rem 0 0; }
     .banner__containers .banner__container .banner__text {
       background-color: black;
-      color: white;
+      color: #ffff;
       padding: 0 1rem;
       border-radius: 0 0 0.5rem 0.5rem;
       height: 30px;
@@ -360,7 +363,7 @@ nav {
     font-size: 1rem; }
 
 footer {
-  background-color: #000000; }
+  background-color: black; }
   footer .box__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -378,9 +381,9 @@ footer {
       display: block;
       font-size: 0.8rem;
       color: #ffff;
-      padding: 1rem 0;
-      transition: all 0.2s linear; }
+      padding: 1rem 0; }
       footer .box__container .box__list__item:hover {
+        transition: all 0.2s linear;
         color: #f27a1a;
         text-decoration: underline; }
     footer .box__container .share {
@@ -397,9 +400,9 @@ footer {
           border-radius: 50%;
           display: flex;
           align-items: center;
-          padding: 0.2rem;
-          transition: all 0.2s linear; }
+          padding: 0.2rem; }
           footer .box__container .share .share__inner a:hover {
+            transition: all 0.2s linear;
             background-color: #f27a1a;
             color: #ffff; }
           footer .box__container .share .share__inner a .shree__icon {
@@ -493,3 +496,80 @@ footer {
     padding: 2px 9px; }
   .filter__container .filter__brand .filter__inner__con.active {
     display: none; }
+
+.laptop__single {
+  padding: 2rem 10rem; }
+  .laptop__single__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border: 1px solid #dddddd;
+    padding: 1rem 3rem;
+    gap: 2rem; }
+  .laptop__single__image {
+    border: 1px solid #dddddd; }
+  .laptop__single__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; }
+    .laptop__single__info .single__price {
+      margin: 0.5rem 0; }
+      .laptop__single__info .single__price span {
+        color: #f27a1a;
+        font-size: 18px; }
+    .laptop__single__info .single__rating {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem; }
+      .laptop__single__info .single__rating .reviews {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem; }
+        .laptop__single__info .single__rating .reviews .css-i4bv87-MuiSvgIcon-root {
+          color: #f27a1a;
+          font-size: 1.1rem; }
+    .laptop__single__info .single__basket {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 0.3rem 0; }
+      .laptop__single__info .single__basket .basket {
+        width: 100%; }
+        .laptop__single__info .single__basket .basket .add__btn {
+          background-color: #f27a1a;
+          padding: 0.7rem 0.8rem;
+          border-radius: 0.3rem;
+          width: 100%;
+          color: white;
+          transition: all 0.2s linear; }
+          .laptop__single__info .single__basket .basket .add__btn:hover {
+            background-color: #ff8b39; }
+      .laptop__single__info .single__basket .heart {
+        border: 1px solid #dddddd;
+        border-radius: 0.3rem;
+        transition: all 0.2s linear; }
+        .laptop__single__info .single__basket .heart:hover {
+          border: 1px solid #f27a1a; }
+        .laptop__single__info .single__basket .heart:hover .css-i4bv87-MuiSvgIcon-root {
+          transition: all 0.2s linear;
+          color: #f27a1a; }
+    .laptop__single__info .line {
+      margin: 1rem 0;
+      border: 1px solid black;
+      border-radius: 5px; }
+    .laptop__single__info .single__inner__desc h4 {
+      margin-bottom: 0.5rem; }
+    .laptop__single__info .single__inner__desc ul {
+      display: flex;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .laptop__single__info .single__inner__desc ul li {
+        display: inline-flex;
+        width: 50%;
+        margin-top: 10px; }
+        .laptop__single__info .single__inner__desc ul li span {
+          font-weight: bold;
+          margin-left: 0.3rem; }

@@ -3,16 +3,15 @@ import { useSelector } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import CurrencyFormat from "react-currency-format";
 import { orange } from "@mui/material/colors";
-
+import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
-
 import Rating from "@mui/material/Rating";
-const Laptop = () => {
-  const Laptops = useSelector((state) => state.commerce.LaptopData);
 
-  // test için yapıldı dosyayı düzenle !!!
+const Laptop = () => {
+  
+  const Laptops = useSelector((state) => state.commerce.LaptopData);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
@@ -22,7 +21,7 @@ const Laptop = () => {
     <>
       <div className="products__inner__container">
         {Laptops.map((x) => (
-          <div className="product__inner__container">
+          <Link className="product__inner__container" to={`${x.id}`}>
             <img
               className="product__image"
               src={require(`../assets/LaptopImage/${x.image}`)}
@@ -62,7 +61,7 @@ const Laptop = () => {
                 checkedIcon={<Favorite />}
               />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

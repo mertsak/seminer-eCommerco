@@ -1,11 +1,12 @@
 import React from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
     <>
       <div className="banner__containers">
-        <div className="banner__container">
+        <Link to="/laptop" className="banner__container">
           <img
             src={require("../assets/BannerImage/pexels-hasan-albari-1229861.jpg")}
             alt=""
@@ -19,8 +20,8 @@ const Banner = () => {
               </span>
             </p>
           </div>
-        </div>
-        <div className="banner__container">
+        </Link>
+        <Link to="/monitor" className="banner__container">
           <img
             src={require("../assets/BannerImage/pexels-mateusz-dach-450035.jpg")}
             alt=""
@@ -34,8 +35,8 @@ const Banner = () => {
               </span>
             </p>
           </div>
-        </div>
-        <div className="banner__container">
+        </Link>
+        <Link to="/headphone" className="banner__container">
           <img
             src={require("../assets/BannerImage/pexels-garrett-morrow-1649771.jpg")}
             alt=""
@@ -49,7 +50,7 @@ const Banner = () => {
               </span>
             </p>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

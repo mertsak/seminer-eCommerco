@@ -2,3 +2,18 @@
   display: flex;
   align-items: center;
 }
+
+@mixin single-add-btn {
+  background-color: $--orange-main;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  color: white;
+  transition: $--short-transition;
+}
+
+@mixin line {
+  margin: 1rem 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}

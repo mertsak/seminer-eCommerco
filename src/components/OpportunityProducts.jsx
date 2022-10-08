@@ -35,6 +35,26 @@ const Highlights = () => {
         }}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1.5,
+          },
+          1024: {
+            slidesPerView: 2.5,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+          1400: {
+            slidesPerView: 4,
+          },
+          1700: {
+            slidesPerView: 5,
+          },
+        }}
       >
         <div className="swiper__header">
           <h2>Opportunity Products</h2>

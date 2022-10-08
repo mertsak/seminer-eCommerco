@@ -10,6 +10,7 @@ import PhonePage from "./pages/PhonePage";
 import HeadPhonePage from "./pages/HeadPhonePage";
 import TelevisionPage from "./pages/TelevisionPage";
 import MonitorPage from "./pages/MonitorPage";
+import LaptopSinglePage from "./pages/LaptopSinglePage";
 
 function App() {
   return (
@@ -17,8 +18,14 @@ function App() {
       <Header></Header>
       <Navigate></Navigate>
       <Routes>
+        {/* HOME */}
         <Route path="/" element={<HomePage />} />
+        <Route path=":uuid" element={<LaptopSinglePage />} />
+        {/*  */}
+        {/* LaptopPage */}
         <Route path="/laptop" element={<LaptopPage />} />
+        <Route path="laptop/:uuid" element={<LaptopSinglePage />} />
+        {/*  */}
         <Route path="/phone" element={<PhonePage />} />
         <Route path="/headphone" element={<HeadPhonePage />} />
         <Route path="/television" element={<TelevisionPage />} />
