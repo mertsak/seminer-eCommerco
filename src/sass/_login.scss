@@ -1,0 +1,88 @@
+.login__container {
+  background-color: #eeeeee;
+  padding: 2rem 0;
+  text-align: center;
+
+  .login__text {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .login__form {
+    padding: 1rem 2rem;
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffff;
+    border: $--border-color;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .line {
+      @include line;
+    }
+
+    .create__btn {
+      @include single-add-btn;
+      background-color: #f3f3f3;
+      color: $--black-text;
+      font-size: 14px;
+      border: 1px solid $--border-color;
+
+      &:hover {
+        transition: $--short-transition;
+        background-color: $--border-color;
+      }
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 0;
+
+      label {
+        text-align: left;
+      }
+
+      input {
+        background-color: #f3f3f3;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-radius: 0.3rem;
+        margin-top: 0.3rem;
+        border-bottom: 1px solid $--border-color;
+        margin: 1rem 0 0.2rem 0;
+        padding-left: 1rem;
+
+        &.red {
+          border: 1px solid red;
+        }
+      }
+
+      button {
+        margin-top: 1rem;
+        @include single-add-btn;
+        font-size: 16px;
+
+        &:hover {
+          background-color: $--orange-main-hover;
+        }
+      }
+
+      .error {
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -84,6 +84,7 @@ img {
   .header__right {
     display: flex;
     align-items: center;
+    position: relative;
     gap: 1rem; }
     .header__right .favorites {
       display: flex;
@@ -111,9 +112,55 @@ img {
       transition: all 0.2s linear;
       display: flex;
       align-items: center;
+      padding: 0.5rem 0;
       gap: 0.3rem; }
       .header__right .login:hover {
         color: #f27a1a; }
+    .header__right .modal {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      position: absolute;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      top: 41px;
+      left: -60px;
+      z-index: 100;
+      background-color: #ffff;
+      color: black;
+      border: 1px solid #dddddd;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+      .header__right .modal .login__btn {
+        background-color: #f27a1a;
+        padding: 0.7rem 0.8rem;
+        border-radius: 0.3rem;
+        width: 100%;
+        color: white;
+        transition: all 0.2s linear;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px; }
+        .header__right .modal .login__btn:hover {
+          background-color: #ff8b39;
+          transition: all 0.2s linear; }
+      .header__right .modal .register__btn {
+        background-color: #f27a1a;
+        padding: 0.7rem 0.8rem;
+        border-radius: 0.3rem;
+        width: 100%;
+        color: white;
+        transition: all 0.2s linear;
+        background-color: #ffff;
+        color: black;
+        border: 1px solid #dddddd;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px; }
+        .header__right .modal .register__btn:hover {
+          background-color: #f3f3f3;
+          transition: all 0.2s linear; }
     .header__right .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
       padding: 0; }
   .header .header__middle2__con {
@@ -418,6 +465,80 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center; }
+
+.login__container {
+  background-color: #eeeeee;
+  padding: 2rem 0;
+  text-align: center; }
+  .login__container .login__text {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+  .login__container .login__form {
+    padding: 1rem 2rem;
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffff;
+    border: #dddddd; }
+    .login__container .login__form h1 {
+      margin-bottom: 1rem; }
+    .login__container .login__form .line {
+      margin: 1rem 0;
+      border: 1px solid black;
+      border-radius: 5px; }
+    .login__container .login__form .create__btn {
+      background-color: #f27a1a;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.3rem;
+      width: 100%;
+      color: white;
+      transition: all 0.2s linear;
+      background-color: #f3f3f3;
+      color: black;
+      font-size: 14px;
+      border: 1px solid #dddddd; }
+      .login__container .login__form .create__btn:hover {
+        transition: all 0.2s linear;
+        background-color: #dddddd; }
+    .login__container .login__form form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 0; }
+      .login__container .login__form form label {
+        text-align: left; }
+      .login__container .login__form form input {
+        background-color: #f3f3f3;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-radius: 0.3rem;
+        margin-top: 0.3rem;
+        border-bottom: 1px solid #dddddd;
+        margin: 1rem 0 0.2rem 0;
+        padding-left: 1rem; }
+        .login__container .login__form form input.red {
+          border: 1px solid red; }
+      .login__container .login__form form button {
+        margin-top: 1rem;
+        background-color: #f27a1a;
+        padding: 0.7rem 0.8rem;
+        border-radius: 0.3rem;
+        width: 100%;
+        color: white;
+        transition: all 0.2s linear;
+        font-size: 16px; }
+        .login__container .login__form form button:hover {
+          background-color: #ff8b39; }
+      .login__container .login__form form .error {
+        color: red;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left; }
 
 .products__container {
   display: flex;

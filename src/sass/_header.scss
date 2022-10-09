@@ -68,6 +68,7 @@
 
   &__right {
     @include flex-align-center;
+    position: relative;
     gap: 1rem;
 
     .favorites {
@@ -107,9 +108,54 @@
     .login {
       transition: $--short-transition;
       @include flex-align-center;
+      padding: 0.5rem 0;
       gap: 0.3rem;
       &:hover {
         color: $--orange-main;
+      }
+    }
+
+    .modal {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      position: absolute;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      top: 41px;
+      left: -60px;
+      z-index: 100;
+      background-color: $--white-text;
+      color: $--black-text;
+      border: 1px solid $--border-color;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .login__btn {
+        @include single-add-btn;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px;
+
+        &:hover {
+          background-color: $--orange-main-hover;
+          transition: $--short-transition;
+        }
+      }
+      .register__btn {
+        @include single-add-btn;
+        background-color: #ffff;
+        color: $--black-text;
+        border: 1px solid $--border-color;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px;
+
+        &:hover {
+          background-color: #f3f3f3;
+          transition: $--short-transition;
+        }
       }
     }
 

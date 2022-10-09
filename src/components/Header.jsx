@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -26,6 +26,19 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
   const dispatch = useDispatch();
 
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -46,10 +59,27 @@ const Header = () => {
         </div>
 
         <div className="header__right">
-          <a className="login" href="#/">
-            <PersonOutlinedIcon className="login__icon"></PersonOutlinedIcon>{" "}
-            <span>Login</span>
-          </a>
+          <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <Link className="login" to="/login">
+              <PersonOutlinedIcon className="login__icon"></PersonOutlinedIcon>
+              <span>Login</span>
+            </Link>
+
+            {isHovering && (
+              <div onMouseEnter={handleMouseEnter} className="modal">
+                <div className="modal__login">
+                  <Link to="/login" className="login__btn">
+                    Login
+                  </Link>
+                </div>
+                <div className="modal__register">
+                  <Link to="/register" className="register__btn">
+                    Register
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
 
           <a className="favorites" href="#/">
             <FavoriteBorderOutlinedIcon className="favorites__icon"></FavoriteBorderOutlinedIcon>
