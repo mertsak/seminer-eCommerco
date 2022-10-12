@@ -4,6 +4,7 @@ import LaptopData from "./Services/LaptopData";
 import TelevisionData from "./Services/TelevisionData";
 import PhoneData from "./Services/PhoneData";
 import MonitorData from "./Services/MonitorData";
+import HeadPhoneData from "./Services/HeadPhoneData";
 
 export const commerceSlice = createSlice({
   name: "commerce",
@@ -13,7 +14,8 @@ export const commerceSlice = createSlice({
     LaptopData: LaptopData,
     TelevisionData: TelevisionData,
     PhoneData: PhoneData,
-    MonitorData: MonitorData
+    MonitorData: MonitorData,
+    HeadPhoneData: HeadPhoneData
   },
   reducers: {
     handleMenu: (state) => {

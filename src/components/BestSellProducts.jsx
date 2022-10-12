@@ -36,11 +36,14 @@ const Highlights = () => {
         navigation={true}
         modules={[Navigation]}
         breakpoints={{
-          640: {
+          0: {
             slidesPerView: 1,
           },
-          768: {
+          640: {
             slidesPerView: 1.5,
+          },
+          768: {
+            slidesPerView: 2,
           },
           1024: {
             slidesPerView: 2.5,

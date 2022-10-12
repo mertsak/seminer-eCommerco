@@ -193,7 +193,15 @@ nav {
 
 @media only screen and (max-width: 1024px) {
   .product__filter {
-    display: none; } }
+    display: none; }
+  .banner__containers {
+    margin-top: 2rem;
+    padding: 2rem !important; }
+  .swiper__con {
+    padding: 2rem !important; }
+  .laptop__single__info .single__inner__desc ul li {
+    width: 100% !important;
+    white-space: nowrap; } }
 
 @media only screen and (max-width: 768px) {
   .header {
@@ -266,13 +274,31 @@ nav {
         justify-content: space-between;
         margin: 2rem 0; }
         nav .nav-list .nav-item .arrow__icon {
-          font-size: 1rem; } }
+          font-size: 1rem; }
+  .box__container {
+    padding: 2rem !important; }
+  .banner__containers {
+    flex-wrap: wrap; }
+  .products__container {
+    margin: 2rem 10rem !important; } }
 
 @media only screen and (max-width: 600px) {
   .header {
     padding: 0 1rem; }
   nav {
-    width: 100%; } }
+    width: 100%; }
+  .laptop__single {
+    padding: 2rem !important; }
+  .products__inner__container {
+    gap: 2rem !important; }
+  .swiper__con {
+    padding: 0 2rem !important; }
+  .credit {
+    font-size: 14px; }
+  .login__container {
+    padding: 2rem !important; }
+    .login__container .login__text {
+      width: inherit !important; } }
 
 .banner__containers {
   display: flex;
@@ -281,7 +307,7 @@ nav {
   gap: 2rem;
   padding: 1rem 10rem; }
   .banner__containers .banner__container {
-    width: 500px;
+    width: 100%;
     transition: all 0.2s linear;
     cursor: pointer;
     border-radius: 0.5rem; }
@@ -415,7 +441,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.5rem;
-    padding: 5rem 10rem; }
+    padding: 5rem 10rem;
+    justify-content: center; }
     footer .box__container .box h3 {
       font-size: 1rem;
       color: #ffff;
@@ -542,7 +569,7 @@ footer {
 
 .products__container {
   display: flex;
-  margin: 2rem 5rem;
+  margin: 2rem 3rem;
   justify-content: center; }
   .products__container .product__filter {
     flex: 0.2;
@@ -557,7 +584,7 @@ footer {
   gap: 1rem; }
   .products__inner__container .product__inner__container {
     border: 1px solid #c5c5c5;
-    padding: 0 2rem 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     transition: all 0.2s linear;
     border-radius: 0.8rem;
     cursor: pointer;
@@ -629,7 +656,8 @@ footer {
     padding: 1rem 3rem;
     gap: 2rem; }
   .laptop__single__image {
-    border: 1px solid #dddddd; }
+    border: 1px solid #dddddd;
+    padding: 1rem; }
     .laptop__single__image img {
       max-width: 300px; }
   .laptop__single__info {

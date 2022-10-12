@@ -16,6 +16,7 @@ import LaptopSinglePage from "./pages/LaptopSinglePage";
 import TelevisionSinglePage from "./pages/TelevisionSinglePage";
 import PhoneSinglePage from "./pages/PhoneSinglePage";
 import MonitorSinglePage from "./pages/MonitorSinglePage";
+import HeadPhoneSinglePage from "./pages/HeadPhoneSinglePage";
 
 function App() {
   return (
@@ -37,7 +38,14 @@ function App() {
         <Route path="/phone/:uuid" element={<PhoneSinglePage />} />
 
         {/*  */}
+
+
+        {/* headphonePage */}
         <Route path="/headphone" element={<HeadPhonePage />} />
+        <Route path="/headphone/:uuid" element={<HeadPhoneSinglePage />} />
+
+        {/*  */}
+
 
         {/* televisionPage */}
         <Route path="/television" element={<TelevisionPage />} />
