@@ -7,20 +7,13 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 const Register = () => {
-  const [alignment, setAlignment] = useState("");
-  const [gender, setGender] = useState("");
-
-  const handleChange = (event, newAlignment) => {
-    setGender(event.target.value);
-    setAlignment(newAlignment);
-  };
-
+  
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
       passwordConfirmation: "",
-      gender: gender,
+      gender: "",
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -40,13 +33,13 @@ const Register = () => {
     },
   });
   return (
-    <div className="login__container">
+    <div className="form__container">
       <h1>Hello,</h1>
-      <p className="login__text">
+      <p className="form__text">
         Log in to MertShop or create an account, don't miss the discounts!
       </p>
 
-      <div className="login__form">
+      <div className="form_inner__container">
         <h1>Register</h1>
 
         <form onSubmit={formik.handleSubmit}>
@@ -92,13 +85,13 @@ const Register = () => {
             value={formik.values.passwordConfirmation}
             className={
               formik.touched.passwordConfirmation &&
-              formik.errors.passwordConfirmation
+                formik.errors.passwordConfirmation
                 ? "red"
                 : null
             }
           />
           {formik.touched.passwordConfirmation &&
-          formik.errors.passwordConfirmation ? (
+            formik.errors.passwordConfirmation ? (
             <div className="error">{formik.errors.passwordConfirmation}</div>
           ) : null}
 

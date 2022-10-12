@@ -1,4 +1,4 @@
-.laptop__single {
+.product__single {
   padding: 2rem 10rem;
 
   &__container {
@@ -14,7 +14,7 @@
   &__image {
     border: 1px solid $--border-color;
     padding: 1rem;
-    
+
     img {
       max-width: 300px;
     }

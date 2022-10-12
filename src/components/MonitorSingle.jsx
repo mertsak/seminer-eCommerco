@@ -16,10 +16,10 @@ const MonitorSingle = () => {
         (state) => state.commerce.MonitorData[params.uuid - 1]
     );
     return (
-        <div className="laptop__single">
+        <div className="product__single">
             {SingleMonitor && (
-                <div className="laptop__single__container">
-                    <div className="laptop__single__image">
+                <div className="product__single__container">
+                    <div className="product__single__image">
                         <img
                             className="product__image"
                             src={require(`../assets/MonitorImage/${SingleMonitor.image}`)}
@@ -27,7 +27,7 @@ const MonitorSingle = () => {
                         />
                     </div>
 
-                    <div className="laptop__single__info">
+                    <div className="product__single__info">
                         <p className="product__single_desc">
                             <strong>{SingleMonitor.brand}</strong> {SingleMonitor.name}
                             {SingleMonitor.description}

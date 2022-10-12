@@ -16,10 +16,10 @@ const HeadPhoneSingle = () => {
         (state) => state.commerce.HeadPhoneData[params.uuid - 1]
     );
     return (
-        <div className="laptop__single">
+        <div className="product__single">
             {SingleHeadPhone && (
-                <div className="laptop__single__container">
-                    <div className="laptop__single__image">
+                <div className="product__single__container">
+                    <div className="product__single__image">
                         <img
                             className="product__image"
                             src={require(`../assets/HeadPhoneImage/${SingleHeadPhone.image}`)}
@@ -27,7 +27,7 @@ const HeadPhoneSingle = () => {
                         />
                     </div>
 
-                    <div className="laptop__single__info">
+                    <div className="product__single__info">
                         <p className="product__single_desc">
                             <strong>{SingleHeadPhone.brand}</strong> {SingleHeadPhone.name}
                             {SingleHeadPhone.description}

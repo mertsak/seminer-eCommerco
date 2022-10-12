@@ -10,7 +10,7 @@
     padding: 2rem !important;
   }
 
-  .laptop__single__info .single__inner__desc ul li {
+  .product__single__info .single__inner__desc ul li {
     width: 100% !important;
     white-space: nowrap;
   }
@@ -136,9 +136,8 @@
     flex-wrap: wrap;
   }
 
-  .products__container{
+  .products__container {
     margin: 2rem 10rem !important;
-
   }
 }
 
@@ -151,11 +150,9 @@
     width: 100%;
   }
 
-  .laptop__single {
+  .product__single {
     padding: 2rem !important;
   }
-
-
 
   .products__inner__container {
     gap: 2rem !important;
@@ -168,10 +165,10 @@
     font-size: 14px;
   }
 
-  .login__container {
+  .form__container {
     padding: 2rem !important;
 
-    .login__text {
+    .form__text {
       width: inherit !important;
     }
   }

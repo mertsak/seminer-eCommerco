@@ -35,7 +35,7 @@ const MonitorFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Apple"
+                                label="Samsung"
                             />
                         </FormGroup>
                     </div>
@@ -53,7 +53,7 @@ const MonitorFilter = () => {
                                         size="small"
                                     />
                                 }
-                                label="Casper"
+                                label="Rampage"
                             />
                         </FormGroup>
                     </div>
@@ -71,7 +71,61 @@ const MonitorFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Hp"
+                                label="Philips"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Gamebooster"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Dell"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="VievSonic"
                             />
                         </FormGroup>
                     </div>
@@ -94,23 +148,6 @@ const MonitorFilter = () => {
                         </FormGroup>
                     </div>
 
-                    <div className="filter__inner">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        size="small"
-                                        sx={{
-                                            "&.Mui-checked": {
-                                                color: orange[600],
-                                            },
-                                        }}
-                                    />
-                                }
-                                label="Monster"
-                            />
-                        </FormGroup>
-                    </div>
 
                     <div className="filter__inner">
                         <FormGroup>
@@ -125,7 +162,7 @@ const MonitorFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Msi"
+                                label="Monster"
                             />
                         </FormGroup>
                     </div>

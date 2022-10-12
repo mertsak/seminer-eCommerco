@@ -17,10 +17,10 @@ const TelevisionSingle = () => {
   );
 
   return (
-    <div className="laptop__single">
+    <div className="product__single">
       {SingleTelevision && (
-        <div className="laptop__single__container">
-          <div className="laptop__single__image">
+        <div className="product__single__container">
+          <div className="product__single__image">
             <img
               className="product__image"
               src={require(`../assets/TelevisionImage/${SingleTelevision.image}`)}
@@ -28,7 +28,7 @@ const TelevisionSingle = () => {
             />
           </div>
 
-          <div className="laptop__single__info">
+          <div className="product__single__info">
             <p className="product__single_desc">
               <strong>{SingleTelevision.brand}</strong> {SingleTelevision.name}
               {SingleTelevision.description}

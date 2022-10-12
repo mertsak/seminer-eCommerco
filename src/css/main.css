@@ -199,7 +199,7 @@ nav {
     padding: 2rem !important; }
   .swiper__con {
     padding: 2rem !important; }
-  .laptop__single__info .single__inner__desc ul li {
+  .product__single__info .single__inner__desc ul li {
     width: 100% !important;
     white-space: nowrap; } }
 
@@ -287,7 +287,7 @@ nav {
     padding: 0 1rem; }
   nav {
     width: 100%; }
-  .laptop__single {
+  .product__single {
     padding: 2rem !important; }
   .products__inner__container {
     gap: 2rem !important; }
@@ -295,9 +295,9 @@ nav {
     padding: 0 2rem !important; }
   .credit {
     font-size: 14px; }
-  .login__container {
+  .form__container {
     padding: 2rem !important; }
-    .login__container .login__text {
+    .form__container .form__text {
       width: inherit !important; } }
 
 .banner__containers {
@@ -493,16 +493,16 @@ footer {
     align-items: center;
     justify-content: center; }
 
-.login__container {
+.form__container {
   background-color: #eeeeee;
   padding: 2rem 0;
   text-align: center; }
-  .login__container .login__text {
+  .form__container .form__text {
     width: 500px;
     display: flex;
     justify-content: center;
     margin: 0 auto; }
-  .login__container .login__form {
+  .form__container .form_inner__container {
     padding: 1rem 2rem;
     max-width: 500px;
     margin: 2rem auto 0 auto;
@@ -511,13 +511,13 @@ footer {
     flex-direction: column;
     background-color: #ffff;
     border: #dddddd; }
-    .login__container .login__form h1 {
+    .form__container .form_inner__container h1 {
       margin-bottom: 1rem; }
-    .login__container .login__form .line {
+    .form__container .form_inner__container .line {
       margin: 1rem 0;
       border: 1px solid black;
       border-radius: 5px; }
-    .login__container .login__form .create__btn {
+    .form__container .form_inner__container .create__btn {
       background-color: #f27a1a;
       padding: 0.7rem 0.8rem;
       border-radius: 0.3rem;
@@ -528,18 +528,18 @@ footer {
       color: black;
       font-size: 14px;
       border: 1px solid #dddddd; }
-      .login__container .login__form .create__btn:hover {
+      .form__container .form_inner__container .create__btn:hover {
         transition: all 0.2s linear;
         background-color: #dddddd; }
-    .login__container .login__form form {
+    .form__container .form_inner__container form {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 1rem 0; }
-      .login__container .login__form form label {
+      .form__container .form_inner__container form label {
         text-align: left; }
-      .login__container .login__form form input {
+      .form__container .form_inner__container form input {
         background-color: #f3f3f3;
         width: 100%;
         padding: 0.5rem 0;
@@ -547,9 +547,9 @@ footer {
         border-bottom: 1px solid #dddddd;
         margin: 0.3rem 0 1rem 0;
         padding-left: 1rem; }
-        .login__container .login__form form input.red {
+        .form__container .form_inner__container form input.red {
           border: 1px solid red; }
-      .login__container .login__form form .form__btn {
+      .form__container .form_inner__container form .form__btn {
         margin-top: 1rem;
         background-color: #f27a1a;
         padding: 0.7rem 0.8rem;
@@ -558,20 +558,20 @@ footer {
         color: white;
         transition: all 0.2s linear;
         font-size: 16px; }
-        .login__container .login__form form .form__btn:hover {
+        .form__container .form_inner__container form .form__btn:hover {
           background-color: #ff8b39; }
-      .login__container .login__form form .button__header {
+      .form__container .form_inner__container form .button__header {
         font-size: 14px;
         text-align: left; }
-      .login__container .login__form form .toggle__btn {
+      .form__container .form_inner__container form .toggle__btn {
         margin: 0.3rem 0;
         width: 100%;
         font-weight: bold; }
-        .login__container .login__form form .toggle__btn:focus {
+        .form__container .form_inner__container form .toggle__btn:focus {
           color: #f27a1a;
           background-color: #ffff;
           border: 1px solid #f27a1a; }
-      .login__container .login__form form .error {
+      .form__container .form_inner__container form .error {
         color: red;
         font-size: 13px;
         font-weight: bold;
@@ -648,17 +648,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 0.3rem;
+    background-color: #dddddd;
+    padding: 0.5rem;
+    border-radius: 0.3rem; }
     .filter__container .filter__brand .filter__header .arrow__icon.active {
       transform: rotate(180deg); }
-  .filter__container .filter__brand .filter__inner__con .css-p82ss4-MuiButtonBase-root-MuiCheckbox-root {
-    padding: 2px 9px; }
+  .filter__container .filter__brand .filter__inner__con .filter__inner {
+    margin-bottom: 0.2rem; }
+    .filter__container .filter__brand .filter__inner__con .filter__inner .css-p82ss4-MuiButtonBase-root-MuiCheckbox-root {
+      padding: 2px 9px;
+      margin-left: 0.5rem; }
   .filter__container .filter__brand .filter__inner__con.active {
     display: none; }
 
-.laptop__single {
+.product__single {
   padding: 2rem 10rem; }
-  .laptop__single__container {
+  .product__single__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -666,72 +673,72 @@ footer {
     border: 1px solid #dddddd;
     padding: 1rem 3rem;
     gap: 2rem; }
-  .laptop__single__image {
+  .product__single__image {
     border: 1px solid #dddddd;
     padding: 1rem; }
-    .laptop__single__image img {
+    .product__single__image img {
       max-width: 300px; }
-  .laptop__single__info {
+  .product__single__info {
     display: flex;
     flex-direction: column;
     max-width: 575px; }
-    .laptop__single__info .single__price {
+    .product__single__info .single__price {
       margin: 0.5rem 0; }
-      .laptop__single__info .single__price span {
+      .product__single__info .single__price span {
         color: #f27a1a;
         font-size: 18px; }
-    .laptop__single__info .single__rating {
+    .product__single__info .single__rating {
       margin: 0.5rem 0;
       display: flex;
       align-items: center;
       gap: 0.3rem; }
-      .laptop__single__info .single__rating .reviews {
+      .product__single__info .single__rating .reviews {
         display: flex;
         align-items: center;
         gap: 0.3rem; }
-        .laptop__single__info .single__rating .reviews .css-i4bv87-MuiSvgIcon-root {
+        .product__single__info .single__rating .reviews .css-i4bv87-MuiSvgIcon-root {
           color: #f27a1a;
           font-size: 1.1rem; }
-    .laptop__single__info .single__basket {
+    .product__single__info .single__basket {
       display: flex;
       align-items: center;
       gap: 2rem;
       margin: 0.3rem 0; }
-      .laptop__single__info .single__basket .basket {
+      .product__single__info .single__basket .basket {
         width: 100%; }
-        .laptop__single__info .single__basket .basket .add__btn {
+        .product__single__info .single__basket .basket .add__btn {
           background-color: #f27a1a;
           padding: 0.7rem 0.8rem;
           border-radius: 0.3rem;
           width: 100%;
           color: white;
           transition: all 0.2s linear; }
-          .laptop__single__info .single__basket .basket .add__btn:hover {
+          .product__single__info .single__basket .basket .add__btn:hover {
             background-color: #ff8b39; }
-      .laptop__single__info .single__basket .heart {
+      .product__single__info .single__basket .heart {
         border: 1px solid #dddddd;
         border-radius: 0.3rem;
         transition: all 0.2s linear; }
-        .laptop__single__info .single__basket .heart:hover {
+        .product__single__info .single__basket .heart:hover {
           border: 1px solid #f27a1a; }
-        .laptop__single__info .single__basket .heart:hover .css-i4bv87-MuiSvgIcon-root {
+        .product__single__info .single__basket .heart:hover .css-i4bv87-MuiSvgIcon-root {
           transition: all 0.2s linear;
           color: #f27a1a; }
-    .laptop__single__info .line {
+    .product__single__info .line {
       margin: 1rem 0;
       border: 1px solid black;
       border-radius: 5px; }
-    .laptop__single__info .single__inner__desc h4 {
+    .product__single__info .single__inner__desc h4 {
       margin-bottom: 0.5rem; }
-    .laptop__single__info .single__inner__desc ul {
+    .product__single__info .single__inner__desc ul {
       display: flex;
       font-size: 14px;
       flex-wrap: wrap;
       justify-content: space-between; }
-      .laptop__single__info .single__inner__desc ul li {
+      .product__single__info .single__inner__desc ul li {
         display: inline-flex;
         width: 50%;
         margin-top: 10px; }
-        .laptop__single__info .single__inner__desc ul li span {
+        .product__single__info .single__inner__desc ul li span {
           font-weight: bold;
           margin-left: 0.3rem; }

@@ -35,7 +35,7 @@ const HeadPhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Apple"
+                                label="Sony"
                             />
                         </FormGroup>
                     </div>
@@ -53,7 +53,7 @@ const HeadPhoneFilter = () => {
                                         size="small"
                                     />
                                 }
-                                label="Casper"
+                                label="Philips"
                             />
                         </FormGroup>
                     </div>
@@ -71,7 +71,61 @@ const HeadPhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Hp"
+                                label="JBL"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Focal"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Sennheiser"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Beyerdynamic"
                             />
                         </FormGroup>
                     </div>
@@ -90,42 +144,6 @@ const HeadPhoneFilter = () => {
                                     />
                                 }
                                 label="Asus"
-                            />
-                        </FormGroup>
-                    </div>
-
-                    <div className="filter__inner">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        size="small"
-                                        sx={{
-                                            "&.Mui-checked": {
-                                                color: orange[600],
-                                            },
-                                        }}
-                                    />
-                                }
-                                label="Monster"
-                            />
-                        </FormGroup>
-                    </div>
-
-                    <div className="filter__inner">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        size="small"
-                                        sx={{
-                                            "&.Mui-checked": {
-                                                color: orange[600],
-                                            },
-                                        }}
-                                    />
-                                }
-                                label="Msi"
                             />
                         </FormGroup>
                     </div>

@@ -1,16 +1,16 @@
-.login__container {
+.form__container {
   background-color: #eeeeee;
   padding: 2rem 0;
   text-align: center;
 
-  .login__text {
+  .form__text {
     width: 500px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
   }
 
-  .login__form {
+  .form_inner__container {
     padding: 1rem 2rem;
     max-width: 500px;
     margin: 2rem auto 0 auto;

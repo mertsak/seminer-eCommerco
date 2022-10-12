@@ -53,7 +53,7 @@ const PhoneFilter = () => {
                                         size="small"
                                     />
                                 }
-                                label="Casper"
+                                label="Xiaomi"
                             />
                         </FormGroup>
                     </div>
@@ -71,7 +71,7 @@ const PhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Hp"
+                                label="Reeder"
                             />
                         </FormGroup>
                     </div>
@@ -89,7 +89,7 @@ const PhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Asus"
+                                label="Realme"
                             />
                         </FormGroup>
                     </div>
@@ -107,7 +107,7 @@ const PhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Monster"
+                                label="Samsung"
                             />
                         </FormGroup>
                     </div>
@@ -125,7 +125,44 @@ const PhoneFilter = () => {
                                         }}
                                     />
                                 }
-                                label="Msi"
+                                label="Oppo"
+                            />
+                        </FormGroup>
+                    </div>
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Poco"
+                            />
+                        </FormGroup>
+                    </div>
+
+
+                    <div className="filter__inner">
+                        <FormGroup>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        size="small"
+                                        sx={{
+                                            "&.Mui-checked": {
+                                                color: orange[600],
+                                            },
+                                        }}
+                                    />
+                                }
+                                label="Tecno"
                             />
                         </FormGroup>
                     </div>

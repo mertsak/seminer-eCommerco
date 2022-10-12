@@ -6,17 +6,25 @@
       @include flex-align-center;
       justify-content: space-between;
       cursor: pointer;
+      margin-bottom: 0.3rem;
+      background-color: $--border-color;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
 
       .arrow__icon {
         &.active {
-            transform: rotate(180deg);
+          transform: rotate(180deg);
         }
       }
     }
 
     .filter__inner__con {
-      .css-p82ss4-MuiButtonBase-root-MuiCheckbox-root {
-        padding: 2px 9px;
+      .filter__inner {
+        margin-bottom: 0.2rem;
+        .css-p82ss4-MuiButtonBase-root-MuiCheckbox-root {
+          padding: 2px 9px;
+          margin-left: 0.5rem;
+        }
       }
 
       &.active {

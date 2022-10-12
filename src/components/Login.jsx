@@ -24,11 +24,11 @@ const Login = () => {
     },
   });
   return (
-    <div className="login__container">
+    <div className="form__container">
       <h1>Hello,</h1>
-      <p className="login__text">Log in to MertShop or create an account, don't miss the discounts!</p>
+      <p className="form__text">Log in to MertShop or create an account, don't miss the discounts!</p>
 
-      <div className="login__form">
+      <div className="form_inner__container">
         <h1>Login</h1>
 
         <form onSubmit={formik.handleSubmit}>
