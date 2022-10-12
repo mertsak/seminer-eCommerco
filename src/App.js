@@ -13,6 +13,9 @@ import HeadPhonePage from "./pages/HeadPhonePage";
 import TelevisionPage from "./pages/TelevisionPage";
 import MonitorPage from "./pages/MonitorPage";
 import LaptopSinglePage from "./pages/LaptopSinglePage";
+import TelevisionSinglePage from "./pages/TelevisionSinglePage";
+import PhoneSinglePage from "./pages/PhoneSinglePage";
+import MonitorSinglePage from "./pages/MonitorSinglePage";
 
 function App() {
   return (
@@ -28,14 +31,27 @@ function App() {
         <Route path="/laptop" element={<LaptopPage />} />
         <Route path="laptop/:uuid" element={<LaptopSinglePage />} />
         {/*  */}
+
+        {/* PhonePage */}
         <Route path="/phone" element={<PhonePage />} />
+        <Route path="/phone/:uuid" element={<PhoneSinglePage />} />
+
+        {/*  */}
         <Route path="/headphone" element={<HeadPhonePage />} />
+
+        {/* televisionPage */}
         <Route path="/television" element={<TelevisionPage />} />
+        <Route path="/television/:uuid" element={<TelevisionSinglePage />} />
+        {/*  */}
+
+        {/* monitorPage */}
         <Route path="/monitor" element={<MonitorPage />} />
+        <Route path="/monitor/:uuid" element={<MonitorSinglePage />} />
+
+        {/*  */}
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        
       </Routes>
       <Footer></Footer>
     </>

@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import LaptopData from "./LaptopData";
+import LaptopData from "./Services/LaptopData";
+import TelevisionData from "./Services/TelevisionData";
+import PhoneData from "./Services/PhoneData";
+import MonitorData from "./Services/MonitorData";
 
 export const commerceSlice = createSlice({
   name: "commerce",
@@ -8,6 +11,9 @@ export const commerceSlice = createSlice({
     menu: false,
     close: false,
     LaptopData: LaptopData,
+    TelevisionData: TelevisionData,
+    PhoneData: PhoneData,
+    MonitorData: MonitorData
   },
   reducers: {
     handleMenu: (state) => {

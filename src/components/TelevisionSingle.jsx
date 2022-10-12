@@ -10,41 +10,46 @@ import { orange } from "@mui/material/colors";
 import { useSelector } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
-const LaptopSingle = () => {
+const TelevisionSingle = () => {
   const params = useParams();
-  const SingleLaptop = useSelector(
-    (state) => state.commerce.LaptopData[params.uuid - 1]
+  const SingleTelevision = useSelector(
+    (state) => state.commerce.TelevisionData[params.uuid - 1]
   );
 
   return (
     <div className="laptop__single">
-      {SingleLaptop && (
+      {SingleTelevision && (
         <div className="laptop__single__container">
           <div className="laptop__single__image">
             <img
               className="product__image"
-              src={require(`../assets/LaptopImage/${SingleLaptop.image}`)}
+              src={require(`../assets/TelevisionImage/${SingleTelevision.image}`)}
               alt=""
             />
           </div>
 
           <div className="laptop__single__info">
             <p className="product__single_desc">
-              <strong>{SingleLaptop.brand}</strong> {SingleLaptop.name}
-              {SingleLaptop.description}
+              <strong>{SingleTelevision.brand}</strong> {SingleTelevision.name}
+              {SingleTelevision.description}
             </p>
 
             <div className="single__rating">
-              <Rating name="read-only" value={SingleLaptop.rating} readOnly />
+              <Rating
+                name="read-only"
+                value={SingleTelevision.rating}
+                readOnly
+              />
               <span className="reviews">
-                {SingleLaptop.numReviews} <RemoveRedEyeIcon></RemoveRedEyeIcon>
+                {SingleTelevision.numReviews}{" "}
+                <RemoveRedEyeIcon></RemoveRedEyeIcon>
               </span>
             </div>
 
             <div className="single__price">
               <p>Basket Price</p>
               <CurrencyFormat
-                value={SingleLaptop.price}
+                value={SingleTelevision.price}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}
@@ -76,22 +81,23 @@ const LaptopSingle = () => {
 
               <ul>
                 <li>
-                  Processor Type: <span>{SingleLaptop.processorType} </span>
+                  Screen Size: <span>{SingleTelevision.screenSize} </span>
                 </li>
                 <li>
-                  Operating system: <span>{SingleLaptop.processorSystem} </span>
+                  Smart TV:
+                  <span>{SingleTelevision.smartTv} </span>
                 </li>
                 <li>
-                  RAM Capacity: <span>{SingleLaptop.ram} </span>
+                  Imaging Technology: <span>{SingleTelevision.ımagingTechnology} </span>
                 </li>
                 <li>
-                  SSD Capacity: <span>{SingleLaptop.ssdCapacity} </span>
+                  Warranty Type: <span>{SingleTelevision.warrantyType} </span>
                 </li>
                 <li>
-                  Display Card: <span>{SingleLaptop.displayCard} </span>
+                  Built-in Satellite Receiver: <span>{SingleTelevision.builtInSatelliteReceiver} </span>
                 </li>
                 <li>
-                  Warranty Type: <span>{SingleLaptop.warrantyType} </span>
+                  Image Quality: <span>{SingleTelevision.ımageQuality} </span>
                 </li>
               </ul>
             </div>
@@ -102,4 +108,4 @@ const LaptopSingle = () => {
   );
 };
 
-export default LaptopSingle;
+export default TelevisionSingle;

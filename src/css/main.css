@@ -630,10 +630,12 @@ footer {
     gap: 2rem; }
   .laptop__single__image {
     border: 1px solid #dddddd; }
+    .laptop__single__image img {
+      max-width: 300px; }
   .laptop__single__info {
     display: flex;
     flex-direction: column;
-    max-width: 500px; }
+    max-width: 575px; }
     .laptop__single__info .single__price {
       margin: 0.5rem 0; }
       .laptop__single__info .single__price span {
