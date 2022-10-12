@@ -64,10 +64,10 @@ const Login = () => {
             <div className="error">{formik.errors.password}</div>
           ) : null}
 
-          <button type="submit">Submit</button>
+          <button className="form__btn"type="submit">Login</button>
         </form>
 
-        <p>New to Amazon?</p>
+        <p>New to MertShop?</p>
 
         <hr className="line" />
 

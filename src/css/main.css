@@ -544,13 +544,12 @@ footer {
         width: 100%;
         padding: 0.5rem 0;
         border-radius: 0.3rem;
-        margin-top: 0.3rem;
         border-bottom: 1px solid #dddddd;
-        margin: 1rem 0 0.2rem 0;
+        margin: 0.3rem 0 1rem 0;
         padding-left: 1rem; }
         .login__container .login__form form input.red {
           border: 1px solid red; }
-      .login__container .login__form form button {
+      .login__container .login__form form .form__btn {
         margin-top: 1rem;
         background-color: #f27a1a;
         padding: 0.7rem 0.8rem;
@@ -559,13 +558,25 @@ footer {
         color: white;
         transition: all 0.2s linear;
         font-size: 16px; }
-        .login__container .login__form form button:hover {
+        .login__container .login__form form .form__btn:hover {
           background-color: #ff8b39; }
+      .login__container .login__form form .button__header {
+        font-size: 14px;
+        text-align: left; }
+      .login__container .login__form form .toggle__btn {
+        margin: 0.3rem 0;
+        width: 100%;
+        font-weight: bold; }
+        .login__container .login__form form .toggle__btn:focus {
+          color: #f27a1a;
+          background-color: #ffff;
+          border: 1px solid #f27a1a; }
       .login__container .login__form form .error {
         color: red;
         font-size: 13px;
         font-weight: bold;
-        text-align: left; }
+        text-align: left;
+        margin-bottom: 0.3rem; }
 
 .products__container {
   display: flex;
