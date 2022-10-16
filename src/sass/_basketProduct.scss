@@ -6,10 +6,12 @@
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-radius: 0.3rem;
+    justify-content: space-evenly;
+    position: relative;
+    gap: 3rem;
     img {
-      max-width: 200px;
+      max-width: 150px;
       border: 1px solid $--border-color;
       padding: 1rem;
       border-radius: 0.3rem;
@@ -20,8 +22,9 @@
     .amount__count {
       border: 1px solid $--border-color;
       border-radius: 0.3rem;
+      display: flex;
       button {
-        padding: 0.5rem;
+        padding: 0.3rem 0.7rem;
         color: $--orange-main;
         font-size: 18px;
         background-color: #f3f3f3;
@@ -31,7 +34,7 @@
         }
       }
       span {
-        padding: 0.8rem;
+        padding: 0.3rem 0.7rem;
       }
     }
 
@@ -52,6 +55,18 @@
         transition: $--short-transition;
         color: $--orange-main-hover;
       }
+    }
+
+    .basket__product__left {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .basket__product__payment {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
     }
   }
 }
