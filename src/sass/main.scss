@@ -10,9 +10,13 @@
 @import "./footer";
 @import "./form";
 @import "./register";
+@import "./myBasketPage";
+@import "./basketPayment";
+@import "./basketProduct";
 
-// single page products
-@import "./products";
+
+// single page and  products page
+@import "./productsPage";
 @import "./product";
 @import "./productsFilter";
 @import "./singleProduct";

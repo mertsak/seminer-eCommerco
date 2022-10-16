@@ -1,0 +1,29 @@
+.payment {
+  &__btn {
+    @include single-add-btn;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  &__info {
+    margin-top: 2rem;
+    border: 1px solid $--border-color;
+    padding: 1rem;
+    border-radius: .3rem;
+
+    hr {
+      @include line;
+    }
+
+    .total__price {
+      display: flex;
+      justify-content: space-between;
+
+      .price__count {
+        color: $--orange-main;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}

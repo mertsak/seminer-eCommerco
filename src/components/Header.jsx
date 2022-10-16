@@ -86,14 +86,17 @@ const Header = () => {
             <span>Favorites</span>
           </a>
 
-          <a className="count__con" href="#/">
+
+          <Link className="count__con" to="/myBasket">
             <span className="count__text">My Basket</span>
             <IconButton aria-label="cart">
               <StyledBadge badgeContent={1} color="secondary">
                 <ShoppingCartIcon />
               </StyledBadge>
             </IconButton>
-          </a>
+          </Link>
+
+
         </div>
       </div>
 

@@ -17,6 +17,7 @@ import TelevisionSinglePage from "./pages/TelevisionSinglePage";
 import PhoneSinglePage from "./pages/PhoneSinglePage";
 import MonitorSinglePage from "./pages/MonitorSinglePage";
 import HeadPhoneSinglePage from "./pages/HeadPhoneSinglePage";
+import MyBasketPage from "./pages/MyBasketPage";
 
 function App() {
   return (
@@ -60,6 +61,10 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/myBasket" element={<MyBasketPage />} />
+
+
       </Routes>
       <Footer></Footer>
     </>
