@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
 
-  .product__inner__container {
+  .product__top__container {
     border: 1px solid #c5c5c5;
     padding: 1rem 2rem 1rem 2rem;
     transition: $--short-transition;
@@ -11,6 +11,10 @@
     cursor: pointer;
     overflow: hidden;
     position: relative;
+  }
+
+  .product__inner__container {
+    transition: $--short-transition;
 
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;

@@ -22,6 +22,10 @@
     padding: 1rem 0;
     cursor: pointer;
 
+    img{
+      max-width: 150px;
+    }
+
     &:hover .product__image {
       transform: scale(1.1);
       transition: $--short-transition;
@@ -36,20 +40,21 @@
         font-size: 16px;
       }
     }
-    .heart {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      @include flex-align-center;
-      justify-content: center;
+  }
 
-      &:hover .heart__icon {
-        color: $--orange-main;
-      }
+  .heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @include flex-align-center;
+    justify-content: center;
+
+    &:hover .heart__icon {
+      color: $--orange-main;
     }
   }
 }

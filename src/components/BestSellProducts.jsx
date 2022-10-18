@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import { Link } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -66,7 +67,7 @@ const Highlights = () => {
 
         {Laptops.map((x) => (
           <SwiperSlide>
-            <div className="product">
+            <Link to={`laptop/${x.id}`} className="product">
               <img
                 className="product__image"
                 src={require(`../assets/LaptopImage/${x.image}`)}
@@ -87,17 +88,18 @@ const Highlights = () => {
                   />
                 </div>
               </div>
-              <div className="heart">
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: orange[600],
-                    },
-                  }}
-                  icon={<FavoriteBorder />}
-                  checkedIcon={<Favorite />}
-                />
-              </div>
+
+            </Link>
+            <div className="heart">
+              <Checkbox
+                sx={{
+                  "&.Mui-checked": {
+                    color: orange[600],
+                  },
+                }}
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+              />
             </div>
           </SwiperSlide>
         ))}

@@ -4,8 +4,27 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { orange } from "@mui/material/colors";
+import { useDispatch } from "react-redux";
+
+import { handleFilter } from "../redux/commerceSlice.js";
 
 const LaptopFilter = () => {
+  const dispatch = useDispatch();
+
+  const [checkedStatus, setCheckedStatus] = useState(false);
+  const [checkedName, setCheckedName] = useState("");
+
+  const handleCheck = (e) => {
+    setCheckedStatus(!checkedStatus);
+    setCheckedName(e.target.value);
+  };
+
+  if (checkedStatus) {
+    dispatch(handleFilter({ Name: checkedName, Status: checkedStatus }));
+  } else {
+    dispatch(handleFilter({ Status: checkedStatus }));
+  }
+
   const [drop, setDrop] = useState(null);
 
   const handleDrop = () => {
@@ -28,6 +47,8 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleCheck(e)}
+                    value="Apple"
                     size="small"
                     sx={{
                       "&.Mui-checked": {
@@ -46,6 +67,8 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleCheck(e)}
+                    value="Casper"
                     sx={{
                       "&.Mui-checked": {
                         color: orange[600],

@@ -27,11 +27,10 @@ function App() {
       <Routes>
         {/* HOME */}
         <Route path="/" element={<HomePage />} />
-        <Route path=":uuid" element={<LaptopSinglePage />} />
         {/*  */}
         {/* LaptopPage */}
         <Route path="/laptop" element={<LaptopPage />} />
-        <Route path="laptop/:uuid" element={<LaptopSinglePage />} />
+        <Route path="/laptop/:uuid" element={<LaptopSinglePage />} />
         {/*  */}
 
         {/* PhonePage */}

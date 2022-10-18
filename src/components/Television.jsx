@@ -20,36 +20,36 @@ const Television = () => {
     <>
       <div className="products__inner__container">
         {Televisions.map((x) => (
-          <Link className="product__inner__container" to={`${x.id}`}>
-            <img
-              className="product__image"
-              src={require(`../assets/TelevisionImage/${x.image}`)}
-              alt=""
-            />
-            {console.log(x.image)}
+          <div className="product__top__container">
+            <Link className="product__inner__container" to={`${x.id}`}>
+              <img
+                className="product__image"
+                src={require(`../assets/TelevisionImage/${x.image}`)}
+                alt=""
+              />
 
-            <div className="product__info">
-              <p className="product__desc">
-                <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
-              </p>
+              <div className="product__info">
+                <p className="product__desc">
+                  <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
+                </p>
 
-              <div className="rating">
-                <Rating name="read-only" value={x.rating} readOnly />
-                <span className="reviews">
-                  {x.numReviews} <RemoveRedEyeIcon></RemoveRedEyeIcon>
-                </span>
+                <div className="rating">
+                  <Rating name="read-only" value={x.rating} readOnly />
+                  <span className="reviews">
+                    {x.numReviews} <RemoveRedEyeIcon></RemoveRedEyeIcon>
+                  </span>
+                </div>
+                <div className="price">
+                  <p>Basket Price</p>
+                  <CurrencyFormat
+                    value={x.price}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"$"}
+                  />
+                </div>
               </div>
-              <div className="price">
-                <p>Basket Price</p>
-                <CurrencyFormat
-                  value={x.price}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"$"}
-                />
-              </div>
-            </div>
-
+            </Link>
             <div className="heart">
               <Checkbox
                 sx={{
@@ -61,7 +61,7 @@ const Television = () => {
                 checkedIcon={<Favorite />}
               />
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </>

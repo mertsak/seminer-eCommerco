@@ -20,7 +20,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 const Highlights = () => {
-  const Laptops = useSelector((state) => state.commerce.LaptopData);
+  const HighlightsData = useSelector((state) => state.commerce.HighlightsData);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 25)}...` : str;
@@ -65,12 +65,12 @@ const Highlights = () => {
           <a href="#/">Tüm Ürünler</a>
         </div>
 
-        {Laptops.map((x) => (
+        {HighlightsData.map((x) => (
           <SwiperSlide>
-            <Link to={`${x.id}`} className="product">
+            <Link to={`${x.category}/${x.id}`} className="product">
               <img
                 className="product__image"
-                src={require(`../assets/LaptopImage/${x.image}`)}
+                src={require(`../assets/${x.imageFile}/${x.image}`)}
                 alt=""
               />
 
@@ -88,18 +88,18 @@ const Highlights = () => {
                   />
                 </div>
               </div>
-              <div className="heart">
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: orange[600],
-                    },
-                  }}
-                  icon={<FavoriteBorder />}
-                  checkedIcon={<Favorite />}
-                />
-              </div>
             </Link>
+            <div className="heart">
+              <Checkbox
+                sx={{
+                  "&.Mui-checked": {
+                    color: orange[600],
+                  },
+                }}
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { createSlice } from "@reduxjs/toolkit";
 
 import LaptopData from "./Services/LaptopData";
@@ -5,6 +6,7 @@ import TelevisionData from "./Services/TelevisionData";
 import PhoneData from "./Services/PhoneData";
 import MonitorData from "./Services/MonitorData";
 import HeadPhoneData from "./Services/HeadPhoneData";
+import HighlightsData from "./Services/HighlightsData";
 
 export const commerceSlice = createSlice({
   name: "commerce",
@@ -15,16 +17,30 @@ export const commerceSlice = createSlice({
     TelevisionData: TelevisionData,
     PhoneData: PhoneData,
     MonitorData: MonitorData,
-    HeadPhoneData: HeadPhoneData
+    HeadPhoneData: HeadPhoneData,
+    HighlightsData: HighlightsData,
   },
   reducers: {
     handleMenu: (state) => {
       state.menu = !state.menu;
     },
+    handleFilter: (state, action) => {
+      if (action.payload.Status) {
+        LaptopData.filter((x) => {
+          if (x.brand === action.payload.Name) {
+            const filterArray = [];
+            filterArray.push(x);
+            state.LaptopData = filterArray;
+          }
+        });
+      } else {
+        state.LaptopData = LaptopData;
+      }
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { handleMenu } = commerceSlice.actions;
+export const { handleMenu, handleFilter } = commerceSlice.actions;
 
 export default commerceSlice.reducer;
