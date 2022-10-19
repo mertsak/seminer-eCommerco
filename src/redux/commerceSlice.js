@@ -23,6 +23,7 @@ export const commerceSlice = createSlice({
     HighlightsData: HighlightsData,
     BestSellsData: BestSellsData,
     OpportunityData: OpportunityData,
+    myBasket: [],
   },
   reducers: {
     handleMenu: (state) => {
@@ -41,10 +42,46 @@ export const commerceSlice = createSlice({
         state.LaptopData = LaptopData;
       }
     },
+    addBasket: (state, action) => {
+      const itemInBasket = state.myBasket.find(
+        (item) => item.id === action.payload.id
+      );
+      if (itemInBasket) {
+        itemInBasket.quantity++;
+      } else {
+        state.myBasket.push({ ...action.payload, quantity: 1 });
+      }
+    },
+    incrementQuantity: (state, action) => {
+      const item = state.myBasket.find((item) => item.id === action.payload);
+      item.quantity++;
+    },
+    decrementQuantity: (state, action) => {
+      const item = state.myBasket.find((item) => item.id === action.payload);
+
+      if (item.quantity === 1) {
+        item.quantity = 1;
+      } else {
+        item.quantity--;
+      }
+    },
+    removeBasket: (state, action) => {
+      const filtered = state.myBasket.filter(
+        (item) => item.id !== action.payload
+      );
+      state.myBasket = filtered;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { handleMenu, handleFilter } = commerceSlice.actions;
+export const {
+  handleMenu,
+  handleFilter,
+  addBasket,
+  incrementQuantity,
+  decrementQuantity,
+  removeBasket,
+} = commerceSlice.actions;
 
 export default commerceSlice.reducer;

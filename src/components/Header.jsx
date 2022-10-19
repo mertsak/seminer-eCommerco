@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import Badge from "@mui/material/Badge";
@@ -24,6 +24,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const myBasket = useSelector((state) => state.commerce.myBasket);
+
   const dispatch = useDispatch();
 
   const [isHovering, setIsHovering] = useState(false);
@@ -37,6 +39,12 @@ const Header = () => {
 
   const handleMouseEnter = () => {
     setIsHovering(true);
+  };
+
+  const getBasketQuantity = () => {
+    let total = 0;
+    myBasket.map((x) => (total += x.quantity));
+    return total;
   };
 
   return (
@@ -86,17 +94,14 @@ const Header = () => {
             <span>Favorites</span>
           </a>
 
-
           <Link className="count__con" to="/myBasket">
             <span className="count__text">My Basket</span>
             <IconButton aria-label="cart">
-              <StyledBadge badgeContent={1} color="secondary">
+              <StyledBadge badgeContent={getBasketQuantity()} color="secondary">
                 <ShoppingCartIcon />
               </StyledBadge>
             </IconButton>
           </Link>
-
-
         </div>
       </div>
 

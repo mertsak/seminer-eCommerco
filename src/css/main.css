@@ -705,6 +705,10 @@ footer {
     align-items: center;
     gap: 3rem; }
 
+.mybasket__empty {
+  text-align: center;
+  font-size: 20px; }
+
 .products__container {
   display: flex;
   margin: 2rem 3rem;

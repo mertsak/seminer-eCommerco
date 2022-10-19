@@ -7,14 +7,30 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
 
-import { useSelector } from "react-redux";
+import { addBasket } from "../redux/commerceSlice.js";
+
+import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const LaptopSingle = () => {
+  const dispatch = useDispatch();
   const params = useParams();
   const SingleLaptop = useSelector(
     (state) => state.commerce.LaptopData[params.uuid - 1]
   );
+
+  const addToBasket = (id, image, brand, name, description, price) => {
+    dispatch(
+      addBasket({
+        id: id,
+        image: image,
+        brand: brand,
+        name: name,
+        description: description,
+        price: price,
+      })
+    );
+  };
 
   return (
     <div className="product__single">
@@ -53,7 +69,21 @@ const LaptopSingle = () => {
 
             <div className="single__basket">
               <div className="basket">
-                <button className="add__btn">Add Basket</button>
+                <button
+                  onClick={() =>
+                    addToBasket(
+                      SingleLaptop.id,
+                      SingleLaptop.image,
+                      SingleLaptop.brand,
+                      SingleLaptop.name,
+                      SingleLaptop.description,
+                      SingleLaptop.price
+                    )
+                  }
+                  className="add__btn"
+                >
+                  Add Basket
+                </button>
               </div>
 
               <div className="heart">

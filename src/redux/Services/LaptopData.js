@@ -1,6 +1,6 @@
 const LaptopData = [
   {
-    id: "1",
+    id: 1,
     name: "MacBook Air",
     image: "macbook.webp",
     description: " 8-Core CPU 7-Core GPU 8GB Unified Memory 256GB SSD",
@@ -18,7 +18,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "2",
+    id: 2,
     name: "Casper Excalibur",
     image: "casper.webp",
     description:
@@ -37,7 +37,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "3",
+    id: 3,
     name: "Hp Victus",
     image: "hp.webp",
     description: "Ryzen 7 6800h 16gb Ram 512gb Ssd 4gb Rtx3050ti",
@@ -55,7 +55,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "4",
+    id: 4,
     name: "Asus Rog Strıx",
     image: "asus.jpg",
     description: "I9-12950hx 32gb 4tb Ssd 16gb Rtx3080tı",
@@ -72,7 +72,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "5",
+    id: 5,
     name: "Monster Abra",
     image: "monster.webp",
     description: "Intel Core I5-12500h 8 Gb Ram 500gb Ssd 4gb Gtx1650",
@@ -89,7 +89,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "6",
+    id: 6,
     name: "Msi Alpha",
     image: "msi.webp",
     description: "R7-5800H 16GB DDR4 RX6600M GDDR6 8GB 512GB SSD",
@@ -107,7 +107,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "7",
+    id: 7,
     name: "Hp Pavilion",
     image: "hp2.webp",
     description: "Intel Core I5 10300h Gtx1050",
@@ -125,7 +125,7 @@ const LaptopData = [
     warrantyType: "Official Distributor",
   },
   {
-    id: "8",
+    id: 8,
     name: "Msi Thın",
     image: "msi2.webp",
     description: "I5-10500h 8gb Ram 256gb Ssd Gtx1650",
