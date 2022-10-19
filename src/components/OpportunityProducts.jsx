@@ -20,7 +20,9 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 const Highlights = () => {
-  const Laptops = useSelector((state) => state.commerce.LaptopData);
+  const OpportunityData = useSelector(
+    (state) => state.commerce.OpportunityData
+  );
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 25)}...` : str;
@@ -62,15 +64,14 @@ const Highlights = () => {
       >
         <div className="swiper__header">
           <h2>Opportunity Products</h2>
-          <a href="#/">Tüm Ürünler</a>
         </div>
 
-        {Laptops.map((x) => (
+        {OpportunityData.map((x) => (
           <SwiperSlide>
-            <Link to={`laptop/${x.id}`} className="product">
+            <Link to={`${x.category}/${x.id}`} className="product">
               <img
                 className="product__image"
-                src={require(`../assets/LaptopImage/${x.image}`)}
+                src={require(`../assets/${x.imageFile}/${x.image}`)}
                 alt=""
               />
 

@@ -1,0 +1,88 @@
+const OpportunityData = [
+  {
+    id: "7",
+    name: "TUF Gaming VG27VQ",
+    image: "asus.webp",
+    imageFile: "MonitorImage",
+    description:
+      " 165 Hz 1ms (HDMI+Display+DVI-D) FreeSync Full HD Curved Monitor",
+    brand: "Asus",
+    category: "monitor",
+    price: 599,
+  },
+  {
+    id: "8",
+    name: "Aryond A32",
+    image: "monster.webp",
+    imageFile: "MonitorImage",
+    description: "165hz 1ms (hdmi+display) G-sync Qhd Led Monitor",
+    brand: "Monster",
+    category: "monitor",
+    price: 899,
+  },
+
+  {
+    id: "3",
+    name: " P13 Blue Max Lite",
+    image: "reeder.webp",
+    imageFile: "PhoneImage",
+    description: "Reeder P13 Blue Max Lite 2022 32 GB",
+    brand: "Reeder",
+    category: "phone",
+    price: 399,
+  },
+  {
+    id: "4",
+    name: " C11 2021",
+    image: "realme.webp",
+    imageFile: "PhoneImage",
+    description: "32GB Blue Mobile Phone",
+    brand: "Realme",
+    category: "phone",
+    price: 599,
+  },
+
+  {
+    id: "3",
+    name: "Hp Victus",
+    image: "hp.webp",
+    imageFile: "LaptopImage",
+    description: "Ryzen 7 6800h 16gb Ram 512gb Ssd 4gb Rtx3050ti",
+    brand: "Hp",
+    category: "laptop",
+    price: 899,
+  },
+  {
+    id: "4",
+    name: "Asus Rog Strıx",
+    image: "asus.jpg",
+    imageFile: "LaptopImage",
+    description: "I9-12950hx 32gb 4tb Ssd 16gb Rtx3080tı",
+    brand: "Asus",
+    category: "laptop",
+    price: 5999,
+  },
+
+  {
+    id: "2",
+    name: "Tah4105",
+    image: "philips.webp",
+    imageFile: "HeadPhoneImage",
+    description: "Black Wired On-Ear Headphones",
+    brand: "Philips",
+    category: "headphone",
+    price: 99,
+  },
+  {
+    id: "3",
+    name: "T500",
+    image: "jbl.webp",
+    imageFile: "HeadPhoneImage",
+    description: "Black Wired On-Ear Headphones",
+    brand: "JBL",
+    category: "headphone",
+    price: 149,
+  },
+];
+
+export default OpportunityData;

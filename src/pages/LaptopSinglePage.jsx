@@ -1,12 +1,12 @@
 import React from "react";
 import LaptopSingle from "../components/LaptopSingle";
-import Highlights from "../components/Highlights";
+import HighlightsProducts from "../components/HighlightsProducts";
 
 const LaptopSinglePage = () => {
   return (
     <>
       <LaptopSingle></LaptopSingle>
-      <Highlights></Highlights>
+      <HighlightsProducts></HighlightsProducts>
     </>
   );
 };

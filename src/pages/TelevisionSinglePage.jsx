@@ -1,12 +1,12 @@
 import React from "react";
 import TelevisionSingle from "../components/TelevisionSingle";
-import Highlights from "../components/Highlights";
+import HighlightsProducts from "../components/HighlightsProducts";
 
 const TelevisionSinglePage = () => {
   return (
     <>
       <TelevisionSingle></TelevisionSingle>
-      <Highlights></Highlights>
+      <HighlightsProducts></HighlightsProducts>
     </>
   );
 };

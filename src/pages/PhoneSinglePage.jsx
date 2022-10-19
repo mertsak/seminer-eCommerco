@@ -1,12 +1,12 @@
 import React from 'react'
 import PhoneSingle from "../components/PhoneSingle";
-import Highlights from "../components/Highlights";
+import HighlightsProducts from "../components/HighlightsProducts";
 
 const PhoneSinglePage = () => {
     return (
         <>
             <PhoneSingle></PhoneSingle>
-            <Highlights></Highlights>
+            <HighlightsProducts></HighlightsProducts>
         </>
     );
 }

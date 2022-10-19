@@ -19,7 +19,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 
-const Highlights = () => {
+const HighlightsProducts = () => {
   const HighlightsData = useSelector((state) => state.commerce.HighlightsData);
 
   const truncate = (str) => {
@@ -62,7 +62,6 @@ const Highlights = () => {
       >
         <div className="swiper__header">
           <h2>Highlight</h2>
-          <a href="#/">Tüm Ürünler</a>
         </div>
 
         {HighlightsData.map((x) => (
@@ -107,4 +106,4 @@ const Highlights = () => {
   );
 };
 
-export default Highlights;
+export default HighlightsProducts;
