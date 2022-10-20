@@ -19,7 +19,7 @@ const BasketPayment = () => {
         <hr className="line" />
         <div className="total__price">
           <p>Basket Amount:</p>
-          <span className="price__count">{getBasketTotal()}</span>
+          <span className="price__count">${getBasketTotal()}</span>
         </div>
       </div>
     </div>
