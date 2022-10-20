@@ -43,6 +43,7 @@ export const commerceSlice = createSlice({
       }
     },
     addBasket: (state, action) => {
+      console.log(action.payload);
       const itemInBasket = state.myBasket.find(
         (item) => item.id === action.payload.id
       );

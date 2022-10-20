@@ -6,15 +6,39 @@ import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
+import { addBasket } from "../redux/commerceSlice.js";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const TelevisionSingle = () => {
+  const dispatch = useDispatch();
   const params = useParams();
   const SingleTelevision = useSelector(
     (state) => state.commerce.TelevisionData[params.uuid - 1]
   );
+
+  const addToBasket = (
+    id,
+    name,
+    image,
+    imageFile,
+    description,
+    brand,
+    price
+  ) => {
+    dispatch(
+      addBasket({
+        id: id,
+        name: name,
+        image: image,
+        imageFile: imageFile,
+        description: description,
+        brand: brand,
+        price: price,
+      })
+    );
+  };
 
   return (
     <div className="product__single">
@@ -23,7 +47,7 @@ const TelevisionSingle = () => {
           <div className="product__single__image">
             <img
               className="product__image"
-              src={require(`../assets/TelevisionImage/${SingleTelevision.image}`)}
+              src={require(`../assets/${SingleTelevision.imageFile}/${SingleTelevision.image}`)}
               alt=""
             />
           </div>
@@ -58,7 +82,22 @@ const TelevisionSingle = () => {
 
             <div className="single__basket">
               <div className="basket">
-                <button className="add__btn">Add Basket</button>
+                <button
+                  onClick={() =>
+                    addToBasket(
+                      SingleTelevision.id,
+                      SingleTelevision.name,
+                      SingleTelevision.image,
+                      SingleTelevision.imageFile,
+                      SingleTelevision.description,
+                      SingleTelevision.brand,
+                      SingleTelevision.price
+                    )
+                  }
+                  className="add__btn"
+                >
+                  Add Basket
+                </button>
               </div>
 
               <div className="heart">
@@ -88,13 +127,15 @@ const TelevisionSingle = () => {
                   <span>{SingleTelevision.smartTv} </span>
                 </li>
                 <li>
-                  Imaging Technology: <span>{SingleTelevision.ımagingTechnology} </span>
+                  Imaging Technology:{" "}
+                  <span>{SingleTelevision.ımagingTechnology} </span>
                 </li>
                 <li>
                   Warranty Type: <span>{SingleTelevision.warrantyType} </span>
                 </li>
                 <li>
-                  Built-in Satellite Receiver: <span>{SingleTelevision.builtInSatelliteReceiver} </span>
+                  Built-in Satellite Receiver:{" "}
+                  <span>{SingleTelevision.builtInSatelliteReceiver} </span>
                 </li>
                 <li>
                   Image Quality: <span>{SingleTelevision.ımageQuality} </span>

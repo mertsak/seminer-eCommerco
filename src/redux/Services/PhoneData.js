@@ -3,6 +3,7 @@ const PhoneData = [
     id: "1",
     name: "iPhone 11",
     image: "iphone.webp",
+    imageFile: "PhoneImage",
     description: "128GB Box White Cell Phone Without Accessories",
     brand: "Apple",
     category: "phone",
@@ -15,13 +16,13 @@ const PhoneData = [
     batteryPower: "3000-4000",
     internalMemory: "128 GB",
     Links: "Wi-Fi",
-    screenSize: "6 inches and up"
-
+    screenSize: "6 inches and up",
   },
   {
     id: "2",
     name: "Redmi 10",
     image: "xiaomi.webp",
+    imageFile: "PhoneImage",
     description: "2022 4GB Ram + 64GB Gray Mobile Phone",
     brand: "Xiaomi",
     category: "phone",
@@ -34,13 +35,13 @@ const PhoneData = [
     batteryPower: "3000-4000",
     internalMemory: "64 GB",
     Links: "Wi-Fi",
-    screenSize: "6.5 inches and up"
-
+    screenSize: "6.5 inches and up",
   },
   {
     id: "3",
     name: " P13 Blue Max Lite",
     image: "reeder.webp",
+    imageFile: "PhoneImage",
     description: "Reeder P13 Blue Max Lite 2022 32 GB",
     brand: "Reeder",
     category: "phone",
@@ -53,13 +54,13 @@ const PhoneData = [
     batteryPower: "2000-3000",
     internalMemory: "64 GB",
     Links: "Wi-Fi",
-    screenSize: "6 inches and up"
-
+    screenSize: "6 inches and up",
   },
   {
     id: "4",
     name: " C11 2021",
     image: "realme.webp",
+    imageFile: "PhoneImage",
     description: "32GB Blue Mobile Phone",
     brand: "Realme",
     category: "phone",
@@ -72,13 +73,13 @@ const PhoneData = [
     batteryPower: "4000-5000",
     internalMemory: "32 GB",
     Links: "Wi-Fi",
-    screenSize: "6 inches and up"
-
+    screenSize: "6 inches and up",
   },
   {
     id: "5",
     name: " Galaxy A32",
     image: "samsung.webp",
+    imageFile: "PhoneImage",
     description: "128GB Purple Mobile Phone",
     brand: "Samsung",
     category: "phone",
@@ -91,13 +92,13 @@ const PhoneData = [
     batteryPower: "4000-5000",
     internalMemory: "128 GB",
     Links: "Wi-Fi",
-    screenSize: "6 inches and up"
-
+    screenSize: "6 inches and up",
   },
   {
     id: "6",
     name: " A16",
     image: "oppo.webp",
+    imageFile: "PhoneImage",
     description: "3GB+32GB Black Mobile Phone",
     brand: "Oppo",
     category: "phone",
@@ -110,13 +111,13 @@ const PhoneData = [
     batteryPower: "5000-6000",
     internalMemory: "32 GB",
     Links: "Wi-Fi",
-    screenSize: "6.5 inches and up"
-
+    screenSize: "6.5 inches and up",
   },
   {
     id: "7",
     name: "  X4",
     image: "poco.webp",
+    imageFile: "PhoneImage",
     description: "8gb+256gb Black Mobile Phone X4 Pro",
     brand: "Poco",
     category: "phone",
@@ -129,13 +130,13 @@ const PhoneData = [
     batteryPower: "3000-7900",
     internalMemory: "256 GB",
     Links: "Wi-Fi",
-    screenSize: "6 inches and up"
-
+    screenSize: "6 inches and up",
   },
   {
     id: "8",
     name: "  Pova 3",
     image: "tecno.webp",
+    imageFile: "PhoneImage",
     description: "128 Gb 6+5 Gb Ram-128gb Blue",
     brand: "Tecno",
     category: "phone",
@@ -148,8 +149,7 @@ const PhoneData = [
     batteryPower: "3000-7900",
     internalMemory: "128 GB",
     Links: "Wi-Fi",
-    screenSize: "6.8 inches and up"
-
+    screenSize: "6.8 inches and up",
   },
 ];
 

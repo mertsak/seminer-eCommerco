@@ -16,7 +16,6 @@ const BasketProducts = () => {
     return str.length > 10 ? `${str.substring(0, 29)}...` : str;
   };
 
-
   return (
     <>
       {myBasket.length === 0 ? (
@@ -30,7 +29,11 @@ const BasketProducts = () => {
         <>
           {myBasket.map((x) => (
             <div className="basket__product__container">
-              <img src={require(`../assets/LaptopImage/${x.image}`)} alt="" />
+              {console.log(x)}
+              <img
+                src={require(`../assets/${x.imageFile}/${x.image}`)}
+                alt=""
+              />
 
               <div className="basket__product__left">
                 <p className="basket__product__info">

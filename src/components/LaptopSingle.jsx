@@ -19,14 +19,23 @@ const LaptopSingle = () => {
     (state) => state.commerce.LaptopData[params.uuid - 1]
   );
 
-  const addToBasket = (id, image, brand, name, description, price) => {
+  const addToBasket = (
+    id,
+    name,
+    image,
+    imageFile,
+    description,
+    brand,
+    price
+  ) => {
     dispatch(
       addBasket({
         id: id,
-        image: image,
-        brand: brand,
         name: name,
+        image: image,
+        imageFile: imageFile,
         description: description,
+        brand: brand,
         price: price,
       })
     );
@@ -73,10 +82,11 @@ const LaptopSingle = () => {
                   onClick={() =>
                     addToBasket(
                       SingleLaptop.id,
-                      SingleLaptop.image,
-                      SingleLaptop.brand,
                       SingleLaptop.name,
+                      SingleLaptop.image,
+                      SingleLaptop.imageFile,
                       SingleLaptop.description,
+                      SingleLaptop.brand,
                       SingleLaptop.price
                     )
                   }

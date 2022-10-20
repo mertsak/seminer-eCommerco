@@ -3,6 +3,7 @@ const TelevisionData = [
     id: "1",
     name: "OV32150",
     image: "onvo.webp",
+    imageFile: "TelevisionImage",
     description: "81 Screen HD Ready Smart LED TV with Satellite Receiver",
     brand: "Onvo",
     category: "television",
@@ -21,6 +22,7 @@ const TelevisionData = [
     id: "2",
     name: "50R754U",
     image: "regal.webp",
+    imageFile: "TelevisionImage",
     description: "126 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
     brand: "Regal",
     category: "television",
@@ -39,6 +41,7 @@ const TelevisionData = [
     id: "3",
     name: "50U9600",
     image: "vestel.webp",
+    imageFile: "TelevisionImage",
     description:
       "127 Screen Satellite Receiver 4K Ultra HD Smart LED TV TV-U9600",
     brand: "Vestel",
@@ -58,6 +61,7 @@ const TelevisionData = [
     id: "4",
     name: "SN55UAL402",
     image: "sunny.webp",
+    imageFile: "TelevisionImage",
     description: "139 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
     brand: "Sunny",
     category: "television",
@@ -76,6 +80,7 @@ const TelevisionData = [
     id: "5",
     name: "50AU7000",
     image: "samsung.webp",
+    imageFile: "TelevisionImage",
     description:
       "125 Screen Crystal 4K Ultra HD Smart LED TV with Satellite Receiver",
     brand: "Samsung",
@@ -95,6 +100,7 @@ const TelevisionData = [
     id: "6",
     name: "50UA2063DT",
     image: "toshiba.webp",
+    imageFile: "TelevisionImage",
     description:
       "127 Screen 4K Ultra HD Smart Android LED TV with Satellite Receiver",
     brand: "Toshiba",
@@ -114,6 +120,7 @@ const TelevisionData = [
     id: "7",
     name: "GEU 7830",
     image: "grundig.jpg",
+    imageFile: "TelevisionImage",
     description: "109 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
     brand: "Grundig",
     category: "television",
@@ -132,6 +139,7 @@ const TelevisionData = [
     id: "8",
     name: "50R754UA9",
     image: "regal.png",
+    imageFile: "TelevisionImage",
     description:
       "126 Screen 4K Ultra HD Android Smart LED TV with Satellite Receiver",
     brand: "Regal",
