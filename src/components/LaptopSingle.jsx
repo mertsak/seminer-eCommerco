@@ -8,6 +8,7 @@ import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
 
 import { addBasket } from "../redux/commerceSlice.js";
+import { addFavorites } from "../redux/commerceSlice.js";
 
 import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
@@ -98,6 +99,8 @@ const LaptopSingle = () => {
 
               <div className="heart">
                 <Checkbox
+                  onClick={() => dispatch(addFavorites(SingleLaptop.id))}
+                  checked={SingleLaptop.chechFavorites ? true : false}
                   sx={{
                     "&.Mui-checked": {
                       color: orange[600],

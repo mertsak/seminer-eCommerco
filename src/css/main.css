@@ -613,7 +613,10 @@ footer {
 .basket__page__container {
   display: flex;
   margin: 2rem 3rem;
-  gap: 1rem; }
+  gap: 1rem;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center; }
 
 .basket__products {
   flex: 0.8; }
@@ -708,6 +711,61 @@ footer {
 .mybasket__empty {
   text-align: center;
   font-size: 20px; }
+
+.favorites__inner__container {
+  display: flex;
+  gap: 1rem; }
+  .favorites__inner__container .favorites__top__container {
+    border: 1px solid #c5c5c5;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all 0.2s linear;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    max-width: 250px; }
+  .favorites__inner__container .favorite__inner__container {
+    transition: all 0.2s linear; }
+    .favorites__inner__container .favorite__inner__container:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px; }
+    .favorites__inner__container .favorite__inner__container:hover .favorites__image {
+      transform: scale(1.1); }
+  .favorites__inner__container .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .favorites__inner__container .heart:hover .heart__icon {
+      color: #f27a1a; }
+  .favorites__inner__container .favorites__image {
+    transition: all 0.2s linear; }
+  .favorites__inner__container .favorites__desc {
+    margin-top: 1rem;
+    font-size: 14px; }
+  .favorites__inner__container .rating {
+    margin: 0.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; }
+    .favorites__inner__container .rating .reviews {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem; }
+      .favorites__inner__container .rating .reviews .css-i4bv87-MuiSvgIcon-root {
+        color: #f27a1a;
+        font-size: 1.1rem; }
+  .favorites__inner__container .price {
+    color: #f27a1a; }
+    .favorites__inner__container .price p {
+      font-size: 12px; }
+  .favorites__inner__container .css-ryrseu-MuiRating-root {
+    font-size: 1rem; }
 
 .products__container {
   display: flex;

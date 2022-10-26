@@ -24,6 +24,7 @@ export const commerceSlice = createSlice({
     BestSellsData: BestSellsData,
     OpportunityData: OpportunityData,
     myBasket: [],
+    myFavorites: [],
   },
   reducers: {
     handleMenu: (state) => {
@@ -38,12 +39,12 @@ export const commerceSlice = createSlice({
             state.LaptopData = filterArray;
           }
         });
-      } else {
-        state.LaptopData = LaptopData;
       }
+      // else {
+      //   state.LaptopData = LaptopData;
+      // }
     },
     addBasket: (state, action) => {
-      console.log(action.payload);
       const itemInBasket = state.myBasket.find(
         (item) => item.id === action.payload.id
       );
@@ -72,6 +73,21 @@ export const commerceSlice = createSlice({
       );
       state.myBasket = filtered;
     },
+    addFavorites: (state, action) => {
+      const item = state.LaptopData.find((item) => item.id === action.payload);
+      const newItems = [...state.LaptopData];
+      newItems.find((item) => item.id === action.payload).chechFavorites =
+        !item.chechFavorites;
+
+      if (item.chechFavorites) {
+        state.myFavorites.push(item);
+      } else {
+        const filtered = state.myFavorites.filter(
+          (item) => item.id !== action.payload
+        );
+        state.myFavorites = filtered;
+      }
+    },
   },
 });
 
@@ -83,6 +99,7 @@ export const {
   incrementQuantity,
   decrementQuantity,
   removeBasket,
+  addFavorites,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;

@@ -1,0 +1,80 @@
+.favorites__inner__container {
+  display: flex;
+  gap: 1rem;
+
+  .favorites__top__container {
+    border: 1px solid #c5c5c5;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: $--short-transition;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    max-width: 250px;
+  }
+
+  .favorite__inner__container {
+    transition: $--short-transition;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+    }
+    &:hover .favorites__image {
+      transform: scale(1.1);
+    }
+  }
+
+  .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .heart__icon {
+      color: $--orange-main;
+    }
+  }
+
+  .favorites__image {
+    transition: $--short-transition;
+  }
+
+  .favorites__desc {
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+
+  .rating {
+    margin: 0.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    .reviews {
+      @include flex-align-center;
+      gap: 0.3rem;
+
+      .css-i4bv87-MuiSvgIcon-root {
+        color: $--orange-main;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .price {
+    color: $--orange-main;
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .css-ryrseu-MuiRating-root {
+    font-size: 1rem;
+  }
+}

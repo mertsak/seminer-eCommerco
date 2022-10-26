@@ -18,6 +18,7 @@ import PhoneSinglePage from "./pages/PhoneSinglePage";
 import MonitorSinglePage from "./pages/MonitorSinglePage";
 import HeadPhoneSinglePage from "./pages/HeadPhoneSinglePage";
 import MyBasketPage from "./pages/MyBasketPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
   return (
@@ -39,13 +40,11 @@ function App() {
 
         {/*  */}
 
-
         {/* headphonePage */}
         <Route path="/headphone" element={<HeadPhonePage />} />
         <Route path="/headphone/:uuid" element={<HeadPhoneSinglePage />} />
 
         {/*  */}
-
 
         {/* televisionPage */}
         <Route path="/television" element={<TelevisionPage />} />
@@ -61,9 +60,17 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
+        {/* favoritePage */}
+
+        
+
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/favorites/laptop/:uuid" element={<LaptopSinglePage />} />
+
+        
+        {/*  */}
+
         <Route path="/myBasket" element={<MyBasketPage />} />
-
-
       </Routes>
       <Footer></Footer>
     </>

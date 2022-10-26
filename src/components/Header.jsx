@@ -89,10 +89,10 @@ const Header = () => {
             )}
           </div>
 
-          <a className="favorites" href="#/">
+          <Link className="favorites" to="/favorites">
             <FavoriteBorderOutlinedIcon className="favorites__icon"></FavoriteBorderOutlinedIcon>
             <span>Favorites</span>
-          </a>
+          </Link>
 
           <Link className="count__con" to="/myBasket">
             <span className="count__text">My Basket</span>

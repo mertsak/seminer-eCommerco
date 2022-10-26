@@ -3,6 +3,9 @@
     display: flex;
     margin: 2rem 3rem;
     gap: 1rem;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
   }
 
   &__products {

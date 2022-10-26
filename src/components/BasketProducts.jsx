@@ -29,7 +29,6 @@ const BasketProducts = () => {
         <>
           {myBasket.map((x) => (
             <div className="basket__product__container">
-              {console.log(x)}
               <img
                 src={require(`../assets/${x.imageFile}/${x.image}`)}
                 alt=""

@@ -17,6 +17,7 @@ const LaptopData = [
     ssdCapacity: "256 GB",
     displayCard: "Internal Card",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const LaptopData = [
     ssdCapacity: "500 GB",
     displayCard: "Nvidia GeForce RTX3060",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 3,
@@ -56,6 +58,7 @@ const LaptopData = [
     ssdCapacity: "512 GB",
     displayCard: "Nvidia GeForce RTX 3050 Ti",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 4,
@@ -74,6 +77,7 @@ const LaptopData = [
     ssdCapacity: "4 TB",
     displayCard: "Nvidia GeForce RTX 3080 Ti",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 5,
@@ -92,6 +96,7 @@ const LaptopData = [
     ssdCapacity: "500 GB",
     displayCard: "Nvidia GeForce GTX 1650",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 6,
@@ -111,6 +116,7 @@ const LaptopData = [
     ssdCapacity: "512 GB",
     displayCard: "Internal Card",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 7,
@@ -130,6 +136,7 @@ const LaptopData = [
     ssdCapacity: "512 GB",
     displayCard: "Nvidia GeForce GTX1650 Ti",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
   {
     id: 8,
@@ -149,6 +156,7 @@ const LaptopData = [
     ssdCapacity: "256 GB",
     displayCard: "Nvidia GeForce GTX1650",
     warrantyType: "Official Distributor",
+    chechFavorites: false,
   },
 ];
 
