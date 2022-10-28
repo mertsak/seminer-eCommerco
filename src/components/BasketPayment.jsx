@@ -12,8 +12,6 @@ const BasketPayment = () => {
 
   return (
     <div className="payment__container">
-      <button className="payment__btn">Confirm Cart</button>
-
       <div className="payment__info">
         <h2>Order Summary</h2>
         <hr className="line" />
@@ -22,6 +20,8 @@ const BasketPayment = () => {
           <span className="price__count">${getBasketTotal()}</span>
         </div>
       </div>
+
+      <button className="payment__btn">Confirm Cart</button>
     </div>
   );
 };

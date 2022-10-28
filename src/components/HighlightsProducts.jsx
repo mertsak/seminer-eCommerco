@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 // Import Swiper React components
@@ -12,6 +12,8 @@ import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 
+import { addFavorites } from "../redux/commerceSlice";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -20,6 +22,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 const HighlightsProducts = () => {
+  const dispatch = useDispatch();
   const HighlightsData = useSelector((state) => state.commerce.HighlightsData);
 
   const truncate = (str) => {
@@ -78,6 +81,8 @@ const HighlightsProducts = () => {
                   <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
                 </p>
 
+                {console.log(x.chechFavorites)}
+
                 <div className="product__price">
                   <CurrencyFormat
                     value={x.price}
@@ -90,6 +95,7 @@ const HighlightsProducts = () => {
             </Link>
             <div className="heart">
               <Checkbox
+                onClick={() => dispatch(addFavorites(x.favoriteId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],

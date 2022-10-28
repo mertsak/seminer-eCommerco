@@ -103,6 +103,7 @@ const MonitorSingle = () => {
                       color: orange[600],
                     },
                   }}
+                  checked={SingleMonitor.chechFavorites ? true : false}
                   icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                 />

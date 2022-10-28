@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import CurrencyFormat from "react-currency-format";
 import { orange } from "@mui/material/colors";
@@ -8,8 +8,10 @@ import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import Rating from "@mui/material/Rating";
+import { addFavorites } from "../redux/commerceSlice.js";
 
 const Monitor = () => {
+  const dispatch = useDispatch();
   const Monitors = useSelector((state) => state.commerce.MonitorData);
 
   const truncate = (str) => {
@@ -20,7 +22,6 @@ const Monitor = () => {
       <div className="products__inner__container">
         {Monitors.map((x) => (
           <div className="product__top__container">
-
             <Link className="product__inner__container" to={`${x.id}`}>
               <img
                 className="product__image"
@@ -50,27 +51,26 @@ const Monitor = () => {
                   />
                 </div>
               </div>
-
-
             </Link>
 
             <div className="heart">
               <Checkbox
+                onClick={() => dispatch(addFavorites(x.favoriteId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],
                   },
                 }}
+                checked={x.chechFavorites ? true : false}
                 icon={<FavoriteBorder />}
                 checkedIcon={<Favorite />}
               />
             </div>
-
           </div>
         ))}
       </div>
     </>
   );
-}
+};
 
-export default Monitor
+export default Monitor;

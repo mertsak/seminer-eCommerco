@@ -107,6 +107,7 @@ const TelevisionSingle = () => {
                       color: orange[600],
                     },
                   }}
+                  checked={SingleTelevision.chechFavorites ? true : false}
                   icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                 />

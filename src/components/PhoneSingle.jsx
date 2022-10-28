@@ -101,6 +101,7 @@ const PhoneSingle = () => {
                       color: orange[600],
                     },
                   }}
+                  checked={SinglePhone.chechFavorites ? true : false}
                   icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                 />

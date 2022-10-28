@@ -74,16 +74,30 @@ export const commerceSlice = createSlice({
       state.myBasket = filtered;
     },
     addFavorites: (state, action) => {
-      const item = state.LaptopData.find((item) => item.id === action.payload);
-      const newItems = [...state.LaptopData];
-      newItems.find((item) => item.id === action.payload).chechFavorites =
-        !item.chechFavorites;
+      const allFavoritesItem = state.LaptopData.concat(
+        state.PhoneData,
+        state.TelevisionData,
+        state.MonitorData,
+        state.HeadPhoneData,
+      );
+
+      // allFavoritesItem.find((item) => console.log(item.favoriteId));
+      // console.log(action.payload);
+
+      const item = allFavoritesItem.find(
+        (item) => item.favoriteId === action.payload
+      );
+      const newItems = [...allFavoritesItem];
+
+      newItems.find(
+        (item) => item.favoriteId === action.payload
+      ).chechFavorites = !item.chechFavorites;
 
       if (item.chechFavorites) {
         state.myFavorites.push(item);
       } else {
         const filtered = state.myFavorites.filter(
-          (item) => item.id !== action.payload
+          (item) => item.favoriteId !== action.payload
         );
         state.myFavorites = filtered;
       }

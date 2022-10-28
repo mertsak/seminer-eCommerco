@@ -62,12 +62,22 @@ function App() {
 
         {/* favoritePage */}
 
-        
-
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/favorites/laptop/:uuid" element={<LaptopSinglePage />} />
+        <Route path="/favorites/phone/:uuid" element={<PhoneSinglePage />} />
+        <Route
+          path="/favorites/headphone/:uuid"
+          element={<HeadPhoneSinglePage />}
+        />
+        <Route
+          path="/favorites/television/:uuid"
+          element={<TelevisionSinglePage />}
+        />
+        <Route
+          path="/favorites/monitor/:uuid"
+          element={<MonitorSinglePage />}
+        />
 
-        
         {/*  */}
 
         <Route path="/myBasket" element={<MyBasketPage />} />

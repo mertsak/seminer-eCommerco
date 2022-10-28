@@ -1,6 +1,8 @@
 .favorites__inner__container {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 
   .favorites__top__container {
     border: 1px solid #c5c5c5;

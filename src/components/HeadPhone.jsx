@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import CurrencyFormat from "react-currency-format";
 import { orange } from "@mui/material/colors";
@@ -8,8 +8,10 @@ import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import Rating from "@mui/material/Rating";
+import { addFavorites } from "../redux/commerceSlice.js";
 
 const HeadPhone = () => {
+  const dispatch = useDispatch();
 
   const HeadPhones = useSelector((state) => state.commerce.HeadPhoneData);
 
@@ -49,16 +51,17 @@ const HeadPhone = () => {
                   />
                 </div>
               </div>
-
             </Link>
 
             <div className="heart">
               <Checkbox
+                onClick={() => dispatch(addFavorites(x.favoriteId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],
                   },
                 }}
+                checked={x.chechFavorites ? true : false}
                 icon={<FavoriteBorder />}
                 checkedIcon={<Favorite />}
               />
@@ -68,6 +71,6 @@ const HeadPhone = () => {
       </div>
     </>
   );
-}
+};
 
-export default HeadPhone
+export default HeadPhone;

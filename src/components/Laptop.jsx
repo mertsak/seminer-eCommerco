@@ -54,7 +54,7 @@ const Laptop = () => {
             </Link>
             <div className="heart">
               <Checkbox
-                onClick={() => dispatch(addFavorites(x.id))}
+                onClick={() => dispatch(addFavorites(x.favoriteId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],

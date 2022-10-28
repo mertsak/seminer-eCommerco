@@ -9,6 +9,7 @@ const OpportunityData = [
     brand: "Asus",
     category: "monitor",
     price: 599,
+    favoriteId: 39,
   },
   {
     id: "8",
@@ -19,6 +20,7 @@ const OpportunityData = [
     brand: "Monster",
     category: "monitor",
     price: 899,
+    favoriteId: 40,
   },
 
   {
@@ -30,6 +32,7 @@ const OpportunityData = [
     brand: "Reeder",
     category: "phone",
     price: 399,
+    favoriteId: 11,
   },
   {
     id: "4",
@@ -40,6 +43,7 @@ const OpportunityData = [
     brand: "Realme",
     category: "phone",
     price: 599,
+    favoriteId: 12,
   },
 
   {
@@ -51,6 +55,7 @@ const OpportunityData = [
     brand: "Hp",
     category: "laptop",
     price: 899,
+    favoriteId: 3,
   },
   {
     id: "4",
@@ -61,6 +66,7 @@ const OpportunityData = [
     brand: "Asus",
     category: "laptop",
     price: 5999,
+    favoriteId: 4,
   },
 
   {
@@ -72,16 +78,19 @@ const OpportunityData = [
     brand: "Philips",
     category: "headphone",
     price: 99,
+    favoriteId: 18,
   },
   {
-    id: "3",
-    name: "T500",
-    image: "jbl.webp",
-    imageFile: "HeadPhoneImage",
-    description: "Black Wired On-Ear Headphones",
-    brand: "JBL",
-    category: "headphone",
-    price: 149,
+    id: 5,
+    name: "50AU7000",
+    image: "samsung.webp",
+    imageFile: "TelevisionImage",
+    description:
+      "125 Screen Crystal 4K Ultra HD Smart LED TV with Satellite Receiver",
+    brand: "Samsung",
+    category: "television",
+    price: 899,
+    favoriteId: 29,
   },
 ];
 

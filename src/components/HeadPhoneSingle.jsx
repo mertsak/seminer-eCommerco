@@ -107,6 +107,7 @@ const HeadPhoneSingle = () => {
                       color: orange[600],
                     },
                   }}
+                  checked={SingleHeadPhone.chechFavorites ? true : false}
                   icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                 />

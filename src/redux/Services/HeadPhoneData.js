@@ -1,6 +1,6 @@
 const HeadPhoneData = [
   {
-    id: "1",
+    id: 1,
     name: "Wh-ch510",
     image: "sony.webp",
     imageFile: "HeadPhoneImage",
@@ -17,9 +17,11 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 17,
   },
   {
-    id: "2",
+    id: 2,
     name: "Tah4105",
     image: "philips.webp",
     imageFile: "HeadPhoneImage",
@@ -36,9 +38,11 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 18,
   },
   {
-    id: "3",
+    id: 3,
     name: "T500",
     image: "jbl.webp",
     imageFile: "HeadPhoneImage",
@@ -55,10 +59,12 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 19,
   },
 
   {
-    id: "4",
+    id: 4,
     name: "Stellia High-end",
     image: "focal.webp",
     imageFile: "HeadPhoneImage",
@@ -75,10 +81,12 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 20,
   },
 
   {
-    id: "5",
+    id: 5,
     name: "Hd 800 S",
     image: "sennheiser.jpg",
     imageFile: "HeadPhoneImage",
@@ -95,10 +103,12 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 21,
   },
 
   {
-    id: "6",
+    id: 6,
     name: "T1 32 Ohm",
     image: "beyerDynamic.jpg",
     imageFile: "HeadPhoneImage",
@@ -115,10 +125,12 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 22,
   },
 
   {
-    id: "7",
+    id: 7,
     name: "Airpods Max",
     image: "apple.webp",
     imageFile: "HeadPhoneImage",
@@ -135,10 +147,12 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Green",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 23,
   },
 
   {
-    id: "8",
+    id: 8,
     name: "Rog Delta S",
     image: "asus.jpg",
     imageFile: "HeadPhoneImage",
@@ -155,6 +169,8 @@ const HeadPhoneData = [
     headphoneModel: "On-Ear Full Length",
     color: "Black",
     microphone: "There Is",
+    chechFavorites: false,
+    favoriteId: 24,
   },
 ];
 
