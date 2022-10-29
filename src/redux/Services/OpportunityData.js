@@ -9,6 +9,7 @@ const OpportunityData = [
     brand: "Asus",
     category: "monitor",
     price: 599,
+    chechFavorites: false,
     favoriteId: 39,
   },
   {
@@ -20,6 +21,7 @@ const OpportunityData = [
     brand: "Monster",
     category: "monitor",
     price: 899,
+    chechFavorites: false,
     favoriteId: 40,
   },
 
@@ -32,6 +34,7 @@ const OpportunityData = [
     brand: "Reeder",
     category: "phone",
     price: 399,
+    chechFavorites: false,
     favoriteId: 11,
   },
   {
@@ -43,6 +46,7 @@ const OpportunityData = [
     brand: "Realme",
     category: "phone",
     price: 599,
+    chechFavorites: false,
     favoriteId: 12,
   },
 
@@ -55,6 +59,7 @@ const OpportunityData = [
     brand: "Hp",
     category: "laptop",
     price: 899,
+    chechFavorites: false,
     favoriteId: 3,
   },
   {
@@ -66,6 +71,7 @@ const OpportunityData = [
     brand: "Asus",
     category: "laptop",
     price: 5999,
+    chechFavorites: false,
     favoriteId: 4,
   },
 
@@ -78,6 +84,7 @@ const OpportunityData = [
     brand: "Philips",
     category: "headphone",
     price: 99,
+    chechFavorites: false,
     favoriteId: 18,
   },
   {
@@ -90,6 +97,7 @@ const OpportunityData = [
     brand: "Samsung",
     category: "television",
     price: 899,
+    chechFavorites: false,
     favoriteId: 29,
   },
 ];

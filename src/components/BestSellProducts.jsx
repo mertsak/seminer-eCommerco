@@ -99,6 +99,7 @@ const Highlights = () => {
                     color: orange[600],
                   },
                 }}
+                checked={x.chechFavorites ? true : false}
                 icon={<FavoriteBorder />}
                 checkedIcon={<Favorite />}
               />

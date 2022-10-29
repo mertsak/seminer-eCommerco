@@ -8,6 +8,7 @@ const BestSellsData = [
     brand: "Onvo",
     category: "television",
     price: 499,
+    chechFavorites: false,
     favoriteId: 25,
   },
   {
@@ -19,6 +20,7 @@ const BestSellsData = [
     brand: "Regal",
     category: "television",
     price: 699,
+    chechFavorites: false,
     favoriteId: 26,
   },
   {
@@ -30,6 +32,7 @@ const BestSellsData = [
     brand: "JBL",
     category: "headphone",
     price: 149,
+    chechFavorites: false,
     favoriteId: 19,
   },
 
@@ -42,6 +45,7 @@ const BestSellsData = [
     brand: "Focal",
     category: "headphone",
     price: 1999,
+    chechFavorites: false,
     favoriteId: 20,
   },
   {
@@ -53,6 +57,7 @@ const BestSellsData = [
     brand: "Philips",
     category: "monitor",
     price: 369,
+    chechFavorites: false,
     favoriteId: 35,
   },
   {
@@ -64,6 +69,7 @@ const BestSellsData = [
     brand: "Gamebooster",
     category: "monitor",
     price: 339,
+    chechFavorites: false,
     favoriteId: 36,
   },
   {
@@ -75,6 +81,7 @@ const BestSellsData = [
     brand: "Apple",
     category: "laptop",
     price: 999,
+    chechFavorites: false,
     favoriteId: 1,
   },
   {
@@ -87,6 +94,7 @@ const BestSellsData = [
     brand: "Casper",
     category: "laptop",
     price: 1199,
+    chechFavorites: false,
     favoriteId: 2,
   },
 ];

@@ -79,19 +79,34 @@ export const commerceSlice = createSlice({
         state.TelevisionData,
         state.MonitorData,
         state.HeadPhoneData,
+        state.HighlightsData,
+        state.BestSellsData,
+        state.OpportunityData
       );
-
-      // allFavoritesItem.find((item) => console.log(item.favoriteId));
-      // console.log(action.payload);
 
       const item = allFavoritesItem.find(
         (item) => item.favoriteId === action.payload
       );
+
       const newItems = [...allFavoritesItem];
 
-      newItems.find(
-        (item) => item.favoriteId === action.payload
-      ).chechFavorites = !item.chechFavorites;
+      // newItems.map(
+      //   (item) => item.favoriteId === action.payload
+      // ).chechFavorites = !item.chechFavorites;
+
+      newItems.map((item) => {
+        if (item.favoriteId === action.payload) {
+          item.chechFavorites = !item.chechFavorites;
+        }
+      });
+
+      // newItems.find((item) => {
+      //   if (item.favoriteId === action.payload) {
+      //     console.log(item.chechFavorites);
+      //     console.log(item.favoriteId);
+      //     console.log(action.payload);
+      //   }
+      // });
 
       if (item.chechFavorites) {
         state.myFavorites.push(item);
