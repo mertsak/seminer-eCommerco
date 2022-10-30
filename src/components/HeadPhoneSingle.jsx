@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import CurrencyFormat from "react-currency-format";
@@ -7,11 +7,13 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
 import { addBasket } from "../redux/commerceSlice.js";
+import { addFavorites } from "../redux/commerceSlice.js";
 
 import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const HeadPhoneSingle = () => {
+  const [addedItem, setAddedItem] = useState(false);
   const dispatch = useDispatch();
   const params = useParams();
   const SingleHeadPhone = useSelector(
@@ -25,7 +27,9 @@ const HeadPhoneSingle = () => {
     imageFile,
     description,
     brand,
-    price
+    category,
+    price,
+    productUnicId
   ) => {
     dispatch(
       addBasket({
@@ -35,9 +39,17 @@ const HeadPhoneSingle = () => {
         imageFile: imageFile,
         description: description,
         brand: brand,
+        category: category,
         price: price,
+        productUnicId: productUnicId,
       })
     );
+
+    setAddedItem(true);
+
+    setTimeout(() => {
+      setAddedItem(false);
+    }, 1500);
   };
 
   return (
@@ -91,16 +103,23 @@ const HeadPhoneSingle = () => {
                       SingleHeadPhone.imageFile,
                       SingleHeadPhone.description,
                       SingleHeadPhone.brand,
-                      SingleHeadPhone.price
+                      SingleHeadPhone.category,
+                      SingleHeadPhone.price,
+                      SingleHeadPhone.productUnicId
                     )
                   }
-                  className="add__btn"
+                  className={addedItem ? "added" : "add__btn"}
                 >
-                  Add Basket
+                  {addedItem ? "Added" : "Add to Basket"}
                 </button>
               </div>
 
-              <div className="heart">
+              <div
+                className="heart"
+                onClick={() =>
+                  dispatch(addFavorites(SingleHeadPhone.productUnicId))
+                }
+              >
                 <Checkbox
                   sx={{
                     "&.Mui-checked": {

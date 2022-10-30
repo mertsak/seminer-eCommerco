@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import CurrencyFormat from "react-currency-format";
@@ -7,10 +7,12 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
 import { addBasket } from "../redux/commerceSlice.js";
+import { addFavorites } from "../redux/commerceSlice.js";
 import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const PhoneSingle = () => {
+  const [addedItem, setAddedItem] = useState(false);
   const dispatch = useDispatch();
   const params = useParams();
   const SinglePhone = useSelector(
@@ -24,7 +26,9 @@ const PhoneSingle = () => {
     imageFile,
     description,
     brand,
-    price
+    category,
+    price,
+    productUnicId
   ) => {
     dispatch(
       addBasket({
@@ -34,9 +38,16 @@ const PhoneSingle = () => {
         imageFile: imageFile,
         description: description,
         brand: brand,
+        category: category,
         price: price,
+        productUnicId: productUnicId,
       })
     );
+    setAddedItem(true);
+
+    setTimeout(() => {
+      setAddedItem(false);
+    }, 1500);
   };
 
   return (
@@ -85,16 +96,23 @@ const PhoneSingle = () => {
                       SinglePhone.imageFile,
                       SinglePhone.description,
                       SinglePhone.brand,
-                      SinglePhone.price
+                      SinglePhone.category,
+                      SinglePhone.price,
+                      SinglePhone.productUnicId
                     )
                   }
-                  className="add__btn"
+                  className={addedItem ? "added" : "add__btn"}
                 >
-                  Add Basket
+                  {addedItem ? "Added" : "Add to Basket"}
                 </button>
               </div>
 
-              <div className="heart">
+              <div
+                className="heart"
+                onClick={() =>
+                  dispatch(addFavorites(SinglePhone.productUnicId))
+                }
+              >
                 <Checkbox
                   sx={{
                     "&.Mui-checked": {

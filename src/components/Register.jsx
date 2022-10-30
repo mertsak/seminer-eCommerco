@@ -7,7 +7,6 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 const Register = () => {
-  
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -85,13 +84,13 @@ const Register = () => {
             value={formik.values.passwordConfirmation}
             className={
               formik.touched.passwordConfirmation &&
-                formik.errors.passwordConfirmation
+              formik.errors.passwordConfirmation
                 ? "red"
                 : null
             }
           />
           {formik.touched.passwordConfirmation &&
-            formik.errors.passwordConfirmation ? (
+          formik.errors.passwordConfirmation ? (
             <div className="error">{formik.errors.passwordConfirmation}</div>
           ) : null}
 
@@ -120,8 +119,8 @@ const Register = () => {
 
         <hr className="line" />
 
-        <Link to="/register" className="create__btn">
-          Create Your MertShop Account
+        <Link to="/login" className="create__btn">
+          If You Have a MertShop Account Login
         </Link>
       </div>
     </div>

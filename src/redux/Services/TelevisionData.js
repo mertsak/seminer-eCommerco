@@ -18,7 +18,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "HD Ready",
     chechFavorites: false,
-    favoriteId: 25,
+    productUnicId: 25,
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 26,
+    productUnicId: 26,
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 27,
+    productUnicId: 27,
   },
   {
     id: 4,
@@ -82,7 +82,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 28,
+    productUnicId: 28,
   },
   {
     id: 5,
@@ -104,7 +104,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 29,
+    productUnicId: 29,
   },
   {
     id: 6,
@@ -126,7 +126,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 30,
+    productUnicId: 30,
   },
   {
     id: 7,
@@ -147,7 +147,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 31,
+    productUnicId: 31,
   },
   {
     id: 8,
@@ -169,7 +169,7 @@ const TelevisionData = [
     builtInSatelliteReceiver: "There is",
     ımageQuality: "4K Ultra HD",
     chechFavorites: false,
-    favoriteId: 32,
+    productUnicId: 32,
   },
 ];
 

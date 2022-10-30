@@ -31,22 +31,23 @@ export const commerceSlice = createSlice({
       state.menu = !state.menu;
     },
     handleFilter: (state, action) => {
-      if (action.payload.Status) {
-        LaptopData.filter((x) => {
-          if (x.brand === action.payload.Name) {
-            const filterArray = [];
+      console.log(action.payload);
+      const filterArray = [];
+      LaptopData.filter((x) => {
+        action.payload.brands.map((y) => {
+          if (x.brand === y) {
             filterArray.push(x);
             state.LaptopData = filterArray;
           }
         });
-      }
-      // else {
-      //   state.LaptopData = LaptopData;
-      // }
+        // if (action.payload.brands.length === 0) {
+        //   state.LaptopData = LaptopData;
+        // }
+      });
     },
     addBasket: (state, action) => {
       const itemInBasket = state.myBasket.find(
-        (item) => item.id === action.payload.id
+        (item) => item.productUnicId === action.payload.productUnicId
       );
       if (itemInBasket) {
         itemInBasket.quantity++;
@@ -55,11 +56,15 @@ export const commerceSlice = createSlice({
       }
     },
     incrementQuantity: (state, action) => {
-      const item = state.myBasket.find((item) => item.id === action.payload);
+      const item = state.myBasket.find(
+        (item) => item.productUnicId === action.payload
+      );
       item.quantity++;
     },
     decrementQuantity: (state, action) => {
-      const item = state.myBasket.find((item) => item.id === action.payload);
+      const item = state.myBasket.find(
+        (item) => item.productUnicId === action.payload
+      );
 
       if (item.quantity === 1) {
         item.quantity = 1;
@@ -69,7 +74,7 @@ export const commerceSlice = createSlice({
     },
     removeBasket: (state, action) => {
       const filtered = state.myBasket.filter(
-        (item) => item.id !== action.payload
+        (item) => item.productUnicId !== action.payload
       );
       state.myBasket = filtered;
     },
@@ -85,25 +90,25 @@ export const commerceSlice = createSlice({
       );
 
       const item = allFavoritesItem.find(
-        (item) => item.favoriteId === action.payload
+        (item) => item.productUnicId === action.payload
       );
 
       const newItems = [...allFavoritesItem];
 
       // newItems.map(
-      //   (item) => item.favoriteId === action.payload
+      //   (item) => item.productUnicId === action.payload
       // ).chechFavorites = !item.chechFavorites;
 
       newItems.map((item) => {
-        if (item.favoriteId === action.payload) {
+        if (item.productUnicId === action.payload) {
           item.chechFavorites = !item.chechFavorites;
         }
       });
 
       // newItems.find((item) => {
-      //   if (item.favoriteId === action.payload) {
+      //   if (item.productUnicId === action.payload) {
       //     console.log(item.chechFavorites);
-      //     console.log(item.favoriteId);
+      //     console.log(item.productUnicId);
       //     console.log(action.payload);
       //   }
       // });
@@ -112,7 +117,7 @@ export const commerceSlice = createSlice({
         state.myFavorites.push(item);
       } else {
         const filtered = state.myFavorites.filter(
-          (item) => item.favoriteId !== action.payload
+          (item) => item.productUnicId !== action.payload
         );
         state.myFavorites = filtered;
       }

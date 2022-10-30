@@ -619,7 +619,6 @@ footer {
   margin: 2rem 3rem;
   gap: 2rem;
   min-height: 300px;
-  align-items: center;
   justify-content: center; }
 
 .basket__products {
@@ -912,6 +911,16 @@ footer {
           transition: all 0.2s linear; }
           .product__single__info .single__basket .basket .add__btn:hover {
             background-color: #ff8b39; }
+        .product__single__info .single__basket .basket .added {
+          background-color: #f27a1a;
+          padding: 0.7rem 0.8rem;
+          border-radius: 0.3rem;
+          width: 100%;
+          color: white;
+          transition: all 0.2s linear;
+          background-color: #4AC348; }
+          .product__single__info .single__basket .basket .added:hover {
+            background-color: #81c480; }
       .product__single__info .single__basket .heart {
         border: 1px solid #dddddd;
         border-radius: 0.3rem;

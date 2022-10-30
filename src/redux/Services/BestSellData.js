@@ -9,7 +9,7 @@ const BestSellsData = [
     category: "television",
     price: 499,
     chechFavorites: false,
-    favoriteId: 25,
+    productUnicId: 25,
   },
   {
     id: "2",
@@ -21,7 +21,7 @@ const BestSellsData = [
     category: "television",
     price: 699,
     chechFavorites: false,
-    favoriteId: 26,
+    productUnicId: 26,
   },
   {
     id: "3",
@@ -33,7 +33,7 @@ const BestSellsData = [
     category: "headphone",
     price: 149,
     chechFavorites: false,
-    favoriteId: 19,
+    productUnicId: 19,
   },
 
   {
@@ -46,7 +46,7 @@ const BestSellsData = [
     category: "headphone",
     price: 1999,
     chechFavorites: false,
-    favoriteId: 20,
+    productUnicId: 20,
   },
   {
     id: "3",
@@ -58,7 +58,7 @@ const BestSellsData = [
     category: "monitor",
     price: 369,
     chechFavorites: false,
-    favoriteId: 35,
+    productUnicId: 35,
   },
   {
     id: "4",
@@ -70,7 +70,7 @@ const BestSellsData = [
     category: "monitor",
     price: 339,
     chechFavorites: false,
-    favoriteId: 36,
+    productUnicId: 36,
   },
   {
     id: "1",
@@ -82,7 +82,7 @@ const BestSellsData = [
     category: "laptop",
     price: 999,
     chechFavorites: false,
-    favoriteId: 1,
+    productUnicId: 1,
   },
   {
     id: "2",
@@ -95,7 +95,7 @@ const BestSellsData = [
     category: "laptop",
     price: 1199,
     chechFavorites: false,
-    favoriteId: 2,
+    productUnicId: 2,
   },
 ];
 

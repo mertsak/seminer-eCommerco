@@ -18,7 +18,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 17,
+    productUnicId: 17,
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 18,
+    productUnicId: 18,
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 19,
+    productUnicId: 19,
   },
 
   {
@@ -82,7 +82,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 20,
+    productUnicId: 20,
   },
 
   {
@@ -104,7 +104,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 21,
+    productUnicId: 21,
   },
 
   {
@@ -126,7 +126,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 22,
+    productUnicId: 22,
   },
 
   {
@@ -148,7 +148,7 @@ const HeadPhoneData = [
     color: "Green",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 23,
+    productUnicId: 23,
   },
 
   {
@@ -170,7 +170,7 @@ const HeadPhoneData = [
     color: "Black",
     microphone: "There Is",
     chechFavorites: false,
-    favoriteId: 24,
+    productUnicId: 24,
   },
 ];
 

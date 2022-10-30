@@ -18,7 +18,7 @@ const MonitorData = [
     panelType: "VA",
     Imagingtechnology: "LED",
     chechFavorites: false,
-    favoriteId: 33,
+    productUnicId: 33,
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const MonitorData = [
     panelType: "IPS",
     Imagingtechnology: "IPS",
     chechFavorites: false,
-    favoriteId: 34,
+    productUnicId: 34,
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const MonitorData = [
     panelType: "VA",
     Imagingtechnology: "VA",
     chechFavorites: false,
-    favoriteId: 35,
+    productUnicId: 35,
   },
   {
     id: 4,
@@ -82,7 +82,7 @@ const MonitorData = [
     panelType: "AH IPS",
     Imagingtechnology: "LED",
     chechFavorites: false,
-    favoriteId: 36,
+    productUnicId: 36,
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ const MonitorData = [
     panelType: "IPS",
     Imagingtechnology: "IPS",
     chechFavorites: false,
-    favoriteId: 37,
+    productUnicId: 37,
   },
   {
     id: 6,
@@ -124,7 +124,7 @@ const MonitorData = [
     panelType: "IPS",
     Imagingtechnology: "LED",
     chechFavorites: false,
-    favoriteId: 38,
+    productUnicId: 38,
   },
   {
     id: 7,
@@ -146,7 +146,7 @@ const MonitorData = [
     panelType: "VA",
     Imagingtechnology: "LED",
     chechFavorites: false,
-    favoriteId: 39,
+    productUnicId: 39,
   },
   {
     id: 8,
@@ -167,7 +167,7 @@ const MonitorData = [
     panelType: "MVA",
     Imagingtechnology: "LED",
     chechFavorites: false,
-    favoriteId: 40,
+    productUnicId: 40,
   },
 ];
 

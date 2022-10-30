@@ -18,7 +18,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6 inches and up",
     chechFavorites: false,
-    favoriteId: 9,
+    productUnicId: 9,
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6.5 inches and up",
     chechFavorites: false,
-    favoriteId: 10,
+    productUnicId: 10,
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6 inches and up",
     chechFavorites: false,
-    favoriteId: 11,
+    productUnicId: 11,
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6 inches and up",
     chechFavorites: false,
-    favoriteId: 12,
+    productUnicId: 12,
   },
   {
     id: 5,
@@ -102,7 +102,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6 inches and up",
     chechFavorites: false,
-    favoriteId: 13,
+    productUnicId: 13,
   },
   {
     id: 6,
@@ -123,7 +123,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6.5 inches and up",
     chechFavorites: false,
-    favoriteId: 14,
+    productUnicId: 14,
   },
   {
     id: 7,
@@ -144,7 +144,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6 inches and up",
     chechFavorites: false,
-    favoriteId: 15,
+    productUnicId: 15,
   },
   {
     id: 8,
@@ -165,7 +165,7 @@ const PhoneData = [
     Links: "Wi-Fi",
     screenSize: "6.8 inches and up",
     chechFavorites: false,
-    favoriteId: 16,
+    productUnicId: 16,
   },
 ];
 

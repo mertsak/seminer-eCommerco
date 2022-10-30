@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable no-implied-eval */
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import CurrencyFormat from "react-currency-format";
@@ -14,6 +15,8 @@ import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const LaptopSingle = () => {
+  const [addedItem, setAddedItem] = useState(false);
+
   const dispatch = useDispatch();
   const params = useParams();
   const SingleLaptop = useSelector(
@@ -27,7 +30,9 @@ const LaptopSingle = () => {
     imageFile,
     description,
     brand,
-    price
+    category,
+    price,
+    productUnicId
   ) => {
     dispatch(
       addBasket({
@@ -37,9 +42,17 @@ const LaptopSingle = () => {
         imageFile: imageFile,
         description: description,
         brand: brand,
+        category: category,
         price: price,
+        productUnicId: productUnicId,
       })
     );
+
+    setAddedItem(true);
+
+    setTimeout(() => {
+      setAddedItem(false);
+    }, 1500);
   };
 
   return (
@@ -88,18 +101,20 @@ const LaptopSingle = () => {
                       SingleLaptop.imageFile,
                       SingleLaptop.description,
                       SingleLaptop.brand,
-                      SingleLaptop.price
+                      SingleLaptop.category,
+                      SingleLaptop.price,
+                      SingleLaptop.productUnicId
                     )
                   }
-                  className="add__btn"
+                  className={addedItem ? "added" : "add__btn"}
                 >
-                  Add Basket
+                  {addedItem ? "Added" : "Add to Basket"}
                 </button>
               </div>
 
               <div className="heart">
                 <Checkbox
-                  onClick={() => dispatch(addFavorites(SingleLaptop.id))}
+                  onClick={() => dispatch(addFavorites(SingleLaptop.productUnicId))}
                   checked={SingleLaptop.chechFavorites ? true : false}
                   sx={{
                     "&.Mui-checked": {

@@ -57,11 +57,14 @@ function App() {
 
         {/*  */}
 
+        {/* login , register */}
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* favoritePage */}
+        {/*  */}
 
+        {/* favoritePage */}
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/favorites/laptop/:uuid" element={<LaptopSinglePage />} />
         <Route path="/favorites/phone/:uuid" element={<PhoneSinglePage />} />
@@ -77,10 +80,22 @@ function App() {
           path="/favorites/monitor/:uuid"
           element={<MonitorSinglePage />}
         />
-
         {/*  */}
 
+        {/* myBasketPage */}
         <Route path="/myBasket" element={<MyBasketPage />} />
+        <Route path="/myBasket/laptop/:uuid" element={<LaptopSinglePage />} />
+        <Route path="/myBasket/phone/:uuid" element={<PhoneSinglePage />} />
+        <Route
+          path="/myBasket/headphone/:uuid"
+          element={<HeadPhoneSinglePage />}
+        />
+        <Route
+          path="/myBasket/television/:uuid"
+          element={<TelevisionSinglePage />}
+        />
+        <Route path="/myBasket/monitor/:uuid" element={<MonitorSinglePage />} />
+        {/*  */}
       </Routes>
       <Footer></Footer>
     </>

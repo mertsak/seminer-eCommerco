@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import CurrencyFormat from "react-currency-format";
@@ -8,10 +8,12 @@ import Favorite from "@mui/icons-material/Favorite";
 import { orange } from "@mui/material/colors";
 import { useSelector, useDispatch } from "react-redux";
 import { addBasket } from "../redux/commerceSlice.js";
+import { addFavorites } from "../redux/commerceSlice.js";
 
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const MonitorSingle = () => {
+  const [addedItem, setAddedItem] = useState(false);
   const dispatch = useDispatch();
 
   const params = useParams();
@@ -26,7 +28,9 @@ const MonitorSingle = () => {
     imageFile,
     description,
     brand,
-    price
+    category,
+    price,
+    productUnicId
   ) => {
     dispatch(
       addBasket({
@@ -36,9 +40,17 @@ const MonitorSingle = () => {
         imageFile: imageFile,
         description: description,
         brand: brand,
+        category: category,
         price: price,
+        productUnicId: productUnicId,
       })
     );
+
+    setAddedItem(true);
+
+    setTimeout(() => {
+      setAddedItem(false);
+    }, 1500);
   };
 
   return (
@@ -87,16 +99,23 @@ const MonitorSingle = () => {
                       SingleMonitor.imageFile,
                       SingleMonitor.description,
                       SingleMonitor.brand,
-                      SingleMonitor.price
+                      SingleMonitor.category,
+                      SingleMonitor.price,
+                      SingleMonitor.productUnicId
                     )
                   }
-                  className="add__btn"
+                  className={addedItem ? "added" : "add__btn"}
                 >
-                  Add Basket
+                  {addedItem ? "Added" : "Add to Basket"}
                 </button>
               </div>
 
-              <div className="heart">
+              <div
+                className="heart"
+                onClick={() =>
+                  dispatch(addFavorites(SingleMonitor.productUnicId))
+                }
+              >
                 <Checkbox
                   sx={{
                     "&.Mui-checked": {

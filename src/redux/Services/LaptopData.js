@@ -18,7 +18,7 @@ const LaptopData = [
     displayCard: "Internal Card",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 1,
+    productUnicId: 1,
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce RTX3060",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 2,
+    productUnicId: 2,
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce RTX 3050 Ti",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 3,
+    productUnicId: 3,
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce RTX 3080 Ti",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 4,
+    productUnicId: 4,
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce GTX 1650",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 5,
+    productUnicId: 5,
   },
   {
     id: 6,
@@ -122,7 +122,7 @@ const LaptopData = [
     displayCard: "Internal Card",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 6,
+    productUnicId: 6,
   },
   {
     id: 7,
@@ -143,7 +143,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce GTX1650 Ti",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 7,
+    productUnicId: 7,
   },
   {
     id: 8,
@@ -164,7 +164,7 @@ const LaptopData = [
     displayCard: "Nvidia GeForce GTX1650",
     warrantyType: "Official Distributor",
     chechFavorites: false,
-    favoriteId: 8,
+    productUnicId: 8,
   },
 ];
 

@@ -11,19 +11,31 @@ import { handleFilter } from "../redux/commerceSlice.js";
 const LaptopFilter = () => {
   const dispatch = useDispatch();
 
-  const [checkedStatus, setCheckedStatus] = useState(false);
-  const [checkedName, setCheckedName] = useState("");
+  const [productBrand, setProductBrand] = useState({
+    brands: [],
+  });
 
-  const handleCheck = (e) => {
-    setCheckedStatus(!checkedStatus);
-    setCheckedName(e.target.value);
+  const handleChange = (e) => {
+    // Destructuring
+    const { value, checked } = e.target;
+    const { brands } = productBrand;
+
+    // Case 1 : The user checks the box
+    if (checked) {
+      setProductBrand({
+        brands: [...brands, value],
+      });
+    }
+
+    // Case 2  : The user unchecks the box
+    else {
+      setProductBrand({
+        brands: brands.filter((e) => e !== value),
+      });
+    }
   };
 
-  if (checkedStatus) {
-    dispatch(handleFilter({ Name: checkedName, Status: checkedStatus }));
-  } else {
-    dispatch(handleFilter({ Status: checkedStatus }));
-  }
+  dispatch(handleFilter(productBrand));
 
   const [drop, setDrop] = useState(null);
 
@@ -47,7 +59,7 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={(e) => handleCheck(e)}
+                    onChange={(e) => handleChange(e)}
                     value="Apple"
                     size="small"
                     sx={{
@@ -67,7 +79,7 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={(e) => handleCheck(e)}
+                    onChange={(e) => handleChange(e)}
                     value="Casper"
                     sx={{
                       "&.Mui-checked": {
@@ -87,7 +99,9 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleChange(e)}
                     size="small"
+                    value="Hp"
                     sx={{
                       "&.Mui-checked": {
                         color: orange[600],
@@ -105,7 +119,9 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleChange(e)}
                     size="small"
+                    value="Asus"
                     sx={{
                       "&.Mui-checked": {
                         color: orange[600],
@@ -123,7 +139,9 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleChange(e)}
                     size="small"
+                    value="Monster"
                     sx={{
                       "&.Mui-checked": {
                         color: orange[600],
@@ -141,7 +159,9 @@ const LaptopFilter = () => {
               <FormControlLabel
                 control={
                   <Checkbox
+                    onChange={(e) => handleChange(e)}
                     size="small"
+                    value="Msi"
                     sx={{
                       "&.Mui-checked": {
                         color: orange[600],

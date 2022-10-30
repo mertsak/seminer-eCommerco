@@ -9,7 +9,7 @@ const HighlightsData = [
     category: "phone",
     price: 1099,
     chechFavorites: false,
-    favoriteId: 9,
+    productUnicId: 9,
   },
 
   {
@@ -23,7 +23,7 @@ const HighlightsData = [
     category: "television",
     price: 799,
     chechFavorites: false,
-    favoriteId: 27,
+    productUnicId: 27,
   },
 
   {
@@ -36,7 +36,7 @@ const HighlightsData = [
     category: "headphone",
     price: 1199,
     chechFavorites: false,
-    favoriteId: 23,
+    productUnicId: 23,
   },
 
   {
@@ -49,7 +49,7 @@ const HighlightsData = [
     category: "phone",
     price: 599,
     chechFavorites: false,
-    favoriteId: 10,
+    productUnicId: 10,
   },
 
   {
@@ -62,7 +62,7 @@ const HighlightsData = [
     category: "laptop",
     price: 799,
     chechFavorites: false,
-    favoriteId: 5,
+    productUnicId: 5,
   },
 
   {
@@ -75,7 +75,7 @@ const HighlightsData = [
     category: "television",
     price: 699,
     chechFavorites: false,
-    favoriteId: 28,
+    productUnicId: 28,
   },
 
   {
@@ -88,7 +88,7 @@ const HighlightsData = [
     category: "headphone",
     price: 1099,
     chechFavorites: false,
-    favoriteId: 24,
+    productUnicId: 24,
   },
 
   {

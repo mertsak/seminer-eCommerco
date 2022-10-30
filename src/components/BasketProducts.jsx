@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { useSelector, useDispatch } from "react-redux";
 import DeleteIcon from "@mui/icons-material/Delete";
 import {
@@ -13,7 +15,7 @@ const BasketProducts = () => {
   const myBasket = useSelector((state) => state.commerce.myBasket);
 
   const truncate = (str) => {
-    return str.length > 10 ? `${str.substring(0, 29)}...` : str;
+    return str.length > 10 ? `${str.substring(0, 40)}...` : str;
   };
 
   return (
@@ -35,17 +37,28 @@ const BasketProducts = () => {
               />
 
               <div className="basket__product__left">
-                <p className="basket__product__info">
+                <Link
+                  to={`${x.category}/${x.id}`}
+                  className="basket__product__info"
+                >
                   <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
-                </p>
+                </Link>
 
                 <div className="basket__product__payment">
                   <div className="amount__count">
-                    <button onClick={() => dispatch(incrementQuantity(x.id))}>
+                    <button
+                      onClick={() =>
+                        dispatch(incrementQuantity(x.productUnicId))
+                      }
+                    >
                       +
                     </button>
                     <span>{x.quantity}</span>
-                    <button onClick={() => dispatch(decrementQuantity(x.id))}>
+                    <button
+                      onClick={() =>
+                        dispatch(decrementQuantity(x.productUnicId))
+                      }
+                    >
                       -
                     </button>
                   </div>
@@ -58,7 +71,7 @@ const BasketProducts = () => {
 
               <button className="basket__product__remove">
                 <DeleteIcon
-                  onClick={() => dispatch(removeBasket(x.id))}
+                  onClick={() => dispatch(removeBasket(x.productUnicId))}
                 ></DeleteIcon>
               </button>
             </div>

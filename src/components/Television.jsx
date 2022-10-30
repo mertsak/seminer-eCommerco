@@ -54,7 +54,7 @@ const Television = () => {
             </Link>
             <div className="heart">
               <Checkbox
-                             onClick={() => dispatch(addFavorites(x.favoriteId))}
+                             onClick={() => dispatch(addFavorites(x.productUnicId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],
