@@ -18,19 +18,55 @@
   }
 
   &__middle {
-    @include flex-align-center;
+    display: flex;
+    flex-direction: column;
     width: 40%;
+    position: relative;
+    z-index: 100;
+
+    .data__result {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      overflow: hidden;
+      overflow-y: auto;
+      line-height: 1.5rem;
+      position: absolute;
+      top: 36px;
+      border-radius: 0.4rem 0 0 0.4rem;
+
+      .data__item {
+        p {
+          padding: 0.4rem 1rem;
+          &:hover {
+            transition: $--short-transition;
+            background-color: #f5f5f5;
+          }
+        }
+      }
+    }
 
     .search {
       background-color: #f3f3f3;
-      padding: 0.3rem 0;
       border-radius: 0.4rem 0 0 0.4rem;
       width: 100%;
       margin: 0 auto;
       padding-left: 0.5rem;
       height: 30px;
+      display: flex;
 
       &__icon {
+        @include flex-align-center;
+        justify-content: center;
+        background-color: #f3f3f3;
+        height: 30px;
+        cursor: pointer;
+        color: $--orange-main;
+      }
+
+      .close__icon {
         @include flex-align-center;
         justify-content: center;
         background-color: #f3f3f3;
@@ -42,20 +78,54 @@
   }
 
   &__middle2 {
-    @include flex-align-center;
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    position: relative;
+
+    .data__result {
+      margin-top: 5px;
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      overflow: hidden;
+      overflow-y: auto;
+      line-height: 1.8rem;
+      position: absolute;
+      top: 35px;
+      border-radius: 0.4rem 0 0 0.4rem;
+      padding: 0.3rem 0;
+      padding-left: 0.5rem;
+
+      .data__item {
+        p {
+          &:hover {
+            transition: $--short-transition;
+            background-color: #f5f5f5;
+          }
+        }
+      }
+    }
 
     .search {
       background-color: #f3f3f3;
-      padding: 0.3rem 0;
       border-radius: 0.4rem 0 0 0.4rem;
       width: 100%;
       margin: 0 auto;
       padding-left: 0.5rem;
       height: 30px;
+      display: flex;
 
       &__icon {
+        @include flex-align-center;
+        justify-content: center;
+        background-color: #f3f3f3;
+        height: 30px;
+        cursor: pointer;
+        color: $--orange-main;
+      }
+
+      .close__icon {
         @include flex-align-center;
         justify-content: center;
         background-color: #f3f3f3;

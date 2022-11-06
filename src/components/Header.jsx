@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -9,9 +9,10 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import { handleMenu } from "../redux/commerceSlice";
+import { handleMenu, allProducts } from "../redux/commerceSlice";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -24,9 +25,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const myBasket = useSelector((state) => state.commerce.myBasket);
-
   const dispatch = useDispatch();
+  const myBasket = useSelector((state) => state.commerce.myBasket);
+  const allBasket = useSelector((state) => state.commerce.allProducts);
+  const [filterData, setFilterData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+
+  useEffect(() => {
+    dispatch(allProducts());
+  }, [dispatch]);
 
   const [isHovering, setIsHovering] = useState(false);
 
@@ -47,6 +54,34 @@ const Header = () => {
     return total;
   };
 
+  const handleFilter = (e) => {
+    const value = e.target.value;
+    setWordEntered(value);
+    const newFilteredData = allBasket.filter((item) => {
+      return item.name.toLowerCase().includes(value.toLowerCase());
+    });
+    setFilterData(newFilteredData);
+
+    if (value === "") {
+      setFilterData([]);
+    }
+  };
+
+  const clearInput = () => {
+    setFilterData([]);
+    setWordEntered("");
+  };
+
+  const closeSearch = (e) => {
+    const text = e.target.innerHTML;
+    setFilterData([]);
+    setWordEntered(text);
+  };
+
+  const openFilter = () => {
+    setFilterData(allBasket);
+  };
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -62,8 +97,40 @@ const Header = () => {
         </div>
 
         <div className="header__middle">
-          <input className="search" placeholder="Search" type="text" />
-          <SearchIcon className="search__icon"></SearchIcon>
+          <div className="search">
+            <input
+              onClick={() => openFilter()}
+              onChange={(e) => handleFilter(e)}
+              value={wordEntered}
+              className="search"
+              placeholder="Search"
+              type="text"
+            />
+
+            <div className="searchIcon">
+              {filterData.length === 0 ? (
+                <SearchIcon className="search__icon"></SearchIcon>
+              ) : (
+                <CloseIcon className="close__icon" onClick={clearInput} />
+              )}
+            </div>
+          </div>
+
+          {filterData.length > 0 && (
+            <div className="data__result">
+              {filterData.map((x) => {
+                return (
+                  <Link
+                    to={`${x.category}/${x.id}`}
+                    className="data__item"
+                    onClick={(e) => closeSearch(e)}
+                  >
+                    <p>{x.name}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <div className="header__right">
@@ -76,12 +143,20 @@ const Header = () => {
             {isHovering && (
               <div onMouseEnter={handleMouseEnter} className="modal">
                 <div className="modal__login">
-                  <Link to="/login" className="login__btn">
+                  <Link
+                    onClick={() => setIsHovering(false)}
+                    to="/login"
+                    className="login__btn"
+                  >
                     Login
                   </Link>
                 </div>
                 <div className="modal__register">
-                  <Link to="/register" className="register__btn">
+                  <Link
+                    onClick={() => setIsHovering(false)}
+                    to="/register"
+                    className="register__btn"
+                  >
                     Register
                   </Link>
                 </div>
@@ -107,8 +182,39 @@ const Header = () => {
 
       <div className="header__middle2__con">
         <div className="header__middle2">
-          <input className="search" placeholder="Search" type="text" />
-          <SearchIcon className="search__icon"></SearchIcon>
+          <div className="search">
+            <input
+              onChange={(e) => handleFilter(e)}
+              value={wordEntered}
+              className="search"
+              placeholder="Search"
+              type="text"
+            />
+
+            <div className="searchIcon">
+              {filterData.length === 0 ? (
+                <SearchIcon className="search__icon"></SearchIcon>
+              ) : (
+                <CloseIcon className="close__icon" onClick={clearInput} />
+              )}
+            </div>
+          </div>
+
+          {filterData.length > 0 && (
+            <div className="data__result">
+              {filterData.map((x) => {
+                return (
+                  <Link
+                    to={`${x.category}/${x.id}`}
+                    className="data__item"
+                    onClick={(e) => closeSearch(e)}
+                  >
+                    <p>{x.name}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </header>

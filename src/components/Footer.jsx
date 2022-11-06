@@ -13,27 +13,27 @@ const Footer = () => {
           <ul className="box__lists">
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Biz Kimiz
+                Blog
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Kariyer
+                About MertShop
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                İletişim
+                MertShop Science
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Kurumsal Hediye Çeki
+                Corporate Gift Certificate
               </a>
             </li>
           </ul>
           <div className="payment__container">
-            <h3>Güvenli Alışveriş</h3>
+            <h3>Secure Shopping</h3>
             <img src={require("../assets/Svg/payment.png")} alt="" />
           </div>
         </div>
@@ -61,27 +61,27 @@ const Footer = () => {
         </div>
 
         <div className="box">
-          <h3>Kampanyalar</h3>
+          <h3>Campaigns</h3>
 
           <ul className="box__lists">
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Aktif Kampanyalar
+                Active Campaigns
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Elite Üyelik
+                Elite Membership
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Hediye Fikirleri
+                Gift Ideas
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Trendyol Fırsatları
+                Trendyol Opportunities
               </a>
             </li>
           </ul>
@@ -107,26 +107,26 @@ const Footer = () => {
         </div>
 
         <div className="box">
-          <h3>Yardım</h3>
+          <h3>Help</h3>
           <ul className="box__lists">
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Sıkça Sorulan Sorular
+                Frequently Asked Questions
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Canlı Yardım
+                Live Help
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                Nasıl İade Edebilirim
+                How can I return it?
               </a>
             </li>
             <li className="box__list">
               <a className="box__list__item" href="#/">
-                İşlem Rehberi
+                Trading Guide
               </a>
             </li>
           </ul>

@@ -1,7 +1,7 @@
 const PhoneData = [
   {
     id: 1,
-    name: "iPhone 11",
+    name: "Apple iPhone 11",
     image: "iphone.webp",
     imageFile: "PhoneImage",
     description: "128GB Box White Cell Phone Without Accessories",
@@ -22,7 +22,7 @@ const PhoneData = [
   },
   {
     id: 2,
-    name: "Redmi 10",
+    name: "Xiaomi Redmi 10",
     image: "xiaomi.webp",
     imageFile: "PhoneImage",
     description: "2022 4GB Ram + 64GB Gray Mobile Phone",
@@ -43,7 +43,7 @@ const PhoneData = [
   },
   {
     id: 3,
-    name: " P13 Blue Max Lite",
+    name: "Reeder P13 Blue Max Lite",
     image: "reeder.webp",
     imageFile: "PhoneImage",
     description: "Reeder P13 Blue Max Lite 2022 32 GB",
@@ -64,7 +64,7 @@ const PhoneData = [
   },
   {
     id: 4,
-    name: " C11 2021",
+    name: "Realme C11 2021",
     image: "realme.webp",
     imageFile: "PhoneImage",
     description: "32GB Blue Mobile Phone",
@@ -85,7 +85,7 @@ const PhoneData = [
   },
   {
     id: 5,
-    name: " Galaxy A32",
+    name: "Samsung Galaxy A32",
     image: "samsung.webp",
     imageFile: "PhoneImage",
     description: "128GB Purple Mobile Phone",
@@ -106,7 +106,7 @@ const PhoneData = [
   },
   {
     id: 6,
-    name: " A16",
+    name: "Oppo A16",
     image: "oppo.webp",
     imageFile: "PhoneImage",
     description: "3GB+32GB Black Mobile Phone",
@@ -127,7 +127,7 @@ const PhoneData = [
   },
   {
     id: 7,
-    name: "  X4",
+    name: "Poco X4",
     image: "poco.webp",
     imageFile: "PhoneImage",
     description: "8gb+256gb Black Mobile Phone X4 Pro",
@@ -148,7 +148,7 @@ const PhoneData = [
   },
   {
     id: 8,
-    name: "  Pova 3",
+    name: "Tecno Pova 3",
     image: "tecno.webp",
     imageFile: "PhoneImage",
     description: "128 Gb 6+5 Gb Ram-128gb Blue",

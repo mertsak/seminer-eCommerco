@@ -25,6 +25,7 @@ export const commerceSlice = createSlice({
     OpportunityData: OpportunityData,
     myBasket: [],
     myFavorites: [],
+    allProducts: [],
   },
   reducers: {
     handleMenu: (state) => {
@@ -122,6 +123,15 @@ export const commerceSlice = createSlice({
         state.myFavorites = filtered;
       }
     },
+    allProducts: (state) => {
+      const allProducts = state.LaptopData.concat(
+        state.PhoneData,
+        state.TelevisionData,
+        state.MonitorData,
+        state.HeadPhoneData
+      );
+      state.allProducts = allProducts;
+    },
   },
 });
 
@@ -134,6 +144,7 @@ export const {
   decrementQuantity,
   removeBasket,
   addFavorites,
+  allProducts,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;

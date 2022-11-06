@@ -32,7 +32,7 @@ const Laptop = () => {
 
               <div className="product__info">
                 <p className="product__desc">
-                  <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
+                  <strong>{x.name} </strong> {truncate(x.description)}
                 </p>
 
                 <div className="rating">

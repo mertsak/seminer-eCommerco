@@ -1,7 +1,7 @@
 const HeadPhoneData = [
   {
     id: 1,
-    name: "Wh-ch510",
+    name: "Sony Wh-ch510",
     image: "sony.webp",
     imageFile: "HeadPhoneImage",
     description: " Black Wireless Bluetooh On-Ear Headphones",
@@ -22,7 +22,7 @@ const HeadPhoneData = [
   },
   {
     id: 2,
-    name: "Tah4105",
+    name: "Philips Tah4105",
     image: "philips.webp",
     imageFile: "HeadPhoneImage",
     description: "Black Wired On-Ear Headphones",
@@ -43,7 +43,7 @@ const HeadPhoneData = [
   },
   {
     id: 3,
-    name: "T500",
+    name: "JBL T500",
     image: "jbl.webp",
     imageFile: "HeadPhoneImage",
     description: "Black Wired On-Ear Headphones",
@@ -65,7 +65,7 @@ const HeadPhoneData = [
 
   {
     id: 4,
-    name: "Stellia High-end",
+    name: "Focal Stellia High-end",
     image: "focal.webp",
     imageFile: "HeadPhoneImage",
     description: "Brown On-Ear Wired Headphones",
@@ -87,7 +87,7 @@ const HeadPhoneData = [
 
   {
     id: 5,
-    name: "Hd 800 S",
+    name: "Sennheiser Hd 800 S",
     image: "sennheiser.jpg",
     imageFile: "HeadPhoneImage",
     description: "Black On-Ear Wired Headphones",
@@ -109,7 +109,7 @@ const HeadPhoneData = [
 
   {
     id: 6,
-    name: "T1 32 Ohm",
+    name: "Beyerdynamic T1 32 Ohm",
     image: "beyerDynamic.jpg",
     imageFile: "HeadPhoneImage",
     description: "3rd Generation On-Ear Headphones",
@@ -131,7 +131,7 @@ const HeadPhoneData = [
 
   {
     id: 7,
-    name: "Airpods Max",
+    name: "Beyerdynamic Airpods Max",
     image: "apple.webp",
     imageFile: "HeadPhoneImage",
     description: "Green Wireless On-Ear Headphones",
@@ -153,7 +153,7 @@ const HeadPhoneData = [
 
   {
     id: 8,
-    name: "Rog Delta S",
+    name: "ASUS Rog Delta S",
     image: "asus.jpg",
     imageFile: "HeadPhoneImage",
     description: "RGB 7.1 Gaming Headphones",

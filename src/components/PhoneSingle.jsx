@@ -64,7 +64,7 @@ const PhoneSingle = () => {
 
           <div className="product__single__info">
             <p className="product__single_desc">
-              <strong>{SinglePhone.brand}</strong> {SinglePhone.name}
+              <strong>{SinglePhone.name}</strong>{" "}
               {SinglePhone.description}
             </p>
 

@@ -1,7 +1,7 @@
 const MonitorData = [
   {
     id: 1,
-    name: "Odyssey G3",
+    name: "Samsung Odyssey G3",
     image: "samsung.webp",
     imageFile: "MonitorImage",
     description: " 165hz 1ms Hdmi Dp Freesync VA Black Gaming Monitor",
@@ -22,7 +22,7 @@ const MonitorData = [
   },
   {
     id: 2,
-    name: "Black Eagle",
+    name: "Rampage Black Eagle",
     image: "rampage.webp",
     imageFile: "MonitorImage",
     description:
@@ -44,7 +44,7 @@ const MonitorData = [
   },
   {
     id: 3,
-    name: "B242e1gsj",
+    name: "Philips B242e1gsj",
     image: "philips.webp",
     imageFile: "MonitorImage",
     description: " 144hz 1ms Hdmi+dp Freesync Fullhd Va Gaming Monitor",
@@ -65,7 +65,7 @@ const MonitorData = [
   },
   {
     id: 4,
-    name: "Gb-2461cf",
+    name: "Gamebooster Gb-2461cf",
     image: "gamebooster.webp",
     imageFile: "MonitorImage",
     description: " 144hz 1ms Curved Freesync Fhd 2xhdmi 1xdp Gaming Monitor",
@@ -86,7 +86,7 @@ const MonitorData = [
   },
   {
     id: 5,
-    name: "P2720d",
+    name: "Dell P2720d",
     image: "dell.jpg",
     imageFile: "MonitorImage",
     description: " 60hz 8ms (hdmi+display) Qhd Ips Monitor",
@@ -107,7 +107,7 @@ const MonitorData = [
   },
   {
     id: 6,
-    name: "Va2432-h",
+    name: "ViewSonic Va2432-h",
     image: "viewSonic.webp",
     imageFile: "MonitorImage",
     description: " 4ms, 75hz, Analog, Hdmi, Ips Led, Monitor",
@@ -128,7 +128,7 @@ const MonitorData = [
   },
   {
     id: 7,
-    name: "TUF Gaming VG27VQ",
+    name: "Asus TUF Gaming VG27VQ",
     image: "asus.webp",
     imageFile: "MonitorImage",
     description:
@@ -150,7 +150,7 @@ const MonitorData = [
   },
   {
     id: 8,
-    name: "Aryond A32",
+    name: "Monster Aryond A32",
     image: "monster.webp",
     imageFile: "MonitorImage",
     description: "165hz 1ms (hdmi+display) G-sync Qhd Led Monitor",

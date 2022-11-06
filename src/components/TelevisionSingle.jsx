@@ -66,7 +66,7 @@ const TelevisionSingle = () => {
 
           <div className="product__single__info">
             <p className="product__single_desc">
-              <strong>{SingleTelevision.brand}</strong> {SingleTelevision.name}
+              <strong>{SingleTelevision.name}</strong>{" "}
               {SingleTelevision.description}
             </p>
 

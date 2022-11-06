@@ -1,7 +1,7 @@
 const LaptopData = [
   {
     id: 1,
-    name: "MacBook Air",
+    name: "Apple MacBook Air",
     image: "macbook.webp",
     imageFile: "LaptopImage",
     description: " 8-Core CPU 7-Core GPU 8GB Unified Memory 256GB SSD",
@@ -26,7 +26,7 @@ const LaptopData = [
     image: "casper.webp",
     imageFile: "LaptopImage",
     description:
-      "Excalibur G911.1270-bv60x-b Intel I7-12700h 16gb Ram 500gb Ssd 6gb Rtx3060",
+      "G911.1270-bv60x-b Intel I7-12700h 16gb Ram 500gb Ssd 6gb Rtx3060",
     brand: "Casper",
     category: "laptop",
     price: 1199,

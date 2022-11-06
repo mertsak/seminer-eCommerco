@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 import MonitorSingle from "../components/MonitorSingle";
-import HighlightsProducts from "../components/HighlightsProducts";
 
 const MonitorSinglePage = () => {
-    return (
-        <>
-            <MonitorSingle></MonitorSingle>
-            <HighlightsProducts></HighlightsProducts>
-        </>
-    );
-}
+  return (
+    <>
+      <MonitorSingle></MonitorSingle>
+    </>
+  );
+};
 
-export default MonitorSinglePage
+export default MonitorSinglePage;

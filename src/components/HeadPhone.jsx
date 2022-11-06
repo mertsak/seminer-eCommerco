@@ -32,8 +32,7 @@ const HeadPhone = () => {
 
               <div className="product__info">
                 <p className="product__desc">
-                  <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
-                </p>
+                <strong>{x.name} </strong> {truncate(x.description)}                </p>
 
                 <div className="rating">
                   <Rating name="read-only" value={x.rating} readOnly />

@@ -67,7 +67,7 @@ const MonitorSingle = () => {
 
           <div className="product__single__info">
             <p className="product__single_desc">
-              <strong>{SingleMonitor.brand}</strong> {SingleMonitor.name}
+              <strong>{SingleMonitor.name}</strong>{" "}
               {SingleMonitor.description}
             </p>
 

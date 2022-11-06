@@ -1,7 +1,7 @@
 const TelevisionData = [
   {
     id: 1,
-    name: "OV32150",
+    name: "Onvo OV32150",
     image: "onvo.webp",
     imageFile: "TelevisionImage",
     description: "81 Screen HD Ready Smart LED TV with Satellite Receiver",
@@ -22,7 +22,7 @@ const TelevisionData = [
   },
   {
     id: 2,
-    name: "50R754U",
+    name: "Regal 50R754U",
     image: "regal.webp",
     imageFile: "TelevisionImage",
     description: "126 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
@@ -43,7 +43,7 @@ const TelevisionData = [
   },
   {
     id: 3,
-    name: "50U9600",
+    name: "Vestel 50U9600",
     image: "vestel.webp",
     imageFile: "TelevisionImage",
     description:
@@ -65,7 +65,7 @@ const TelevisionData = [
   },
   {
     id: 4,
-    name: "SN55UAL402",
+    name: "Sunny SN55UAL402",
     image: "sunny.webp",
     imageFile: "TelevisionImage",
     description: "139 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
@@ -86,7 +86,7 @@ const TelevisionData = [
   },
   {
     id: 5,
-    name: "50AU7000",
+    name: "Samsung 50AU7000",
     image: "samsung.webp",
     imageFile: "TelevisionImage",
     description:
@@ -108,7 +108,7 @@ const TelevisionData = [
   },
   {
     id: 6,
-    name: "50UA2063DT",
+    name: "Toshiba 50UA2063DT",
     image: "toshiba.webp",
     imageFile: "TelevisionImage",
     description:
@@ -130,7 +130,7 @@ const TelevisionData = [
   },
   {
     id: 7,
-    name: "GEU 7830",
+    name: "Grundig GEU 7830",
     image: "grundig.jpg",
     imageFile: "TelevisionImage",
     description: "109 Screen 4K Ultra HD Smart LED TV with Satellite Receiver",
@@ -151,7 +151,7 @@ const TelevisionData = [
   },
   {
     id: 8,
-    name: "50R754UA9",
+    name: "Regal 50R754UA9",
     image: "regal.png",
     imageFile: "TelevisionImage",
     description:

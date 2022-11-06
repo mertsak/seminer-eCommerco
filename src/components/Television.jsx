@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import CurrencyFormat from "react-currency-format";
 import { orange } from "@mui/material/colors";
@@ -32,7 +32,7 @@ const Television = () => {
 
               <div className="product__info">
                 <p className="product__desc">
-                  <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
+                  <strong>{x.name} </strong> {truncate(x.description)}{" "}
                 </p>
 
                 <div className="rating">
@@ -54,7 +54,7 @@ const Television = () => {
             </Link>
             <div className="heart">
               <Checkbox
-                             onClick={() => dispatch(addFavorites(x.productUnicId))}
+                onClick={() => dispatch(addFavorites(x.productUnicId))}
                 sx={{
                   "&.Mui-checked": {
                     color: orange[600],

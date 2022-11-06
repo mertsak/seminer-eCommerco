@@ -69,7 +69,7 @@ const LaptopSingle = () => {
 
           <div className="product__single__info">
             <p className="product__single_desc">
-              <strong>{SingleLaptop.brand}</strong> {SingleLaptop.name}
+              <strong>{SingleLaptop.name}</strong>{" "}
               {SingleLaptop.description}
             </p>
 
@@ -114,7 +114,9 @@ const LaptopSingle = () => {
 
               <div className="heart">
                 <Checkbox
-                  onClick={() => dispatch(addFavorites(SingleLaptop.productUnicId))}
+                  onClick={() =>
+                    dispatch(addFavorites(SingleLaptop.productUnicId))
+                  }
                   checked={SingleLaptop.chechFavorites ? true : false}
                   sx={{
                     "&.Mui-checked": {
