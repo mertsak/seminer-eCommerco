@@ -57,7 +57,8 @@ img {
       line-height: 1.5rem;
       position: absolute;
       top: 36px;
-      border-radius: 0.4rem 0 0 0.4rem; }
+      border-radius: 0.4rem 0 0 0.4rem;
+      z-index: 100; }
       .header__middle .data__result .data__item p {
         padding: 0.4rem 1rem; }
         .header__middle .data__result .data__item p:hover {
@@ -308,7 +309,7 @@ nav {
   .header__middle2__con {
     display: block !important; }
   nav {
-    position: absolute;
+    position: fixed;
     width: 40%;
     height: 100vh;
     top: 0%;
@@ -731,7 +732,8 @@ footer {
   .basket__product__container .amount__count {
     border: 1px solid #dddddd;
     border-radius: 0.3rem;
-    display: flex; }
+    display: flex;
+    max-width: 75px; }
     .basket__product__container .amount__count button {
       padding: 0.3rem 0.7rem;
       color: #f27a1a;
