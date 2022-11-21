@@ -914,6 +914,11 @@ footer {
       margin-left: 0.5rem; }
   .filter__container .filter__brand .filter__inner__con.active {
     display: none; }
+  .filter__container .filter__brand .sorting__price__con {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
 
 .product__single {
   padding: 2rem 10rem; }

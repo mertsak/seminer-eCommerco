@@ -132,6 +132,18 @@ export const commerceSlice = createSlice({
       );
       state.allProducts = allProducts;
     },
+    lowToHigh: (state) => {
+      const lowToHigh = state.LaptopData.sort((a, b) => a.price - b.price);
+      state.LaptopData = lowToHigh;
+    },
+    highToLow: (state) => {
+      const highToLow = state.LaptopData.sort((a, b) => b.price - a.price);
+      state.LaptopData = highToLow;
+    },
+    resetSort: (state) => {
+      const resetData = state.LaptopData.sort((a, b) => a.id - b.id);
+      state.LaptopData = resetData;
+    },
   },
 });
 
@@ -145,6 +157,9 @@ export const {
   removeBasket,
   addFavorites,
   allProducts,
+  lowToHigh,
+  highToLow,
+  resetSort,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;
