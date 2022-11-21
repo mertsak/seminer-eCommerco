@@ -732,8 +732,7 @@ footer {
   .basket__product__container .amount__count {
     border: 1px solid #dddddd;
     border-radius: 0.3rem;
-    display: flex;
-    max-width: 75px; }
+    display: flex; }
     .basket__product__container .amount__count button {
       padding: 0.3rem 0.7rem;
       color: #f27a1a;
@@ -743,7 +742,11 @@ footer {
         transition: all 0.2s linear;
         background-color: #e6e6e6; }
     .basket__product__container .amount__count span {
-      padding: 0.3rem 0.7rem; }
+      padding: 0.3rem 0.7rem;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .basket__product__container .basket__product__price {
     color: #f27a1a;
     font-size: 18px; }
