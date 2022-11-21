@@ -11,127 +11,140 @@ import BestSellsData from "./Services/BestSellData";
 import OpportunityData from "./Services/OpportunityData";
 
 export const commerceSlice = createSlice({
-	name: "commerce",
-	initialState: {
-		menu: false,
-		close: false,
-		LaptopData: LaptopData,
-		TelevisionData: TelevisionData,
-		PhoneData: PhoneData,
-		MonitorData: MonitorData,
-		HeadPhoneData: HeadPhoneData,
-		HighlightsData: HighlightsData,
-		BestSellsData: BestSellsData,
-		OpportunityData: OpportunityData,
-		myBasket: [],
-		myFavorites: [],
-		allProducts: [],
-		filteredLaptopData: [],
-	},
-	reducers: {
-		handleMenu: (state) => {
-			state.menu = !state.menu;
-		},
-		handleFilter: (state, action) => {
-			const filterArray = [];
-			if (action.payload.brands.length > 0) {
-				state.LaptopData.filter((x) => {
-					action.payload.brands.map((y) => {
-						if (x.brand === y) {
-							filterArray.push(x);
-							state.filteredLaptopData = filterArray;
-						}
-					});
-				});
-			} else state.filteredLaptopData = [];
-		},
-		addBasket: (state, action) => {
-			const itemInBasket = state.myBasket.find((item) => item.productUnicId === action.payload.productUnicId);
-			if (itemInBasket) {
-				itemInBasket.quantity++;
-			} else {
-				state.myBasket.push({ ...action.payload, quantity: 1 });
-			}
-		},
-		incrementQuantity: (state, action) => {
-			const item = state.myBasket.find((item) => item.productUnicId === action.payload);
-			item.quantity++;
-		},
-		decrementQuantity: (state, action) => {
-			const item = state.myBasket.find((item) => item.productUnicId === action.payload);
+  name: "commerce",
+  initialState: {
+    menu: false,
+    close: false,
+    LaptopData: LaptopData,
+    TelevisionData: TelevisionData,
+    PhoneData: PhoneData,
+    MonitorData: MonitorData,
+    HeadPhoneData: HeadPhoneData,
+    HighlightsData: HighlightsData,
+    BestSellsData: BestSellsData,
+    OpportunityData: OpportunityData,
+    myBasket: [],
+    myFavorites: [],
+    allProducts: [],
+    filteredLaptopData: [],
+  },
+  reducers: {
+    handleMenu: (state) => {
+      state.menu = !state.menu;
+    },
+    handleFilter: (state, action) => {
+      const filterArray = [];
+      if (action.payload.brands.length > 0) {
+        state.LaptopData.filter((x) => {
+          action.payload.brands.map((y) => {
+            if (x.brand === y) {
+              filterArray.push(x);
+              state.filteredLaptopData = filterArray;
+            }
+          });
+        });
+      } else state.filteredLaptopData = [];
+    },
+    addBasket: (state, action) => {
+      const itemInBasket = state.myBasket.find(
+        (item) => item.productUnicId === action.payload.productUnicId
+      );
+      if (itemInBasket) {
+        itemInBasket.quantity++;
+      } else {
+        state.myBasket.push({ ...action.payload, quantity: 1 });
+      }
+    },
+    incrementQuantity: (state, action) => {
+      const item = state.myBasket.find(
+        (item) => item.productUnicId === action.payload
+      );
+      item.quantity++;
+    },
+    decrementQuantity: (state, action) => {
+      const item = state.myBasket.find(
+        (item) => item.productUnicId === action.payload
+      );
 
-			if (item.quantity === 1) {
-				item.quantity = 1;
-			} else {
-				item.quantity--;
-			}
-		},
-		removeBasket: (state, action) => {
-			const filtered = state.myBasket.filter((item) => item.productUnicId !== action.payload);
-			state.myBasket = filtered;
-		},
-		addFavorites: (state, action) => {
-			const allFavoritesItem = state.LaptopData.concat(
-				state.PhoneData,
-				state.TelevisionData,
-				state.MonitorData,
-				state.HeadPhoneData,
-				state.HighlightsData,
-				state.BestSellsData,
-				state.OpportunityData
-			);
+      if (item.quantity === 1) {
+        item.quantity = 1;
+      } else {
+        item.quantity--;
+      }
+    },
+    removeBasket: (state, action) => {
+      const filtered = state.myBasket.filter(
+        (item) => item.productUnicId !== action.payload
+      );
+      state.myBasket = filtered;
+    },
+    addFavorites: (state, action) => {
+      const allFavoritesItem = state.LaptopData.concat(
+        state.PhoneData,
+        state.TelevisionData,
+        state.MonitorData,
+        state.HeadPhoneData,
+        state.HighlightsData,
+        state.BestSellsData,
+        state.OpportunityData,
+        state.filteredLaptopData
+      );
 
-			const item = allFavoritesItem.find((item) => item.productUnicId === action.payload);
+      const item = allFavoritesItem.find(
+        (item) => item.productUnicId === action.payload
+      );
 
-			const newItems = [...allFavoritesItem];
+      const newItems = [...allFavoritesItem];
 
-			// newItems.map(
-			//   (item) => item.productUnicId === action.payload
-			// ).chechFavorites = !item.chechFavorites;
+      // newItems.map(
+      //   (item) => item.productUnicId === action.payload
+      // ).chechFavorites = !item.chechFavorites;
 
-			newItems.map((item) => {
-				if (item.productUnicId === action.payload) {
-					item.chechFavorites = !item.chechFavorites;
-				}
-			});
+      newItems.map((item) => {
+        if (item.productUnicId === action.payload) {
+          item.chechFavorites = !item.chechFavorites;
+        }
+      });
 
-			// newItems.find((item) => {
-			//   if (item.productUnicId === action.payload) {
-			//     console.log(item.chechFavorites);
-			//     console.log(item.productUnicId);
-			//     console.log(action.payload);
-			//   }
-			// });
+      // newItems.find((item) => {
+      //   if (item.productUnicId === action.payload) {
+      //     console.log(item.chechFavorites);
+      //     console.log(item.productUnicId);
+      //     console.log(action.payload);
+      //   }
+      // });
 
-			if (item.chechFavorites) {
-				state.myFavorites.push(item);
-			} else {
-				const filtered = state.myFavorites.filter((item) => item.productUnicId !== action.payload);
-				state.myFavorites = filtered;
-			}
-		},
-		allProducts: (state) => {
-			const allProducts = state.LaptopData.concat(
-				state.PhoneData,
-				state.TelevisionData,
-				state.MonitorData,
-				state.HeadPhoneData
-			);
-			state.allProducts = allProducts;
-		},
-	},
+      if (item.chechFavorites) {
+        state.myFavorites.push(item);
+      } else {
+        const filtered = state.myFavorites.filter(
+          (item) => item.productUnicId !== action.payload
+        );
+        state.myFavorites = filtered;
+      }
+    },
+    allProducts: (state) => {
+      const allProducts = state.LaptopData.concat(
+        state.PhoneData,
+        state.TelevisionData,
+        state.MonitorData,
+        state.HeadPhoneData
+      );
+      state.allProducts = allProducts;
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function
 export const {
-	handleMenu,
-	handleFilter,
-	addBasket,
-	incrementQuantity,
-	decrementQuantity,
-	removeBasket,
-	addFavorites,
-	allProducts,
+  handleMenu,
+  handleFilter,
+  addBasket,
+  incrementQuantity,
+  decrementQuantity,
+  removeBasket,
+  addFavorites,
+  allProducts,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;
