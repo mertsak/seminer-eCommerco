@@ -81,8 +81,6 @@ const HighlightsProducts = () => {
                   <strong>{x.brand}</strong> {x.name} {truncate(x.description)}
                 </p>
 
-                {console.log(x.chechFavorites)}
-
                 <div className="product__price">
                   <CurrencyFormat
                     value={x.price}

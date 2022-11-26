@@ -21,7 +21,7 @@ const Phone = () => {
     <>
       <div className="products__inner__container">
         {Phones.map((x) => (
-          <div className="product__top__container">
+          <div key={x.id} className="product__top__container">
             <Link className="product__inner__container" to={`${x.id}`}>
               <img
                 className="product__image"
@@ -31,7 +31,8 @@ const Phone = () => {
 
               <div className="product__info">
                 <p className="product__desc">
-                <strong>{x.name} </strong> {truncate(x.description)}                </p>
+                  <strong>{x.name} </strong> {truncate(x.description)}{" "}
+                </p>
 
                 <div className="rating">
                   <Rating name="read-only" value={x.rating} readOnly />

@@ -132,7 +132,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div class="credit">
+      <div className="credit">
         <p>
           created by <strong> Mert Sakınç </strong> | © Copyright @ 2022
         </p>

@@ -96,23 +96,11 @@ export const commerceSlice = createSlice({
 
       const newItems = [...allFavoritesItem];
 
-      // newItems.map(
-      //   (item) => item.productUnicId === action.payload
-      // ).chechFavorites = !item.chechFavorites;
-
       newItems.map((item) => {
         if (item.productUnicId === action.payload) {
           item.chechFavorites = !item.chechFavorites;
         }
       });
-
-      // newItems.find((item) => {
-      //   if (item.productUnicId === action.payload) {
-      //     console.log(item.chechFavorites);
-      //     console.log(item.productUnicId);
-      //     console.log(action.payload);
-      //   }
-      // });
 
       if (item.chechFavorites) {
         state.myFavorites.push(item);

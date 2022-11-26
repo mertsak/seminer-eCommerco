@@ -30,7 +30,7 @@ const Favorites = () => {
       ) : (
         <div className="favorites__inner__container">
           {Favorites.map((x) => (
-            <div className="favorites__top__container">
+            <div key={x.id} className="favorites__top__container">
               <Link
                 className="favorite__inner__container"
                 to={`${x.category}/${x.id}`}

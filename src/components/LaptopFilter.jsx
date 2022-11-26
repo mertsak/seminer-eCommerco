@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -59,6 +59,10 @@ const LaptopFilter = () => {
   const handleDrop = () => {
     setDrop(!drop);
   };
+
+  useEffect(() => {
+    dispatch(resetSort());
+  }, [dispatch]);
 
   return (
     <div className="filter__container">

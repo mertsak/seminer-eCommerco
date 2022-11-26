@@ -30,7 +30,7 @@ const BasketProducts = () => {
       ) : (
         <>
           {myBasket.map((x) => (
-            <div className="basket__product__container">
+            <div key={x.id} className="basket__product__container">
               <img
                 src={require(`../assets/${x.imageFile}/${x.image}`)}
                 alt=""

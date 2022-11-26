@@ -22,7 +22,7 @@ const Television = () => {
     <>
       <div className="products__inner__container">
         {Televisions.map((x) => (
-          <div className="product__top__container">
+          <div key={x.id} className="product__top__container">
             <Link className="product__inner__container" to={`${x.id}`}>
               <img
                 className="product__image"
