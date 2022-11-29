@@ -43,7 +43,7 @@ export const commerceSlice = createSlice({
             }
           });
         });
-      } else state.filteredLaptopData = [];
+      } else state.filteredLaptopData = state.LaptopData;
     },
     addBasket: (state, action) => {
       const itemInBasket = state.myBasket.find(
@@ -120,17 +120,17 @@ export const commerceSlice = createSlice({
       );
       state.allProducts = allProducts;
     },
-    lowToHigh: (state) => {
-      const lowToHigh = state.LaptopData.sort((a, b) => a.price - b.price);
-      state.LaptopData = lowToHigh;
-    },
-    highToLow: (state) => {
-      const highToLow = state.LaptopData.sort((a, b) => b.price - a.price);
-      state.LaptopData = highToLow;
-    },
-    resetSort: (state) => {
-      const resetData = state.LaptopData.sort((a, b) => a.id - b.id);
-      state.LaptopData = resetData;
+    handleSorting: (state, action) => {
+      const sortedData = state.filteredLaptopData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredLaptopData = sortedData;
     },
   },
 });
@@ -145,9 +145,7 @@ export const {
   removeBasket,
   addFavorites,
   allProducts,
-  lowToHigh,
-  highToLow,
-  resetSort,
+  handleSorting,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;

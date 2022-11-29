@@ -12,21 +12,16 @@ import { addFavorites } from "../redux/commerceSlice.js";
 
 const Laptop = () => {
   const dispatch = useDispatch();
-  const { filteredLaptopData, LaptopData } = useSelector(
-    (state) => state.commerce
-  );
+  const { filteredLaptopData } = useSelector((state) => state.commerce);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
   };
 
-  const laptopData =
-    filteredLaptopData.length > 0 ? filteredLaptopData : LaptopData;
-
   return (
     <>
       <div className="products__inner__container">
-        {laptopData.map((x) => (
+        {filteredLaptopData.map((x) => (
           <div key={x.id} className="product__top__container">
             <Link className="product__inner__container" to={`${x.id}`}>
               <img

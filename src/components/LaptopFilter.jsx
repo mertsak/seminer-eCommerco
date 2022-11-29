@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -12,21 +12,20 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import {
-  handleFilter,
-  lowToHigh,
-  highToLow,
-  resetSort,
-} from "../redux/commerceSlice.js";
+import { handleFilter, handleSorting } from "../redux/commerceSlice.js";
 
 const LaptopFilter = () => {
   const dispatch = useDispatch();
 
-  const [age, setAge] = React.useState("");
+  const [sortName, setSortName] = React.useState("def");
 
   const handleChangeSort = (event) => {
-    setAge(event.target.value);
+    setSortName(event.target.value);
   };
+
+  useEffect(() => {
+    dispatch(handleSorting(sortName));
+  }, [sortName, dispatch]);
 
   const [productBrand, setProductBrand] = useState({
     brands: [],
@@ -59,10 +58,6 @@ const LaptopFilter = () => {
   const handleDrop = () => {
     setDrop(!drop);
   };
-
-  useEffect(() => {
-    dispatch(resetSort());
-  }, [dispatch]);
 
   return (
     <div className="filter__container">
@@ -202,19 +197,13 @@ const LaptopFilter = () => {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={sortName}
               label="Age"
               onChange={handleChangeSort}
             >
-              <MenuItem onClick={() => dispatch(resetSort())} value={5}>
-                Default
-              </MenuItem>
-              <MenuItem onClick={() => dispatch(lowToHigh())} value={10}>
-                Low to high
-              </MenuItem>
-              <MenuItem onClick={() => dispatch(highToLow())} value={20}>
-                high to low
-              </MenuItem>
+              <MenuItem value={"def"}>Default</MenuItem>
+              <MenuItem value={"lth"}>Low to high</MenuItem>
+              <MenuItem value={"htl"}>high to low</MenuItem>
             </Select>
           </FormControl>
         </Box>
