@@ -12,7 +12,7 @@ import { addFavorites } from "../redux/commerceSlice.js";
 
 const Phone = () => {
   const dispatch = useDispatch();
-  const Phones = useSelector((state) => state.commerce.PhoneData);
+  const { filteredPhoneData } = useSelector((state) => state.commerce);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
@@ -20,7 +20,7 @@ const Phone = () => {
   return (
     <>
       <div className="products__inner__container">
-        {Phones.map((x) => (
+        {filteredPhoneData.map((x) => (
           <div key={x.id} className="product__top__container">
             <Link className="product__inner__container" to={`${x.id}`}>
               <img

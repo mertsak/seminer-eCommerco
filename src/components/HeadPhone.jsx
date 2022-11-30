@@ -13,7 +13,7 @@ import { addFavorites } from "../redux/commerceSlice.js";
 const HeadPhone = () => {
   const dispatch = useDispatch();
 
-  const HeadPhones = useSelector((state) => state.commerce.HeadPhoneData);
+  const { filteredHeadPhoneData } = useSelector((state) => state.commerce);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
@@ -21,7 +21,7 @@ const HeadPhone = () => {
   return (
     <>
       <div className="products__inner__container">
-        {HeadPhones.map((x) => (
+        {filteredHeadPhoneData.map((x) => (
           <div key={x.id} className="product__top__container">
             <Link className="product__inner__container" to={`${x.id}`}>
               <img
@@ -32,7 +32,8 @@ const HeadPhone = () => {
 
               <div className="product__info">
                 <p className="product__desc">
-                <strong>{x.name} </strong> {truncate(x.description)}                </p>
+                  <strong>{x.name} </strong> {truncate(x.description)}{" "}
+                </p>
 
                 <div className="rating">
                   <Rating name="read-only" value={x.rating} readOnly />

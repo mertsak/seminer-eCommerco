@@ -16,10 +16,10 @@ export const commerceSlice = createSlice({
     menu: false,
     close: false,
     LaptopData: LaptopData,
-    TelevisionData: TelevisionData,
     PhoneData: PhoneData,
-    MonitorData: MonitorData,
     HeadPhoneData: HeadPhoneData,
+    TelevisionData: TelevisionData,
+    MonitorData: MonitorData,
     HighlightsData: HighlightsData,
     BestSellsData: BestSellsData,
     OpportunityData: OpportunityData,
@@ -27,12 +27,16 @@ export const commerceSlice = createSlice({
     myFavorites: [],
     allProducts: [],
     filteredLaptopData: [],
+    filteredPhoneData: [],
+    filteredHeadPhoneData: [],
+    filteredTelevisionData: [],
+    filteredMonitorData: [],
   },
   reducers: {
     handleMenu: (state) => {
       state.menu = !state.menu;
     },
-    handleFilter: (state, action) => {
+    laptopHandleFilter: (state, action) => {
       const filterArray = [];
       if (action.payload.brands.length > 0) {
         state.LaptopData.filter((x) => {
@@ -40,10 +44,187 @@ export const commerceSlice = createSlice({
             if (x.brand === y) {
               filterArray.push(x);
               state.filteredLaptopData = filterArray;
+              if (action.payload.sortName === "def") {
+                filterArray.sort((a, b) => {
+                  return a.id - b.id;
+                });
+              } else if (action.payload.sortName === "lth") {
+                filterArray.sort((a, b) => {
+                  return a.price - b.price;
+                });
+              } else if (action.payload.sortName === "htl") {
+                filterArray.sort((a, b) => {
+                  return b.price - a.price;
+                });
+              }
             }
           });
         });
       } else state.filteredLaptopData = state.LaptopData;
+    },
+    laptopHandleSorting: (state, action) => {
+      const sortedData = state.filteredLaptopData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredLaptopData = sortedData;
+    },
+    phoneHandleFilter: (state, action) => {
+      const filterArray = [];
+      if (action.payload.brands.length > 0) {
+        state.PhoneData.filter((x) => {
+          action.payload.brands.map((y) => {
+            if (x.brand === y) {
+              filterArray.push(x);
+              state.filteredPhoneData = filterArray;
+              if (action.payload.sortName === "def") {
+                filterArray.sort((a, b) => {
+                  return a.id - b.id;
+                });
+              } else if (action.payload.sortName === "lth") {
+                filterArray.sort((a, b) => {
+                  return a.price - b.price;
+                });
+              } else if (action.payload.sortName === "htl") {
+                filterArray.sort((a, b) => {
+                  return b.price - a.price;
+                });
+              }
+            }
+          });
+        });
+      } else state.filteredPhoneData = state.PhoneData;
+    },
+    phoneHandleSorting: (state, action) => {
+      const sortedData = state.filteredPhoneData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredPhoneData = sortedData;
+    },
+    headPhoneHandleFilter: (state, action) => {
+      const filterArray = [];
+      if (action.payload.brands.length > 0) {
+        state.HeadPhoneData.filter((x) => {
+          action.payload.brands.map((y) => {
+            if (x.brand === y) {
+              filterArray.push(x);
+              state.filteredHeadPhoneData = filterArray;
+              if (action.payload.sortName === "def") {
+                filterArray.sort((a, b) => {
+                  return a.id - b.id;
+                });
+              } else if (action.payload.sortName === "lth") {
+                filterArray.sort((a, b) => {
+                  return a.price - b.price;
+                });
+              } else if (action.payload.sortName === "htl") {
+                filterArray.sort((a, b) => {
+                  return b.price - a.price;
+                });
+              }
+            }
+          });
+        });
+      } else state.filteredHeadPhoneData = state.HeadPhoneData;
+    },
+    headPhoneHandleSorting: (state, action) => {
+      const sortedData = state.filteredHeadPhoneData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredHeadPhoneData = sortedData;
+    },
+    televisionHandleFilter: (state, action) => {
+      const filterArray = [];
+      if (action.payload.brands.length > 0) {
+        state.TelevisionData.filter((x) => {
+          action.payload.brands.map((y) => {
+            if (x.brand === y) {
+              filterArray.push(x);
+              state.filteredTelevisionData = filterArray;
+              if (action.payload.sortName === "def") {
+                filterArray.sort((a, b) => {
+                  return a.id - b.id;
+                });
+              } else if (action.payload.sortName === "lth") {
+                filterArray.sort((a, b) => {
+                  return a.price - b.price;
+                });
+              } else if (action.payload.sortName === "htl") {
+                filterArray.sort((a, b) => {
+                  return b.price - a.price;
+                });
+              }
+            }
+          });
+        });
+      } else state.filteredTelevisionData = state.TelevisionData;
+    },
+    televisionHandleSorting: (state, action) => {
+      const sortedData = state.filteredTelevisionData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredTelevisionData = sortedData;
+    },
+    monitorHandleFilter: (state, action) => {
+      const filterArray = [];
+      if (action.payload.brands.length > 0) {
+        state.MonitorData.filter((x) => {
+          action.payload.brands.map((y) => {
+            if (x.brand === y) {
+              filterArray.push(x);
+              state.filteredMonitorData = filterArray;
+              if (action.payload.sortName === "def") {
+                filterArray.sort((a, b) => {
+                  return a.id - b.id;
+                });
+              } else if (action.payload.sortName === "lth") {
+                filterArray.sort((a, b) => {
+                  return a.price - b.price;
+                });
+              } else if (action.payload.sortName === "htl") {
+                filterArray.sort((a, b) => {
+                  return b.price - a.price;
+                });
+              }
+            }
+          });
+        });
+      } else state.filteredMonitorData = state.MonitorData;
+    },
+    monitorHandleSorting: (state, action) => {
+      const sortedData = state.filteredMonitorData.sort((a, b) => {
+        if (action.payload === "lth") {
+          return a.price - b.price;
+        } else if (action.payload === "htl") {
+          return b.price - a.price;
+        } else if (action.payload === "def") {
+          return a.id - b.id;
+        }
+      });
+      state.filteredMonitorData = sortedData;
     },
     addBasket: (state, action) => {
       const itemInBasket = state.myBasket.find(
@@ -87,7 +268,9 @@ export const commerceSlice = createSlice({
         state.HighlightsData,
         state.BestSellsData,
         state.OpportunityData,
-        state.filteredLaptopData
+        state.filteredLaptopData,
+        state.filteredPhoneData,
+        state.filteredHeadPhoneData
       );
 
       const item = allFavoritesItem.find(
@@ -120,32 +303,28 @@ export const commerceSlice = createSlice({
       );
       state.allProducts = allProducts;
     },
-    handleSorting: (state, action) => {
-      const sortedData = state.filteredLaptopData.sort((a, b) => {
-        if (action.payload === "lth") {
-          return a.price - b.price;
-        } else if (action.payload === "htl") {
-          return b.price - a.price;
-        } else if (action.payload === "def") {
-          return a.id - b.id;
-        }
-      });
-      state.filteredLaptopData = sortedData;
-    },
   },
 });
 
 // Action creators are generated for each case reducer function
 export const {
   handleMenu,
-  handleFilter,
+  laptopHandleFilter,
+  laptopHandleSorting,
+  phoneHandleFilter,
+  phoneHandleSorting,
+  headPhoneHandleFilter,
+  headPhoneHandleSorting,
+  televisionHandleFilter,
+  televisionHandleSorting,
+  monitorHandleFilter,
+  monitorHandleSorting,
   addBasket,
   incrementQuantity,
   decrementQuantity,
   removeBasket,
   addFavorites,
   allProducts,
-  handleSorting,
 } = commerceSlice.actions;
 
 export default commerceSlice.reducer;

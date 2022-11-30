@@ -6,13 +6,12 @@ import Checkbox from "@mui/material/Checkbox";
 import { orange } from "@mui/material/colors";
 import { useDispatch } from "react-redux";
 
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import Sort from "./Sort.jsx";
 
-import { handleFilter, handleSorting } from "../redux/commerceSlice.js";
+import {
+  laptopHandleFilter,
+  laptopHandleSorting,
+} from "../redux/commerceSlice.js";
 
 const LaptopFilter = () => {
   const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const LaptopFilter = () => {
   };
 
   useEffect(() => {
-    dispatch(handleSorting(sortName));
+    dispatch(laptopHandleSorting(sortName));
   }, [sortName, dispatch]);
 
   const [productBrand, setProductBrand] = useState({
@@ -40,6 +39,7 @@ const LaptopFilter = () => {
     if (checked) {
       setProductBrand({
         brands: [...brands, value],
+        sortName: sortName,
       });
     }
 
@@ -51,7 +51,7 @@ const LaptopFilter = () => {
     }
   };
 
-  dispatch(handleFilter(productBrand));
+  dispatch(laptopHandleFilter(productBrand));
 
   const [drop, setDrop] = useState(null);
 
@@ -191,22 +191,7 @@ const LaptopFilter = () => {
           </div>
         </div>
 
-        <Box className="sorting__price__con">
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Sorting</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={sortName}
-              label="Age"
-              onChange={handleChangeSort}
-            >
-              <MenuItem value={"def"}>Default</MenuItem>
-              <MenuItem value={"lth"}>Low to high</MenuItem>
-              <MenuItem value={"htl"}>high to low</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
+        <Sort sortName={sortName} handleChangeSort={handleChangeSort}></Sort>
       </div>
     </div>
   );
