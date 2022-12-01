@@ -270,7 +270,9 @@ export const commerceSlice = createSlice({
         state.OpportunityData,
         state.filteredLaptopData,
         state.filteredPhoneData,
-        state.filteredHeadPhoneData
+        state.filteredHeadPhoneData,
+        state.filteredTelevisionData,
+        state.filteredMonitorData
       );
 
       const item = allFavoritesItem.find(
