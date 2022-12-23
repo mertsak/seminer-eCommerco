@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { register } from "../firebase";
 
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 const Register = () => {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -27,8 +29,10 @@ const Register = () => {
         "Passwords must match"
       ),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      const user = await register(values.email, values.password);
+      navigate("/login");
+      console.log(user);
     },
   });
   return (

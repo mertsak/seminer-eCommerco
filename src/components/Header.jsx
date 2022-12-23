@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { useDispatch, useSelector } from "react-redux";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+
+import { logout } from "../firebase";
+import { logout as handleLogout } from "../redux/authSlice";
 
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
@@ -26,8 +29,10 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const myBasket = useSelector((state) => state.commerce.myBasket);
   const allBasket = useSelector((state) => state.commerce.allProducts);
+  const { user } = useSelector((state) => state.auth);
   const [filterData, setFilterData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -80,6 +85,12 @@ const Header = () => {
 
   const openFilter = () => {
     setFilterData(allBasket);
+  };
+
+  const handlerLogout = async () => {
+    await logout();
+    dispatch(handleLogout());
+    navigate("/");
   };
 
   return (
@@ -137,28 +148,46 @@ const Header = () => {
           <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             <Link className="login" to="/login">
               <PersonOutlinedIcon className="login__icon"></PersonOutlinedIcon>
-              <span>Login</span>
+              {user ? <span> {user.user.email} </span> : <span>Login </span>}
             </Link>
 
             {isHovering && (
-              <div onMouseEnter={handleMouseEnter} className="modal">
+              <div
+                onMouseEnter={handleMouseEnter}
+                style={user ? { gap: 0, left: "10px" } : {}}
+                className="modal"
+              >
                 <div className="modal__login">
-                  <Link
-                    onClick={() => setIsHovering(false)}
-                    to="/login"
-                    className="login__btn"
-                  >
-                    Login
-                  </Link>
+                  {user ? (
+                    <button onClick={handlerLogout} className="login__btn">
+                      Logout
+                    </button>
+                  ) : (
+                    <>
+                      <Link
+                        onClick={() => setIsHovering(false)}
+                        to="/login"
+                        className="login__btn"
+                      >
+                        Login
+                      </Link>
+                    </>
+                  )}
                 </div>
                 <div className="modal__register">
-                  <Link
-                    onClick={() => setIsHovering(false)}
-                    to="/register"
-                    className="register__btn"
-                  >
-                    Register
-                  </Link>
+                  {user ? (
+                    <></>
+                  ) : (
+                    <>
+                      <Link
+                        onClick={() => setIsHovering(false)}
+                        to="/register"
+                        className="register__btn"
+                      >
+                        Register
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             )}

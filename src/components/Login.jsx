@@ -1,10 +1,15 @@
 import React from "react";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { login as loginHandle } from "../redux/authSlice";
+import { login } from "../firebase";
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -19,14 +24,19 @@ const Login = () => {
           "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
         ),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      const user = await login(values.email, values.password);
+      dispatch(loginHandle(user));
+      navigate("/");
+      console.log(user);
     },
   });
   return (
     <div className="form__container">
       <h1>Hello,</h1>
-      <p className="form__text">Log in to MertShop or create an account, don't miss the discounts!</p>
+      <p className="form__text">
+        Log in to MertShop or create an account, don't miss the discounts!
+      </p>
 
       <div className="form_inner__container">
         <h1>Login</h1>
@@ -64,7 +74,9 @@ const Login = () => {
             <div className="error">{formik.errors.password}</div>
           ) : null}
 
-          <button className="form__btn"type="submit">Login</button>
+          <button className="form__btn" type="submit">
+            Login
+          </button>
         </form>
 
         <p>New to MertShop?</p>

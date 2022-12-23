@@ -13,6 +13,7 @@ const BasketProducts = () => {
   const dispatch = useDispatch();
 
   const myBasket = useSelector((state) => state.commerce.myBasket);
+  const { user } = useSelector((state) => state.auth);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
@@ -23,8 +24,9 @@ const BasketProducts = () => {
       {myBasket.length === 0 ? (
         <div className="mybasket__empty">
           <p>
-            You have <b>no items</b> in your basket . to buy one or more item ,
-            click <b>"Add to basket"</b> next to the item.
+            {user ? user.user.email : "You have"} <b>no items</b> in your basket
+            . to buy one or more item , click <b>"Add to basket"</b> next to the
+            item.
           </p>
         </div>
       ) : (

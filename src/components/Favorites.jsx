@@ -13,6 +13,7 @@ import { addFavorites } from "../redux/commerceSlice.js";
 const Favorites = () => {
   const dispatch = useDispatch();
   const Favorites = useSelector((state) => state.commerce.myFavorites);
+  const { user } = useSelector((state) => state.auth);
 
   const truncate = (str) => {
     return str.length > 10 ? `${str.substring(0, 40)}...` : str;
@@ -23,8 +24,9 @@ const Favorites = () => {
       {Favorites.length === 0 ? (
         <div className="mybasket__empty">
           <p>
-            You have <b>no items</b> in your favorites . to add one or more item
-            , click <b>"Add to favorites"</b> next to the item.
+            {user ? user.user.email : "You have"} <b>no items</b> in your
+            favorites . to add one or more item , click{" "}
+            <b>"Add to favorites"</b> next to the item.
           </p>
         </div>
       ) : (
