@@ -19,6 +19,7 @@ import MonitorSinglePage from "./pages/MonitorSinglePage";
 import HeadPhoneSinglePage from "./pages/HeadPhoneSinglePage";
 import MyBasketPage from "./pages/MyBasketPage";
 import FavoritesPage from "./pages/FavoritesPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Header></Header>
       <Navigate></Navigate>
       <Routes>
+        <Route path="*" element={<NotFound />} />
         {/* HOME */}
         <Route path="/" element={<HomePage />} />
         {/*  */}

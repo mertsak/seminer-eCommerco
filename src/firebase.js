@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import toast from "react-hot-toast";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUk9whoouXqkwHq_6ed-zdaXRUMmsS8NI",
@@ -22,27 +23,36 @@ const auth = getAuth();
 export const register = async (email, password) => {
   try {
     const user = await createUserWithEmailAndPassword(auth, email, password);
+    if (user) {
+      toast.success("You have successfully registered");
+    }
     return user;
   } catch (error) {
-    console.log(error);
+    if (error) {
+      toast.error(error.message);
+    }
   }
 };
 
 export const login = async (email, password) => {
   try {
     const user = await signInWithEmailAndPassword(auth, email, password);
+    if (user) {
+      toast.success("You have successfully logged in");
+    }
     return user;
   } catch (error) {
-    console.log(error);
+    toast.error(error.message);
   }
 };
 
 export const logout = async () => {
   try {
     await signOut(auth);
+    toast.success("You have successfully logged out");
     return true;
   } catch (error) {
-    console.log(error);
+    toast.error(error.message);
   }
 };
 

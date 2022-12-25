@@ -14,6 +14,7 @@ import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Toaster } from "react-hot-toast";
 
 import { handleMenu, allProducts } from "../redux/commerceSlice";
 
@@ -95,6 +96,7 @@ const Header = () => {
 
   return (
     <header className="header">
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="header__inner">
         <div className="header__left">
           <div className="menu__con">

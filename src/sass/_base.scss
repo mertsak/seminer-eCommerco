@@ -12,16 +12,16 @@ html {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
   color: $--black-text;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -34,4 +34,42 @@ input {
 img {
   width: 100%;
   height: auto;
+}
+
+.not__found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 320px;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    h3 {
+      margin-bottom: 0.2rem;
+    }
+    .arrow {
+      margin-right: 0.5rem;
+      color: $--orange-main;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: $--orange-main;
+      margin-left: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

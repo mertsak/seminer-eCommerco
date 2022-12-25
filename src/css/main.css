@@ -27,6 +27,30 @@ img {
   width: 100%;
   height: auto; }
 
+.not__found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 320px; }
+  .not__found h1 {
+    margin-bottom: 3rem; }
+  .not__found__text h3 {
+    margin-bottom: 0.2rem; }
+  .not__found__text .arrow {
+    margin-right: 0.5rem;
+    color: #f27a1a; }
+  .not__found__text p {
+    display: flex;
+    align-items: center; }
+  .not__found__text a {
+    color: #f27a1a;
+    margin-left: 0.5rem; }
+    .not__found__text a:hover {
+      text-decoration: underline; }
+
 .header {
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 5px 0px;
   padding: 0 2rem;
@@ -173,8 +197,6 @@ img {
       border-radius: 0.5rem;
       position: absolute;
       display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 1rem;
       flex-direction: column;
       top: 41px;

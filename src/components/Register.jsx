@@ -6,9 +6,27 @@ import { register } from "../firebase";
 
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const navigate = useNavigate();
+
+  const notify = (values) => {
+    if (
+      values.email === "" &&
+      values.password === "" &&
+      values.passwordConfirmation === ""
+    ) {
+      toast.error("Please fill the form");
+    } else if (values.email === "") {
+      toast.error("Please enter your email");
+    } else if (values.password === "") {
+      toast.error("Please enter your password");
+    } else if (values.passwordConfirmation === "") {
+      toast.error("Please confirm your password");
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -24,19 +42,21 @@ const Register = () => {
           /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})/,
           "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
         ),
-      passwordConfirmation: Yup.string().oneOf(
-        [Yup.ref("password"), null],
-        "Passwords must match"
-      ),
+      passwordConfirmation: Yup.string()
+        .oneOf([Yup.ref("password"), null], "Passwords must match")
+        .required("Please confirm your password"),
     }),
     onSubmit: async (values) => {
       const user = await register(values.email, values.password);
-      navigate("/login");
+      if (user) {
+        navigate("/login");
+      }
       console.log(user);
     },
   });
   return (
     <div className="form__container">
+      <Toaster position="top-right" reverseOrder={false} />
       <h1>Hello,</h1>
       <p className="form__text">
         Log in to MertShop or create an account, don't miss the discounts!
@@ -114,7 +134,11 @@ const Register = () => {
             </ToggleButton>
           </ToggleButtonGroup>
 
-          <button className="form__btn" type="submit">
+          <button
+            onClick={() => notify(formik.values)}
+            className="form__btn"
+            type="submit"
+          >
             Register
           </button>
         </form>

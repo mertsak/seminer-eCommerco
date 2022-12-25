@@ -5,10 +5,21 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { login as loginHandle } from "../redux/authSlice";
 import { login } from "../firebase";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const notify = (values) => {
+    if (values.email === "" && values.password === "") {
+      toast.error("Please fill the form");
+    } else if (values.email === "") {
+      toast.error("Please enter your email");
+    } else if (values.password === "") {
+      toast.error("Please enter your password");
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -27,12 +38,14 @@ const Login = () => {
     onSubmit: async (values) => {
       const user = await login(values.email, values.password);
       dispatch(loginHandle(user));
-      navigate("/");
-      console.log(user);
+      if (user) {
+        navigate("/");
+      }
     },
   });
   return (
     <div className="form__container">
+      <Toaster position="top-right" reverseOrder={false} />
       <h1>Hello,</h1>
       <p className="form__text">
         Log in to MertShop or create an account, don't miss the discounts!
@@ -74,7 +87,13 @@ const Login = () => {
             <div className="error">{formik.errors.password}</div>
           ) : null}
 
-          <button className="form__btn" type="submit">
+          {console.log(formik)}
+
+          <button
+            onClick={() => notify(formik.values)}
+            className="form__btn"
+            type="submit"
+          >
             Login
           </button>
         </form>

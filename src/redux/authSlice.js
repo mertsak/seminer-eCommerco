@@ -15,7 +15,6 @@ const authSlice = createSlice({
       state.user = false;
     },
   },
-  extraReducers: {},
 });
 
 export const { login, logout } = authSlice.actions;
